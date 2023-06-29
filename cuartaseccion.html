@@ -14,58 +14,100 @@
 
     <style>
         body {
-            background-color: rgb(139, 174, 158);
+            background-color: rgb(113, 122, 117);
         }
 
-        h2,
-        h3 {
-            color: white
+        h4,
+        h5 {
+            color: rgba(253, 240, 240, 0.8)
         }
+
         a {
             text-decoration: none;
         }
+
+        .container {
+            background-color: rgb(155, 152, 152);
+            border-radius: 10px 10px 10px 10px;
+            margin: 20px;
+            padding: 10px;
+            box-shadow: 2px 2px 4px rgba(44, 43, 43, 0.7);
+        }
+
+        .boton {
+            background-color: white;
+            font-size: 20px;
+            padding: 20px;
+            margin: 20px 5px 20px 5px;
+            transition: background-color 0.3s ease; 
+        }
+        .boton:hover {
+            background-color: rgb(118, 219, 106);
+        }
+        .boton2 {
+            background-color: green;
+            font-size: 20px;
+            padding: 20px;
+            margin: 20px 20px 20px 5px;
+            transition: background-color 0.3s ease; 
+        }
+        .boton2:hover {
+            background-color: rgb(118, 219, 106);
+        }
+
+        .cambio-colores:hover {
+            color: white;
+
+        }
+
+        .cambio-coloresfondo:hover {
+            background-color: rgb(118, 219, 106);
+
+        }
+
     </style>
 </head>
 
 <body>
 
     <main class="container">
-        <section class="row text-center"
-            style="background-color: rgba(147, 200, 140, 0.5); border-radius: 10px 10px 10px 10px; margin: 20px;">
+        <section class="row text-center">
             <!-- section -->
-            <div class="col-3">
-                <h3>Centro Coordinador de <br> Atención Permanente</h3>
-                <h2>0800-222-2787</h2>
+            <div class="col-md-3">
+                <h5>Centro Coordinador de <br> Atención Permanente</h5>
+                <h4>0800-222-2787</h4>
             </div>
-            <div class="col-3">
-                <h3>Atención al Asociado <br> (8 a 16 hs)</h3>
-                <h2>0800-333-2782</h2>
+            <div class="col-md-3">
+                <h5>Atención al Asociado <br> (8 a 16 hs)</h5>
+                <h4>0800-333-2782</h4>
             </div>
-            <div class="col-2">
-                <button
-                style="font-size: 20px; padding: 40px 40px; background-color:white; border-radius: 5px 5px 5px 5px; border: 2px solid rgb(118, 219, 106);">
-                <nav>
-                    <a style="color: rgb(118, 219, 106);" href="" class="">Agencias</a>
-                </nav>
-            </button>
+            <div class="col-md-2">
+                <button class="boton"
+                    style="border-radius: 5px 5px 5px 5px; border: 2px solid rgb(118, 219, 106);">
+                    <nav>
+                        <a style="color: rgb(118, 219, 106);" href="" class=""><span
+                                class="cambio-colores">Agencias</span></a>
+                    </nav>
+                </button>
 
             </div>
-            <div class="col-2">
-                <button
-                style="font-size: 20px; padding: 40px 40px; background-color:white; border-radius: 5px 5px 5px 5px; border: 2px solid rgb(118, 219, 106);">
-                <nav>
-                    <a style="color: rgb(118, 219, 106);" href="" class="">Trabajador</a>
-                </nav>
-            </button>
+            <div class="col-md-2">
+                <button class="boton"
+                    style="border-radius: 5px 5px 5px 5px; border: 2px solid rgb(118, 219, 106);">
+                        <nav>
+                            <a style="color: rgb(118, 219, 106);" href="" class=""><span
+                                    class="cambio-colores">Trabajador</span></a>
+                        </nav>
+                    </button>
 
             </div>
-            <div class="col-2">
-                <button
-                style="font-size: 20px; padding: 40px 40px; background-color:rgb(118, 219, 106); border-radius: 5px 5px 5px 5px; border: 2px solid rgb(118, 219, 106);">
-                <nav>
-                    <a style="color: white;" href="" class="">LOGIN</a>
-                </nav>
-            </button>
+            <div class="col-md-2">
+                <button class="boton2"
+                    style="border-radius: 5px 5px 5px 5px; border: 2px solid rgb(118, 219, 106);">
+                    <nav>
+                        <a style="color: white;" href="" class="">LOGIN</a>
+                    </nav>
+                </button>
 
             </div>
         </section>
