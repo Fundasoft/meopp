@@ -21,6 +21,7 @@
             background-color: white;
             box-shadow: 2px 2px 4px rgba(44, 43, 43, 0.7);
             border-radius: 10px 10px 10px 10px;
+        
         }
 
         h2 {
@@ -34,11 +35,17 @@
         .list-group-item {
             background-color: rgb(236, 229, 229);
             color: blue;
+            
         }
 
         .col {
             margin: 50px;
+           
 
+        }
+        a {
+            color:blue;
+            text-decoration: none;
         }
     </style>
 
@@ -55,7 +62,11 @@
         <section class="row"> <!-- section -->
             <div class="col">
                 <ul class="list-group">
-                    <li class="list-group-item">Fondo Fiduciario de Enfermedades Profesionales (F.F.E.P)</li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div class="p-2 bd-highlight">Fondo Fiduciario de Enfermedades Profesionales (F.F.E.P)</div>
+                        <div class="p-2 bd-highlight"></div>
+                        <div class="p-2 bd-highlight"></div>
+                    </li>
                     <li class="list-group-item d-flex justify-content-between">
                         <div class="p-2 bd-highlight">Decreto 49/ 2014</div>
                         <div class="p-2 bd-highlight"></div>
@@ -80,14 +91,31 @@
                         <div class="p-2 bd-highlight"><button type="button" class="btn btn-primary">Descargar</button>
                         </div>
                     </li>
-                    <li class="list-group-item" style="color:black; background-color:white;">Información que deber remitir las ART a la Superintendencia de Riesgos del Trabajo. Procedimiento.</li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div class="p-2 bd-highlight">
+                            <a href="#demo" data-bs-toggle="collapse">Resolución SRT
+                                741/2010
+                            </a>
+                        </div>
+                        <div class="p-2 bd-highlight"></div>
+                        <div class="p-2 bd-highlight"><button type="button" class="btn btn-primary">Descargar</button>
+                        </div>
+                    </li>
+                    <div id="demo" class="collapse">
+                        Información que deber
+                        remitir las ART a la Superintendencia de Riesgos del Trabajo. Procedimiento.
+                    </div>
                     <li class="list-group-item d-flex justify-content-between">
                         <div class="p-2 bd-highlight">Resolución SRT 1735/2009</div>
                         <div class="p-2 bd-highlight"></div>
                         <div class="p-2 bd-highlight"><button type="button" class="btn btn-primary">Descargar</button>
                         </div>
                     </li>
-                    <li class="list-group-item">Decreto 1694/2009</li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div class="p-2 bd-highlight">Decreto 1694/2009</div>
+                        <div class="p-2 bd-highlight"></div>
+                        <div class="p-2 bd-highlight"></div>
+                    </li>
                     <li class="list-group-item d-flex justify-content-between">
                         <div class="p-2 bd-highlight">Resolución SRT 463/2009</div>
                         <div class="p-2 bd-highlight"></div>
@@ -103,6 +131,7 @@
                 </ul>
             </div>
         </section>
+
     </main>
 
 </body>
