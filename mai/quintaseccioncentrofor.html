@@ -21,26 +21,27 @@
             background-color: white;
             box-shadow: 2px 2px 4px rgba(44, 43, 43, 0.7);
             border-radius: 10px 10px 10px 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .bd-highlight {
+            text-align: center;
+            color: rgb(118, 219, 106);
         }
 
         h2 {
+            text-align: center;
             color: rgb(118, 219, 106);
-            margin-left: 200px;
-            padding-left: 200px;
         }
 
-        ul {
+        .ul {
             border-color: white;
         }
-
-        .row {
-            padding: 20px;
-            margin: 20px;
-        }
-
-        button {
-            margin-left: 150px;
-            padding-left: 150px;
+        .btn-primary {
+            height: 40px;
+            width: 150px;
+            text-align: center;
         }
     </style>
 
@@ -49,26 +50,27 @@
 
 <body>
     <main class="container">
-        <section class="row"> <!-- section -->
-            <div class="col-9">
-                <h2>Plan Anual de Capacitaciones</h2>
-            </div>
-            <div class="col-3">
-                <button type="button" class="btn btn-primary">Descargar</button>
+
+        <section class="row" style="margin:10px; padding:10px">
+            <div class="list-group-item d-flex justify-content-between">
+                <div class="col-lg-9 col-md-9 col-sm-6">
+                        <h2>Plan Anual de Capacitaciones</h2>          
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <button type="button" class="btn btn-primary">Descargar</button>         
+                </div>
             </div>
         </section>
-        <section class="row" style="padding-bottom:0px; margin-bottom: 0px;">
-            <div class="col">
+        <section class="row" style="margin:10px 10px 0px 10px">
+            <div class="col-12">
                 <img src="images/3.jpg" class="card-img-top" alt="...">
             </div>
         </section>
-        <section class="row" style="padding-top:0px; margin-top:0px;">
-            <div class="col">
+        <section class="row" style="margin:0px 10px 10px 10px">
+            <div class="col-12">
                 <img src="images/3.jpg" class="card-img-top" alt="...">
             </div>
         </section>
-
-
 
     </main>
 
