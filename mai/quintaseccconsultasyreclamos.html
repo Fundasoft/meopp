@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: rgb(113, 122, 117);
+        }
+
+        .btn {
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 40px;
+
+        }
+
+        .btn:hover {
+            background-color: rgb(118, 219, 106);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form id="datos" action="m00_prestadores_pdf.php" method="POST" target="_blank">
+        <input type="hidden" name="provincia" class="provincia1">
+        <input type="hidden" name="localidad" class="localidad1">
+        <input type="hidden" name="tipo" class="tipo1">
+    </form>
+
+    <main class="container">
+        <section class="row"> <!-- section -->
+
+            <div class="col-md-6">
+                <div class="form-control">
+                    <label for="Tipo Tramite">Tipo trámite:</label>
+                    <select name="tipo_consulta" input type="Tipo Tramite" required="required" id="Tipo Tramite"
+                        placeholder="Tipo Tramite" name="Tipo Trámite" onkeypress="">
+                        <option value=""> Seleccionar </option>
+                        <option value="1">Consulta</option>
+                        <option value="2">Reclamo</option>
+                        <option value="3">Queja</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-control">
+                    <label for="Trabajador">Trabajador:
+                        <input type="checkbox" name="trabajador">
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-control">
+                    <label for="Empleador">Empleador:
+                        <input type="checkbox" name="empleador">
+                    </label>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-8"> Nombre y Apellido / Razon Social: <input type="text" id="nombre" name="apellido"
+                    required=""> </div>
+            <div class="col-md-4"> Siniestro: <input type="text" id="num_siniestro" name="num_siniestro"
+                    onkeypress="return soloNumeros(event)"> </div>
+
+            <div class="col-md-6"> DNI: <input type="text" maxlength="8" id="dni" name="dni"
+                    onkeypress="return soloNumeros(event)">
+            </div>
+            <div class="col-md-6"> CUIT: <input type="text" maxlength="11" id="cuit" name="cuit"
+                    onkeypress="return soloNumeros(event)"> </div>
+            <div class="col-md-4"> Teléfono Particular: <input type="text" required="required" id="telefono_part"
+                    name="telefono_part" onkeypress="return soloNumeros(event)"> </div>
+            <div class="col-md-4"> Teléfono Laboral: <input type="text" id="telefono_lab" name="telefono_lab"
+                    required="" onkeypress="return soloNumeros(event)"> </div>
+            <div class="col-md-4"> Teléfono Celular: <input type="text" id="telefono_cel" name="telefono_cel"
+                    required="" onkeypress="return soloNumeros(event)"> </div>
+            <div class="col-md-6"> Dirección: <input type="text" id="calle" name="calle" required="required"> </div>
+            <!--<div class="col-md-4"> Número: <input type="number" id="numero" name="numero"  required > </div>
+                                    <div class="col-md-4"> Piso: <input type="text" id="piso" name="piso"  required > </div>
+                                    <div class="col-md-4"> Dpto: <input type="text" id="dpto" name="dpto"  required > </div>-->
+            <!--<div class="col-md-4"> Código Postal: <input type="text" id="codigo_postal" name="codigo_postal"  required > </div>
+                                    <div class="col-md-4"> Localidad: <input type="text" id="localidad" name="localidad"  required > </div>
+                                    <div class="col-md-4">
+                                        Provincia
+                                        <select name="id_provincia" required >
+                                            <option value="">-- Provincia --</option>
+                                            <option value="1">CAPITAL FEDERAL</option>
+                                            <option value="2">BUENOS AIRES</option>
+                                            <option value="3">CATAMARCA</option>
+                                            <option value="4">CORDOBA</option>
+                                            <option value="5">CORRIENTES</option>
+                                            <option value="6">ENTRE RIOS</option>
+                                            <option value="7">JUJUY</option>
+                                            <option value="8">LA RIOJA</option>
+                                            <option value="9">MENDOZA</option>
+                                            <option value="10">SALTA</option>
+                                            <option value="11">SAN JUAN</option>
+                                            <option value="12">SAN LUIS</option>
+                                            <option value="13">SANTA FE</option>
+                                            <option value="14">SANTIAGO DEL ESTERO</option>
+                                            <option value="15">TUCUMAN</option>
+                                            <option value="16">CHACO</option>
+                                            <option value="17">CHUBUT</option>
+                                            <option value="18">FORMOSA</option>
+                                            <option value="19">LA PAMPA</option>
+                                            <option value="20">MISIONES</option>
+                                            <option value="21">NEUQUEN</option>
+                                            <option value="22">RIO NEGRO</option>
+                                            <option value="23">SANTA CRUZ</option>
+                                            <option value="24">TIERRA DEL FUEGO</option>
+                                        </select>
+                                     </div>		-->
+            <div class="col-md-6"> Email: <input type="email" id="email" name="email" required=""> </div>
+
+
+            <div class="col-md-6">
+                Tema de Consulta
+                <select name="tema_consulta" id="tema_consulta" required="required">
+                    <option value="">-- SELECCIONAR-- </option>
+                    <option value="6">Examámenes Periódicos</option>
+                    <option value="5">Afiliacion y Contratos</option>
+                    <option value="4">Prevención</option>
+                    <option value="3">Comisiones medicas</option>
+                    <option value="2">Prestaciones dinerarias</option>
+                    <option value="1">Prestaciones en especie</option>
+
+
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                Categoria de Consulta
+                <select name="categoria" id="categoria" required="required">
+                    <option value="">-- SELECCIONAR-- </option>
+                </select>
+            </div>
+
+            <div class="col-md-12">
+                <label for="Mensaje">Mensaje:</label>
+                <br>
+                <textarea name="observaciones" class="form-control border border-success" id="mensaje"
+                    placeholder="Mensaje" required="" style="height: 40px;"></textarea>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="d-grid gap-2 col-3 mx-auto">
+                <button class="btn btn-primary; border border-success" type="submit" type="button">ENVIAR</button>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="col-md-12" style="padding: 0;">
+                <p>El campo CUIT será obligatorio en el caso de que el
+                    consultante/reclamante sea empleador.</p>
+            </div>
+
+            <p> </p>
+            <div id="respuesta"></div>
+            <p></p>
+            </form>
+
+
+            </div>
+            </div>
+            </div>
+            </div> <!-- .page -->
+        </section>
+
+    </main>
+
+    <script type="text/javascript">
+
+        $(document).on("change", "#tema_consulta", function () {
+            var textID = $("#site-content").attr('rel');
+            var id = $(this).val();
+            $.post("m00_acciones.php", { 'tipo_grabacion': 13, 'id': id, 'textID': textID }, function (data) {
+                console.log(data);
+                $("#categoria").html(data);
+            });
+        });
+
+        $('#reclamosViaWeb').submit(function (e) {
+
+            var textID = $("#site-content").attr('rel');
+
+            e.preventDefault();
+
+            if ($("input[name='empleador']").is(':checked')) {
+
+                if (validaCuit($("#cuit").val())) {
+
+                    $.post("m00_acciones.php", $("#reclamosViaWeb").serialize() + "&textID=" + textID + "", function (data) {
+                        //$('#respuesta').html(data);
+                        var datos = data.split("_");
+                        if (datos[0] = "OK") {
+                            alert("Carga Exisitosa - Trámite nro " + datos[1] + " !!");
+                            window.location = "consultas";
+                        }
+                    });
+
+                } else {
+                    alert("El cuit es incorrecto !!");
+                }
+            } else {
+                $.post("m00_acciones.php", $("#reclamosViaWeb").serialize() + "&textID=" + textID + "", function (data) {
+                    //$('#respuesta').html(data);
+                    var datos = data.split("_");
+                    if (datos[0] = "OK") {
+                        alert("Carga Exisitosa - Trámite nro " + datos[1] + " !!");
+                        window.location = "consultas";
+                    }
+                });
+            }
+        });
+
+
+    </script>
+
+
+
+    <!-- INICIO librerias internas de jquery -->
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!-- datatables -->
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="admin/js/ColumnFilterWidgets.js"></script>
+    <script type="text/javascript" src="admin/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="admin/js/jszip.min.js"></script>
+    <!--<script type="text/javascript" src="admin/js/pdfmake.min.js"></script>-->
+    <script type="text/javascript" src="admin/js/vfs_fonts.js"></script>
+    <script type="text/javascript" src="admin/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="admin/js/buttons.colVis.min.js"></script>
+    <!-- datatables -->
+
+    <!-- FIN librerias internas de jquery -->
+
+
+
+
+
+</body>
+
+</html>
