@@ -17,6 +17,20 @@
             background-color: rgb(113, 122, 117);
         }
 
+        main {
+            background-color: white;
+            box-shadow: 2px 2px 4px rgba(44, 43, 43, 0.7);
+            border-radius: 10px 10px 10px 10px;
+            margin: 20px;
+            padding: 30px;
+        }
+
+        .row {
+            background-color: white;
+            margin: 20px;
+            padding: 10px 30px 10px 30px;
+        }
+
         .btn {
             background-color: green;
             color: white;
@@ -28,6 +42,10 @@
         .btn:hover {
             background-color: rgb(118, 219, 106);
             color: white;
+        }
+
+        p {
+            text-align: center;
         }
     </style>
 </head>
@@ -45,51 +63,67 @@
         <section class="row"> <!-- section -->
 
             <div class="col-md-6">
-                <div class="form-control">
-                    <label for="Tipo Tramite">Tipo trámite:</label>
-                    <select name="tipo_consulta" input type="Tipo Tramite" required="required" id="Tipo Tramite"
-                        placeholder="Tipo Tramite" name="Tipo Trámite" onkeypress="">
-                        <option value=""> Seleccionar </option>
-                        <option value="1">Consulta</option>
-                        <option value="2">Reclamo</option>
-                        <option value="3">Queja</option>
-                    </select>
-                </div>
+                <select name="tipo_consulta" class="form-control" style="border:1px solid; border-radius: 2px" input
+                    type="Tipo Tramite" required="required" id="Tipo Tramite" placeholder="Tipo Tramite"
+                    name="Tipo Trámite" onkeypress="">
+                    <option value="">Tipo trámite:<br>
+                        <br>
+                        Seleccionar
+                    </option>
+                    <option value="1">Consulta</option>
+                    <option value="2">Reclamo</option>
+                    <option value="3">Queja</option>
+                </select>
             </div>
             <div class="col-md-3">
-                <div class="form-control">
+                <div class="form-control" style="border-radius: 2px ">
                     <label for="Trabajador">Trabajador:
                         <input type="checkbox" name="trabajador">
                     </label>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="form-control">
+                <div class="form-control" style="border-radius: 2px ">
                     <label for="Empleador">Empleador:
                         <input type="checkbox" name="empleador">
                     </label>
                 </div>
             </div>
-
-
-            
-            <div class="col-md-8"> Nombre y Apellido / Razon Social: <input type="text" id="nombre" name="apellido"
-                    required=""> </div>
-            <div class="col-md-4"> Siniestro: <input type="text" id="num_siniestro" name="num_siniestro"
-                    onkeypress="return soloNumeros(event)"> </div>
-
-            <div class="col-md-6"> DNI: <input type="text" maxlength="8" id="dni" name="dni"
+            <div class="col-md-8">
+                <label for="Nombre y Apellido/Razón Social:">Nombre y Apellido/Razón Social:</label>
+                <input type="Nombre y Apellido/Razón Social" class="form-control" id="nombre" name="apellido"
+                    required="" onkeypress="" placeholder="Nombre y Apellido/Razón Social">
+            </div>
+            <div class="col-md-4">
+                <label for="Siniestro:">Siniestro:</label>
+                <input type="Siniestro" class="form-control" id="num_siniestro" placeholder="Siniestro"
+                    name="num_siniestro" required="" onkeypress="return soloNumeros(event)">
+            </div>
+            <div class="col-md-6">
+                <label for="DNI:">DNI:</label>
+                <input type="DNI" class="form-control" maxlength="8" id="dni" placeholder="DNI" name="dni" required=""
                     onkeypress="return soloNumeros(event)">
             </div>
-            <div class="col-md-6"> CUIT: <input type="text" maxlength="11" id="cuit" name="cuit"
-                    onkeypress="return soloNumeros(event)"> </div>
-            <div class="col-md-4"> Teléfono Particular: <input type="text" required="required" id="telefono_part"
-                    name="telefono_part" onkeypress="return soloNumeros(event)"> </div>
-            <div class="col-md-4"> Teléfono Laboral: <input type="text" id="telefono_lab" name="telefono_lab"
-                    required="" onkeypress="return soloNumeros(event)"> </div>
-            <div class="col-md-4"> Teléfono Celular: <input type="text" id="telefono_cel" name="telefono_cel"
-                    required="" onkeypress="return soloNumeros(event)"> </div>
-            <div class="col-md-6"> Dirección: <input type="text" id="calle" name="calle" required="required"> </div>
+            <div class="col-md-6">
+                <label for="CUIT:">CUIT:</label>
+                <input type="CUIT" maxlength="11" class="form-control" id="cuit" placeholder="CUIT" name="cuit"
+                    required="" onkeypress="return soloNumeros(event)">
+            </div>
+            <div class="col-md-6">
+                <label for="Teléfono Particular:">Teléfono Particular:</label>
+                <input type="Teléfono Particular" class="form-control" required="required" id="telefono_part"
+                    placeholder="Teléfono Particular" name="telefono_part" onkeypress="return soloNumeros(event)">
+            </div>
+            <div class="col-md-6">
+                <label for="Teléfono Laboral:">Teléfono Laboral:</label>
+                <input type="Teléfono Laboral" class="form-control" required="required" id="telefono_lab"
+                    placeholder="Teléfono Laboral" name="telefono_lab" onkeypress="return soloNumeros(event)">
+            </div>
+            <div class="col-md-6">
+                <label for="Dirección:">Dirección:</label>
+                <input type="Dirección" class="form-control" id="calle" placeholder="Dirección" name="calle"
+                    required="required">
+            </div>
             <!--<div class="col-md-4"> Número: <input type="number" id="numero" name="numero"  required > </div>
                                     <div class="col-md-4"> Piso: <input type="text" id="piso" name="piso"  required > </div>
                                     <div class="col-md-4"> Dpto: <input type="text" id="dpto" name="dpto"  required > </div>-->
@@ -125,12 +159,16 @@
                                             <option value="24">TIERRA DEL FUEGO</option>
                                         </select>
                                      </div>		-->
-            <div class="col-md-6"> Email: <input type="email" id="email" name="email" required=""> </div>
+            <div class="col-md-6">
+                <label for="Email">Email:</label>
+                <input type="Email" class="form-control" id="email" name="email" required="" placeholder="Email"
+                    onkeypress="">
+            </div>
 
 
             <div class="col-md-6">
-                Tema de Consulta
-                <select name="tema_consulta" id="tema_consulta" required="required">
+                <label for="Tema de Consulta">Tema de Consulta:</label>
+                <select name="tema_consulta" class="form-control" id="tema_consulta" required="required">
                     <option value="">-- SELECCIONAR-- </option>
                     <option value="6">Examámenes Periódicos</option>
                     <option value="5">Afiliacion y Contratos</option>
@@ -138,14 +176,11 @@
                     <option value="3">Comisiones medicas</option>
                     <option value="2">Prestaciones dinerarias</option>
                     <option value="1">Prestaciones en especie</option>
-
-
                 </select>
             </div>
-
             <div class="col-md-6">
-                Categoria de Consulta
-                <select name="categoria" id="categoria" required="required">
+                <label for="Categoria de Consulta">Categoria de Consulta:</label>
+                <select name="categoria" class="form-control" id="categoria" required="required">
                     <option value="">-- SELECCIONAR-- </option>
                 </select>
             </div>
@@ -153,14 +188,16 @@
             <div class="col-md-12">
                 <label for="Mensaje">Mensaje:</label>
                 <br>
-                <textarea name="observaciones" class="form-control border border-success" id="mensaje"
-                    placeholder="Mensaje" required="" style="height: 40px;"></textarea>
+                <textarea name="observaciones" class="form-control" id="mensaje" placeholder="Mensaje" required=""
+                    style="height: 40px;"></textarea>
             </div>
             <br>
             <br>
             <br>
+            <br>
             <div class="d-grid gap-2 col-3 mx-auto">
-                <button class="btn btn-primary; border border-success" type="submit" type="button">ENVIAR</button>
+                <button class="btn btn-primary; border border-success; center" type="submit"
+                    type="button">ENVIAR</button>
             </div>
             <br>
             <br>
@@ -174,12 +211,7 @@
             <div id="respuesta"></div>
             <p></p>
             </form>
-
-
-            </div>
-            </div>
-            </div>
-            </div> <!-- .page -->
+            <!-- .page -->
         </section>
 
     </main>
