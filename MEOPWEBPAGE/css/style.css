@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-image:url("images/back.png");
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+}
+
+
+.barraLogo{
+    height: 15vh;
+    min-height: 48px;
+    width: 87vw;
+    margin-bottom: 15px;
+}
+
+.briefInfo{
+width: 85vw;
+background-color: #47AD49;
+box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
+transition: all 0.5s;
+}
+.briefInfo:hover{
+transform: scale(1.05);
+}
