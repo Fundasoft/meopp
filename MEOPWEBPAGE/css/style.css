@@ -13,14 +13,20 @@ body{
     -o-background-size:cover;
     background-size:cover;
     background-position:center;
+    
 }
 
+body::-webkit-scrollbar{
+    display: none;
+  }
 
-.barraLogo{
-    height: 15vh;
-    min-height: 48px;
-    width: 87vw;
-    margin-bottom: 15px;
+.nav-item:hover{
+background-color: #47AD49;
+border-radius: 5px;
+}
+
+h5{
+    font-size: 16px;
 }
 
 .briefInfo{
@@ -31,4 +37,15 @@ transition: all 0.5s;
 }
 .briefInfo:hover{
 transform: scale(1.05);
+}
+
+.numeros:hover{
+
+box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
+transform: scale(1.03);
+border-radius: 5px;
+}
+
+.logo:hover{
+    transform: scale(1.03);
 }

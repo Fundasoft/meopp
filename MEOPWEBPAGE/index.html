@@ -12,79 +12,82 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="d-flex flex-column align-items-center">
+  <body>
 
     <!-- SECCION LOGO NAV CON BOTONERA -->
-    <section class="barraLogo d-flex justify-content-between p-3" id="logoNav">
-      <img src="images/logo.webp" alt="logoMEOPP" class="" />
-      <div class="col-md-3 d-flex flex-column">
-        <h5 class="text-center fs-5">
-          Centro de 
-          Atención 24hs
-        </h5>
-        <h4 class="text-center">0800-222-2787</h4>
-      </div>
-      <div class="col-md-3 d-flex flex-column">
-        <h5 class="text-center fs-5">
-          Atención al Asociado 
-          (8 a 16 hs)
-        </h5>
-        <h4 class="text-center">0800-333-2782</h4>
-      </div>
-      <div
-        class="btn-group btn-grop-sm"
-        role="group"
-        aria-label="Basic example"
-      >
-        <button type="button" class="btn btn-outline-success">Agencias</button>
-        <button type="button" class="btn btn-outline-success">
-          Trabajador
-        </button>
-        <button type="button" class="btn btn-success">Login</button>
+
+    
+
+    <section class="container-fluid" id="logoNav">
+      <div class="row">
+        <div class="col-12 col-lg-3 order-first text-center align-self-center mt-2 mb-2 d-flex justify-content-center">
+          <img src="images/logo.webp" alt="logoMEOPP" class="img-fluid logo" />
+        </div>
+
+        <div class="col-12 col-lg-6 order-2 order-lg-1   d-flex align-self-center justify-content-center">
+          <div class="col-4 d-flex flex-column m-2 p-1 numeros">
+            <h5 class="text-center">
+              Centro de Atención <br> (24hs)
+            </h5>
+            <h4 class="text-center fs-5 text-success">0800-222-2787</h4>
+          </div>
+          <div class="col-4 d-flex flex-column m-2 p-1 numeros">
+            <h5 class="text-center">
+              Atención al Asociado <br>
+              (8 a 16 hs)
+            </h5>
+            <h4 class="text-center fs-5 text-success">0800-333-2782</h4>
+          </div>
+          <div class="col-4 d-flex flex-column m-2 p-1 numeros">
+            <h5 class="text-center">
+              Whatsapp de Asociados <br> (8 a 16hs)
+            </h5>
+            <h4 class="text-center fs-5 text-success">11-39889193</h4>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 order-1 order-lg-2 text-center d-flex align-self-center justify-content-center mb-2 mt-2">
+          <div class="btn-group btn-grop-md">
+            <button type="button" class="btn btn-outline-success">Agencias</button>
+            <button type="button" class="btn btn-outline-success">Trabajador</button>
+            <button type="button" class="btn btn-success">Login</button>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- SECCION NARRA NAV RESPONSIVE -->
     <section id="navbar">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
         <div class="container-fluid">
-          <a class="navbar-brand ms-2" href="#">Home</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link text-center" href="#">Institucional</a>
+                <a class="nav-link text-center text-white" href="#">Institucional</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center" href="#">Formularios</a>
+                <a class="nav-link text-center text-white" href="#">Formularios</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center" href="#">Cotizaciones y Afiliaciones</a>
+                <a class="nav-link text-center text-white" href="#">Cotizaciones y Afiliaciones</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center" href="#">Preguntas Frecuentes</a>
+                <a class="nav-link text-center text-white" href="#">Preguntas Frecuentes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center" href="#">Normativa</a>
+                <a class="nav-link text-center text-white" href="#">Normativa</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center" href="#">Prestadores</a>
+                <a class="nav-link text-center text-white" href="#">Prestadores</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center" href="#">Centro de Formación</a>
+                <a class="nav-link text-center text-white" href="#">Centro de Formación</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center" href="#">Consultas y reclamos</a>
+                <a class="nav-link text-center text-white" href="#">Consultas y reclamos</a>
               </li>
             </ul>
           </div>
@@ -93,13 +96,8 @@
     </section>
 
     <!-- SECCION BRIEF INFO -->
-    <section id="briefInfo" class="briefInfo text-center text-white p-3 rounded m-3">
-      <h4>
-        Les damos la bienvenida a la web de MEOPP ART MUTUAL.
-      </h4>
-      <p>
-        Aquí encontrará todas nuestras herramientas y la información completa que necesitan nuestros Asociados.
-      </p>
+    <section id="briefInfo" class="briefInfo text-white p-3 rounded m-3">
+      
     </section>
 
     <!-- SECCION ACCESOS RAPIDOS -->
