@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-image:url("../images/fondo.png");
+    
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+.nav-item:hover{
+background-color: #47AD49;
+border-radius: 5px;
+transform: scale(1.05);
+}
+
+.barra{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    
+}
+#logoNav{
+    background-color: rgb(255, 255, 255);
+}
+
+h5{
+    font-size: 14px;
+}
+
+.tarjetas{
+    
+    height: 28rem;
+}
+
+.tarjetas:hover{
+    transform: scale(1.02);
+}
+
+.briefInfo{
+
+background-color: #2fca31ad;
+box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
+transition: all 0.5s;
+}
+.briefInfo:hover{
+transform: scale(1.05);
+}
+
+.numeros:hover{
+
+box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.397);
+transform: scale(1.03);
+border-radius: 5px;
+}
+
+.logo:hover{
+    transform: scale(1.03);
+}
+
+.footerNav{
+    background-color: rgba(32, 32, 32, 0.822);
+    border-radius: 5px;
+}
+.btn-secondary:hover{
+    background-color: #47AD49;
+    border: #47AD49;
+}
+
+.bg-dark{
+    background-color: rgba(32, 32, 32, 0.822) !important;
+}
+
+.agencia:hover{
+    transform: scale(1.03);
+}
