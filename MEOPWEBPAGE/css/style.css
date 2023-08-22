@@ -6,14 +6,12 @@
 }
 
 body{
-    background-image:url("images/back.png");
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
+    background-image:url("../images/fondo.png");
+    
     background-size:cover;
     background-position:center;
-    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 body::-webkit-scrollbar{
@@ -23,10 +21,20 @@ body::-webkit-scrollbar{
 .nav-item:hover{
 background-color: #47AD49;
 border-radius: 5px;
+transform: scale(1.05);
+}
+
+.barra{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+#logoNav{
+    background-color: rgb(255, 255, 255);
 }
 
 h5{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .briefInfo{
