@@ -31,7 +31,7 @@ transform: scale(1.05);
     
 }
 #logoNav{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.774);
 }
 
 h5{
@@ -40,7 +40,7 @@ h5{
 
 .tarjetas{
     
-    height: 26rem;
+    height: 28rem;
 }
 
 .tarjetas:hover{
@@ -48,8 +48,10 @@ h5{
 }
 
 .briefInfo{
-
-background-color: #2fca31ad;
+    background: linear-gradient(-45deg, #05916e, #27c564, #109145);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+/* background-color: #2fca31ad; */
 box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
 transition: all 0.5s;
 }
@@ -58,7 +60,7 @@ transform: scale(1.05);
 }
 
 .numeros:hover{
-
+background-color: rgb(255, 255, 255);
 box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.397);
 transform: scale(1.03);
 border-radius: 5px;
@@ -69,18 +71,46 @@ border-radius: 5px;
 }
 
 .footerNav{
-    background-color: rgba(32, 32, 32, 0.822);
+    background: linear-gradient(-45deg, #141414c9, #525252bd, #242424b0);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+    /* background-color: rgba(32, 32, 32, 0.822); */
     border-radius: 5px;
 }
 .btn-secondary:hover{
     background-color: #47AD49;
     border: #47AD49;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.76);
 }
 
 .bg-dark{
+    background: linear-gradient(-45deg, #141414c9, #525252bd, #242424b0);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
     background-color: rgba(32, 32, 32, 0.822) !important;
 }
 
 .agencia:hover{
     transform: scale(1.03);
+}
+
+.card-text{
+    margin: 0 !important;
+}
+
+.linkExterno:hover{
+    transform: scale(1.03);
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
