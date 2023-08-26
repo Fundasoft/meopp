@@ -103,7 +103,7 @@
 
     <section class="container-fluid" id="briefSeccion">
       <div class="row justify-content-center rounded  mt-4 p-0 ">
-        <div class="col-11 col-lg-2 briefInfo text-white text-center me-3 ms-3 rounded mt-2 mb-2 p-3" id="infoSeccion">
+        <div class="col-11 col-lg-2 briefInfo text-white text-center me-lg-3  rounded mt-2 mb-2 p-3" id="infoSeccion">
           <h4>Le damos la bienvenida a la web de MEOPP ART MUTUAL</h4><br>
           <h5>Aquí encontrará todas nuestras herramientas y la información completa que necesitan nuestros Asociados.</h5>
         
@@ -195,49 +195,53 @@
   <div class="row justify-content-center bg-white rounded me-4 ms-4 mt-4">
     <div class="col-11 col-lg-3 m-2 p-0">
       <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action agencia" aria-current="true">
+        <div  class="list-group-item list-group-item-action agencia" onclick="cambioAgencia(this)" id="aCentral">
           <div class="d-flex w-100 justify-content-between">
             <h4 class="mb-1">Agencia Central</h4>
             
           </div>
           <p class="mb-1">Yrigoyen 315 , CP: 8424 , Localidad: Cipolletti</p>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action agencia">
+        </div>
+        <div  class="list-group-item list-group-item-action agencia" onclick="cambioAgencia(this)" id="aSur">
           <div class="d-flex w-100 justify-content-between">
             <h4 class="mb-1">Agencia Patagonia Sur</h4>
             
           </div>
           <p class="mb-1">Alvear 437, CP: 9000, Localidad: Comodoro Rivadavia</p>
           
-        </a>
-        <a href="#" class="list-group-item list-group-item-action agencia">
+        </div>
+        <div  class="list-group-item list-group-item-action agencia" onclick="cambioAgencia(this)" id="aNorte">
           <div class="d-flex w-100 justify-content-between">
             <h4 class="mb-1">Agencia Patagonia Norte</h4>
             
           </div>
           <p class="mb-1">Santa Cruz 255, CP: 8300, Localidad: Neuquén Capital</p>
           
-        </a>
-        <a href="#" class="list-group-item list-group-item-action agencia">
+        </div>
+        <div  class="list-group-item list-group-item-action agencia" onclick="cambioAgencia(this)" id="aCentro">
           <div class="d-flex w-100 justify-content-between">
             <h4 class="mb-1">Agencia Centro</h4>
             
           </div>
           <p class="mb-1">La Plata 1557, CP: 1250, Localidad: Boedo</p>
           
-        </a>
-        <a href="#" class="list-group-item list-group-item-action agencia">
+        </div>
+        <div  class="list-group-item list-group-item-action agencia" onclick="cambioAgencia(this)" id="aCuyo">
           <div class="d-flex w-100 justify-content-between">
             <h4 class="mb-1">Agencia Cuyo</h4>
             
           </div>
-          <p class="mb-1">Av. Mitre 864, Piso: PB -Edificio ZOD, CP: 5500, Localidad: Mendoza Capita</p>
+          <p class="mb-1">Av. Mitre 864, Piso: PB -Edificio ZOD, CP: 5500, Localidad: Mendoza Capital</p>
           
-        </a>
+        </div>
       </div>
     </div>
     <div class="col-11 col-lg-8 m-2 rounded overflow-hidden">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.8465855487065!2d-67.99762833041119!3d-38.93800145508522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a314ae367d051%3A0x195b10b13cff95dd!2sMeopp%20ART%20Mutual!5e0!3m2!1ses!2sar!4v1692696352144!5m2!1ses!2sar" width="100%" height="550px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.8465855487065!2d-67.99762833041119!3d-38.93800145508522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a314ae367d051%3A0x195b10b13cff95dd!2sMeopp%20ART%20Mutual!5e0!3m2!1ses!2sar!4v1692696352144!5m2!1ses!2sar" width="100%" height="550px" style="border:0;" allowfullscreen="true"  referrerpolicy="no-referrer-when-downgrade" id="central"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173.6405709165682!2d-67.49730646719863!3d-45.866324972162815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbde454fa145a0021%3A0x9e42b77e030879d8!2sAlvear%20437%2C%20U9002EAB%20Comodoro%20Rivadavia%2C%20Chubut!5e0!3m2!1ses!2sar!4v1693064824355!5m2!1ses!2sar" width="100%" height="550px" style="border:0;" allowfullscreen="true"  referrerpolicy="no-referrer-when-downgrade" id="sur"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d326.1118612140553!2d-68.05388258207857!3d-38.957875820697964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a322b56eaf375%3A0x742b19b2fab7f22f!2sSindicato%20Petroleros%20Privados%20-%20Edificio%20Meopp!5e0!3m2!1ses!2sar!4v1693065016490!5m2!1ses!2sar" width="100%" height="550px" style="border:0;" allowfullscreen="true"  referrerpolicy="no-referrer-when-downgrade" id="norte"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217.37902105049426!2d-58.42572759984002!3d-34.63309015245952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35564fd36c4f05%3A0x325b60a7bd950eba!2sSINDICATO%20DE%20PETR%C3%93LEO%20Y%20GAS%20PRIVADO%20R%C3%8DO%20NEGRO%2C%20NEUQU%C3%89N%20Y%20LA%20PAMPA!5e0!3m2!1ses!2sar!4v1693063099022!5m2!1ses!2sar" width="100%" height="550px" style="border:0;" allowfullscreen="true"  referrerpolicy="no-referrer-when-downgrade" id="centro"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418.77795154263083!2d-68.84512748044368!3d-32.8922556127456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091a98720e3f%3A0xea8dc31abe0f0a95!2sAv.%20Bartolom%C3%A9%20Mitre%20864%2C%20M5500BZA%20Mendoza!5e0!3m2!1ses!2sar!4v1693065169134!5m2!1ses!2sar" width="100%" height="550px" style="border:0;" allowfullscreen="true"  referrerpolicy="no-referrer-when-downgrade" id="cuyo"></iframe>
     </div>
   </div>
 </section>
