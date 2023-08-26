@@ -71,12 +71,13 @@ border-radius: 5px;
 }
 
 .footerNav{
-    background: linear-gradient(-45deg, #141414c9, #525252bd, #242424b0);
+    background: linear-gradient(-45deg, #141414af, #525252b2, #242424cb, #525252e3);
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
     /* background-color: rgba(32, 32, 32, 0.822); */
     border-radius: 5px;
 }
+
 .btn-secondary:hover{
     background-color: #47AD49;
     border: #47AD49;
@@ -84,9 +85,9 @@ border-radius: 5px;
 }
 
 .bg-dark{
-    background: linear-gradient(-45deg, #141414c9, #525252bd, #242424b0);
+    background: linear-gradient(-45deg,#141414af, #525252b2, #242424cb, #525252e3);
 	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	animation: gradient 20s ease infinite;
     background-color: rgba(32, 32, 32, 0.822) !important;
 }
 
