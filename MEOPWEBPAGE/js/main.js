@@ -1,29 +1,28 @@
+
+//--------------SELECCION DE AGENCIAS----------------//
+
+
 function cambioAgencia(boton){
-    let agencia;
-    const aCentral= document.getElementById("central").style.display="none";
-    const aSur= document.getElementById("sur").style.display="none";
-    const aNorte= document.getElementById("norte").style.display="none";
-    const aCentro= document.getElementById("centro").style.display="none";
-    const aCuyo= document.getElementById("cuyo").style.display="none";
+    
     switch (boton.id) {
         case "aCentral":
-            agencia= document.getElementById("central").style.display="flex";
+            const agencia1= document.getElementById("agenciasFrame").src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.8465855487065!2d-67.99762833041119!3d-38.93800145508522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a314ae367d051%3A0x195b10b13cff95dd!2sMeopp%20ART%20Mutual!5e0!3m2!1ses!2sar!4v1692696352144!5m2!1ses!2sar";
 
         break;
         case "aSur":
-            agencia= document.getElementById("sur").style.display="flex";
+            const agencia2= document.getElementById("agenciasFrame").src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173.6405709165682!2d-67.49730646719863!3d-45.866324972162815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbde454fa145a0021%3A0x9e42b77e030879d8!2sAlvear%20437%2C%20U9002EAB%20Comodoro%20Rivadavia%2C%20Chubut!5e0!3m2!1ses!2sar!4v1693064824355!5m2!1ses!2sar";
 
         break;
         case "aNorte":
-            agencia= document.getElementById("norte").style.display="flex";
+            const agencia3= document.getElementById("agenciasFrame").src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d326.1118612140553!2d-68.05388258207857!3d-38.957875820697964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a322b56eaf375%3A0x742b19b2fab7f22f!2sSindicato%20Petroleros%20Privados%20-%20Edificio%20Meopp!5e0!3m2!1ses!2sar!4v1693065016490!5m2!1ses!2sar";
 
         break;
         case "aCentro":
-            agencia= document.getElementById("centro").style.display="flex";
+            const agencia4= document.getElementById("agenciasFrame").src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217.37902105049426!2d-58.42572759984002!3d-34.63309015245952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35564fd36c4f05%3A0x325b60a7bd950eba!2sSINDICATO%20DE%20PETR%C3%93LEO%20Y%20GAS%20PRIVADO%20R%C3%8DO%20NEGRO%2C%20NEUQU%C3%89N%20Y%20LA%20PAMPA!5e0!3m2!1ses!2sar!4v1693063099022!5m2!1ses!2sar";
             
         break;
         case "aCuyo":
-            agencia= document.getElementById("cuyo").style.display="flex";
+            const agencia5= document.getElementById("agenciasFrame").src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418.77795154263083!2d-68.84512748044368!3d-32.8922556127456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091a98720e3f%3A0xea8dc31abe0f0a95!2sAv.%20Bartolom%C3%A9%20Mitre%20864%2C%20M5500BZA%20Mendoza!5e0!3m2!1ses!2sar!4v1693065169134!5m2!1ses!2sar";
             
         break;
 
@@ -32,3 +31,4 @@ function cambioAgencia(boton){
             break;
     }
 }
+
