@@ -455,30 +455,37 @@
             <h4>Descargue la Credencial Digital</h4>
             <form class="w-lg-50 w-100">
               <div class="mb-3 m-1">
+                <label for="cuil" class="form-label">CUIL del Trabajador</label>
+                <input
+                  type="text"
+                  class="form-control text-center"
+                  id="cuil"
+                  name="cuil"
+                  maxlength="11"
+                  required
+                  placeholder="20354957694"
+
+                />
+                <div id="cuilHelp" class="form-text">
+                  Ingrese el CUIL sin guiones ni espacios intermedios.
+                </div>
+              </div>
+              <div class="mb-3 m-1">
                 <label for="trabajadorNombre" class="form-label"
                   >Nombre y Apellido</label
                 >
                 <input
                   type="text"
                   class="form-control text-center"
-                  id="trabajadorNombre"
-                  required
+                  id="nombre_completo"
+                  name="nombre_completo"
+                  readonly
+                  maxlength="11"
                   placeholder="Juan Perez"
-                />
-              </div>
-              <div class="mb-3 m-1">
-                <label for="cuil" class="form-label">CUIL del Trabajador</label>
-                <input
-                  type="number"
-                  class="form-control text-center"
-                  id="cuil"
                   required
-                  placeholder="20354957694"
                 />
-                <div id="cuilHelp" class="form-text">
-                  Ingrese el CUIL sin guiones ni espacios intermedios.
-                </div>
               </div>
+              
 
               <button type="submit" class="btn btn-success">Descargar</button>
             </form>
@@ -546,12 +553,12 @@
               </div>
               <div class="form-floating m-1">
                 <label for="razon_social" class="form-label">Nombre y Apellido</label>
-                <input type="text" class="form-control text-center" id="razon_social" placeholder="Nombre y Apellido" disabled>
+                <input type="text" class="form-control text-center" id="razon_social" placeholder="Nombre y Apellido" readonly >
                 
               </div>
               <div class="form-floating m-1">
                 <label for="tipo_usuario" class="form-label">Tipo de Usuario</label>
-                <input type="text" class="form-control text-center" id="tipo_usuario" placeholder="Tipo de Usuario" disabled>
+                <input type="text" class="form-control text-center" id="tipo_usuario" placeholder="Tipo de Usuario" readonly>
                 
               </div>
           
