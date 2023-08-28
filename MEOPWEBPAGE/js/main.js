@@ -12,6 +12,9 @@ function ocultarTodo() {
   const trabajadorSeccion = (document.getElementById(
     "trabajadorSeccion"
   ).style.display = "none");
+  const loginSeccion = (document.getElementById(
+    "loginSeccion"
+  ).style.display = "none");
 }
 
 //--------------MOSTRAR MAIN-----------------------//
@@ -85,6 +88,8 @@ function mostrarTrabajador() {
 
 function mostrarLogin() {
   ocultarTodo();
-
+  const loginSeccion = (document.getElementById(
+    "loginSeccion"
+  ).style.display = "block");
   
 }
