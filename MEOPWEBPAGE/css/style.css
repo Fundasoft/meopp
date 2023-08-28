@@ -5,18 +5,49 @@
 
 }
 
-body{
-    background-image:url("../images/fondo.png");
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.arriba{
+    height:fit-content;
+    z-index: 0;
+
+    background: linear-gradient(
+    0deg,
+    rgba(241, 241, 241, 0.603) 3%,
+    rgba(190, 190, 190, 0.747) 38%,
+    rgba(141, 141, 141, 0.651) 68%
     
+  );
+  animation: gradient 2s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+
+
+  }
+  @keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+
+}
+
+.imgback{
+  height:fit-content;
+  z-index: -2;
+    background-image:url("../images/fondo.png");
     background-size:cover;
     background-position:center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-
-body::-webkit-scrollbar{
-    display: none;
-  }
 
 .nav-item:hover{
 background-color: #47AD49;
@@ -31,7 +62,7 @@ transform: scale(1.05);
     
 }
 #logoNav{
-    background-color: rgba(255, 255, 255, 0.774);
+    background-color: rgb(255, 255, 255);
 }
 
 .trabajadorStyle{
@@ -55,9 +86,11 @@ h5{
     background: linear-gradient(-45deg, #05916e, #27c564, #109145);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
-/* background-color: #2fca31ad; */
-box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
-transition: all 0.5s;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+    /* background-color: rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 6px rgba(44, 43, 43, 0.7); */
 }
 .briefInfo:hover{
 transform: scale(1.07);
@@ -76,11 +109,14 @@ border-radius: 5px;
 }
 
 .footerNav{
-    background: linear-gradient(-45deg, #141414af, #525252b2, #242424cb, #525252e3);
+    /* background: linear-gradient(-45deg, #141414af, #525252b2, #242424cb, #525252e3);
 	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+	animation: gradient 5s ease infinite; */
     /* background-color: rgba(32, 32, 32, 0.822); */
     border-radius: 5px;
+    background-color: rgba(83, 83, 83, 0.651);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 6px rgba(44, 43, 43, 0.7);
 }
 
 .btn-secondary:hover{
@@ -90,10 +126,11 @@ border-radius: 5px;
 }
 
 .bg-dark{
-    background: linear-gradient(-45deg,#141414af, #525252b2, #242424cb, #525252e3);
+    background: linear-gradient(-45deg,#666666af, #525252b2, #464646e3, #525252e3);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
     background-color: rgba(32, 32, 32, 0.822) !important;
+    
 }
 
 .agencia:hover{

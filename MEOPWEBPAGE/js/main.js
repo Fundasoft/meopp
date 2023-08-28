@@ -26,6 +26,8 @@ function mostrarMain(){
     const brieftarjetas = (document.getElementById(
         "tarjetasSeccion"
       ).style.display = "block");
+      const carousel = (document.getElementById("carousel").style.display =
+    "block");
     const agenciasSeccion = (document.getElementById("agencias").style.display =
     "block");
   const briefSeccion = (document.getElementById("briefSeccion").style.display =
