@@ -15,6 +15,9 @@ function ocultarTodo() {
   const loginSeccion = (document.getElementById(
     "loginSeccion"
   ).style.display = "none");
+  const newUsuarioSeccion = (document.getElementById(
+    "newUsuarioSeccion"
+  ).style.display = "none");
 }
 
 //--------------MOSTRAR MAIN-----------------------//
@@ -29,8 +32,8 @@ function mostrarMain(){
     "block");
     const titulo = (document.getElementById("tituloSeccion").innerHTML =
     "Le damos la bienvenida a la web de MEOPP ART MUTUAL.");
-  const descripcion = (document.getElementById("dSeccion").innerHTML =
-    "Ubicación geográfica de Casa Central y Agencias.");
+  const descripcion = document.getElementById("dSeccion").innerHTML =
+  "Aquí encontrará todas nuestras herramientas y la información completa que necesitan nuestros Asociados.";
 }
 
 //--------------MOSTRAR SECCION AGENCIAS----------------//
@@ -91,5 +94,31 @@ function mostrarLogin() {
   const loginSeccion = (document.getElementById(
     "loginSeccion"
   ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+    "Acceso a los asociados.");
+  const descripcion = (document.getElementById("dSeccion").innerHTML =
+    "Ingrese al sistema para visualizar todas las funciones o solicite acceso como Nuevo Usuario.");
   
+}
+
+//-----TOGGLE VISIBILIDAD PASSWORD-------///
+function verPassword(element){
+  const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        const type = password.getAttribute('type') === 'password' ?'text' : 'password';
+            password.setAttribute('type', type);
+            // Toggle the eye and bi-eye icon
+  element.classList.toggle('bi-eye');
+}
+
+//---------SECCION NUEVO USUARIO----------//
+function mostrarNewUsuario(){
+  ocultarTodo();
+  const loginSeccion = (document.getElementById(
+    "newUsuarioSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+    "Nuevo Usuario.");
+  const descripcion = (document.getElementById("dSeccion").innerHTML =
+    "Complete los campos y obtenga un usuario y contraseña para operar con nuestra web. (Para Alta de Usuarios u olvido de clave. )");
 }

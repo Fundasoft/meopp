@@ -102,6 +102,9 @@ border-radius: 5px;
     color: #05916e;
 }
 
+i{
+    cursor: pointer;
+}
 .card-text{
     margin: 0 !important;
 }
