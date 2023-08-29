@@ -80,6 +80,7 @@ h5{
 
 .tarjetas:hover{
     transform: scale(1.02);
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
 }
 
 .briefInfo{
