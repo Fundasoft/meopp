@@ -42,7 +42,7 @@ body::-webkit-scrollbar{
     box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
 }
 .nav-item:hover{
-background-color: #47AD49;
+background-color: #28b964;
 border-radius: 5px;
 transform: scale(1.05);
 }
@@ -112,9 +112,10 @@ border-radius: 5px;
 	animation: gradient 5s ease infinite; */
     /* background-color: rgba(32, 32, 32, 0.822); */
     border-radius: 5px;
-    background-color: rgba(83, 83, 83, 0.651);
-    backdrop-filter: blur(10px);
-    box-shadow: 4px 4px 6px rgba(44, 43, 43, 0.7);
+    background: linear-gradient(-45deg,#666666af, #525252b2, #464646e3, #525252e3);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+    background-color: rgba(32, 32, 32, 0.822) !important;
 }
 
 .btn-secondary:hover{
