@@ -1,5 +1,6 @@
 mostrarMain();
 
+
 //-----OCULTAR TODO PREVIO MOSTRAR SECCION-------//
 function ocultarTodo() {
   const brieftarjetas = (document.getElementById(
