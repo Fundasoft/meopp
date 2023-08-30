@@ -19,6 +19,9 @@ function ocultarTodo() {
   const newUsuarioSeccion = (document.getElementById(
     "newUsuarioSeccion"
   ).style.display = "none");
+  const institucionalSeccion = (document.getElementById(
+    "institucionalSeccion"
+  ).style.display = "none");
 }
 
 //--------------MOSTRAR MAIN-----------------------//
@@ -124,4 +127,16 @@ function mostrarNewUsuario(){
     "Nuevo Usuario.");
   const descripcion = (document.getElementById("dSeccion").innerHTML =
     "Complete los campos y obtenga un usuario y contraseña para operar con nuestra web. (Para Alta de Usuarios u olvido de clave. )");
+}
+
+//--------------MOSTRAR SECCION INSTITUCIONAL----------------//
+function mostrarInstitucional(){
+  ocultarTodo();
+  const institucionalSeccion = (document.getElementById(
+    "institucionalSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+    "ART MUTUAL DE EMPLEADOS Y OBREROS PETROLEROS PRIVADOS (MEOPP)");
+  const descripcion = document.getElementById("dSeccion").innerHTML =
+  "Conozca nuestros valores y servicios.";
 }

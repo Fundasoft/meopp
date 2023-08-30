@@ -75,6 +75,11 @@ h5{
     box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
 }
 
+.feature:hover{
+    transform: scale(1.02);
+    
+}
+
 .briefInfo{
     background: linear-gradient(-45deg, #05916e, #27c564, #109145);
 	background-size: 400% 400%;
