@@ -309,15 +309,16 @@
                 <h4 class="mb-1">Agencia Central</h4>
               </div>
               <p class="mb-1">
-                Yrigoyen 315 , CP: 8424 , Localidad: Cipolletti
+                Yrigoyen 315 , CP: 8424 <br> Localidad: Cipolletti
               </p>
+              <h4 class="font-weight text-success">Tel:0299-4429320</h4>
             </div>
             <div class="list-group-item list-group-item-action agencia" onclick="cambioAgencia(this)" id="aSur">
               <div class="d-flex w-100 justify-content-between">
                 <h4 class="mb-1">Agencia Patagonia Sur</h4>
               </div>
               <p class="mb-1">
-                Alvear 437, CP: 9000, Localidad: Comodoro Rivadavia
+                Alvear 437, CP: 9000 <br> Localidad: Comodoro Rivadavia
               </p>
             </div>
             <div class="list-group-item list-group-item-action agencia" onclick="cambioAgencia(this)" id="aNorte">
@@ -325,22 +326,23 @@
                 <h4 class="mb-1">Agencia Patagonia Norte</h4>
               </div>
               <p class="mb-1">
-                Santa Cruz 255, CP: 8300, Localidad: Neuquén Capital
+                Santa Cruz 255, CP: 8300 <br> Localidad: Neuquén Capital
               </p>
+              <h4 class="font-weight text-success">Tel:0299-4499300</h4>
             </div>
             <div class="list-group-item list-group-item-action agencia" onclick="cambioAgencia(this)" id="aCentro">
               <div class="d-flex w-100 justify-content-between">
                 <h4 class="mb-1">Agencia Centro</h4>
               </div>
-              <p class="mb-1">La Plata 1557, CP: 1250, Localidad: Boedo</p>
+              <p class="mb-1">La Plata 1557, CP: 1250 <br> Localidad: Boedo</p>
+              <h4 class="font-weight text-success">Tel:01149094900</h4>
             </div>
             <div class="list-group-item list-group-item-action agencia" onclick="cambioAgencia(this)" id="aCuyo">
               <div class="d-flex w-100 justify-content-between">
                 <h4 class="mb-1">Agencia Cuyo</h4>
               </div>
               <p class="mb-1">
-                Av. Mitre 864, Piso: PB -Edificio ZOD, CP: 5500, Localidad:
-                Mendoza Capital
+                Av. Mitre 864, Piso: PB -Edificio ZOD, CP: 5500 <br> Localidad: Mendoza Capital
               </p>
             </div>
           </div>
@@ -349,7 +351,7 @@
         <div class="col-12 col-lg-9 mt-2 m-lg-0 rounded overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.8465855487065!2d-67.99762833041119!3d-38.93800145508522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a314ae367d051%3A0x195b10b13cff95dd!2sMeopp%20ART%20Mutual!5e0!3m2!1ses!2sar!4v1692696352144!5m2!1ses!2sar"
-            style="border: 0; height: 485px" allowfullscreen="true" referrerpolicy="no-referrer-when-downgrade"
+            style="border: 0; height: 640px" allowfullscreen="true" referrerpolicy="no-referrer-when-downgrade"
             class="w-100 rounded" id="agenciasFrame"></iframe>
         </div>
       </div>
@@ -667,7 +669,8 @@
             <div class="row">
               <div class="col-6 mt-3">
                 <label for="DNI:">DNI:</label>
-                <input type="number" class="form-control" maxlength="8" id="dni" placeholder="DNI" name="dni" required="" />
+                <input type="number" class="form-control" maxlength="8" id="dni" placeholder="DNI" name="dni"
+                  required="" />
               </div>
               <div class="col-6 mt-3">
                 <label for="CUIT:">CUIT:</label>
@@ -684,7 +687,7 @@
                 <input type="number" class="form-control" required="required" id="telefono_lab"
                   placeholder="Teléfono Laboral" name="telefono_lab" />
               </div>
-              
+
             </div>
             <div class="row">
               <div class="col-lg-6 mt-3 col-12">
@@ -697,7 +700,7 @@
                 <input type="Email" class="form-control" id="email" name="email" required="" placeholder="Email"
                   onkeypress="" />
               </div>
-  
+
               <div class="col-lg-6 mt-3 col-12">
                 <label for="Tema de Consulta">Tema de Consulta:</label>
                 <select name="tema_consulta" class="form-control" id="tema_consulta" required="required">
@@ -729,8 +732,8 @@
                 </button>
               </div>
             </div>
-            
-            <div class="col-12 p-4 text-center" >
+
+            <div class="col-12 p-4 text-center">
               <span>
                 El campo CUIT será obligatorio en el caso de que el
                 consultante/reclamante sea empleador.
@@ -745,6 +748,57 @@
       </div>
     </section>
 
+    <!--SECCION MODAL CONTACTO-->
+    <section>
+      
+      <!-- MODAL -->
+      <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Números de Emergencia</h1>
+              
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12 d-flex flex-column  p-1 numeros">
+                  <a href="tel:0800-222-2787" target="_blank" class="text-decoration-none">
+                    <h4 class="text-center text-black">
+                      Centro de Atención <br />
+                      (24hs)
+                    </h4>
+                    <h4 class="text-center fs-4 text-success">0800-222-2787</h4>
+                  </a>
+                </div>
+                <div class="col-12 d-flex flex-column  p-1 numeros">
+                  <a href="tel:0800-333-2782" target="_blank" class="text-decoration-none">
+                    <h4 class="text-center text-black">
+                      Atención al Asociado <br />
+                      (8 a 16 hs)
+                    </h4>
+                    <h4 class="text-center fs-4 text-success">0800-333-2782</h4>
+                  </a>
+                </div>
+                <div class="col-12 d-flex flex-column  p-1 numeros">
+                  <a href="https://wa.me/1139889193" target="_blank" class="text-decoration-none">
+                    <h4 class="text-center text-black">
+                      Whatsapp de Asociado <br />
+                      (8 a 16hs)
+                    </h4>
+                    <h4 class="text-center fs-4 text-success">11-39889193</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- SECCION FOOTER -->
     <section class="container-fluid" id="footer">
       <footer class="row justify-content-center footerNav m-2 p-2">
@@ -757,11 +811,11 @@
             <li class="nav-item" onclick="mostrarMain()">
               <a href="#" class="nav-link px-2 text-white">Home</a>
             </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-white" data-bs-toggle="modal" data-bs-target="#modalContacto">Contacto</a>
+            </li>
             <li class="nav-item" onclick="mostrarAgencias()">
               <a href="#" class="nav-link px-2 text-white">Agencias</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-white">Contacto</a>
             </li>
           </ul>
         </div>
