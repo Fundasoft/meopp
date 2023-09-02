@@ -22,6 +22,9 @@ function ocultarTodo() {
   const institucionalSeccion = (document.getElementById(
     "institucionalSeccion"
   ).style.display = "none");
+  const consultasSeccion = (document.getElementById(
+    "consultasSeccion"
+  ).style.display = "none");
 }
 
 //--------------MOSTRAR MAIN-----------------------//
@@ -139,4 +142,16 @@ function mostrarInstitucional(){
     "ART MUTUAL DE EMPLEADOS Y OBREROS PETROLEROS PRIVADOS (MEOPP)");
   const descripcion = document.getElementById("dSeccion").innerHTML =
   "Conozca nuestros valores y servicios.";
+}
+
+//--------------MOSTRAR SECCION CONSULTAS Y RECLAMOS----------------//
+function mostrarConsultas(){
+  ocultarTodo();
+  const consultasSeccion = (document.getElementById(
+    "consultasSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+  "Quejas, Consultas y Reclamos");
+const descripcion = document.getElementById("dSeccion").innerHTML =
+"Complete los campos y envíe su queja, consulta o reclamo.";
 }
