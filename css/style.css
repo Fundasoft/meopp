@@ -81,18 +81,25 @@ h5{
 }
 
 .briefInfo{
-    background: linear-gradient(-45deg, #05916e, #27c564, #109145);
+    
+    
+    background: linear-gradient(-45deg, #2b2b2b9d, #7979799c, #313131bb);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
-    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+.imagenBack:hover{
+transform: scale(1.03);
+box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.397);
+}
+
+.imagenBack{
+    height: 200px;
+    background-image: url("../images/oficinas.jpeg");
     transition: all 0.5s;
-    /* background-color: rgba(255, 255, 255, 0.575);
-    backdrop-filter: blur(10px);
-    box-shadow: 4px 4px 6px rgba(44, 43, 43, 0.7); */
 }
-.briefInfo:hover{
-transform: scale(1.07);
-}
+
+
 
 .numeros:hover{
 background-color: rgb(255, 255, 255);

@@ -25,6 +25,30 @@ function ocultarTodo() {
   const consultasSeccion = (document.getElementById(
     "consultasSeccion"
   ).style.display = "none");
+  const prestadoresSeccion = (document.getElementById(
+    "prestadoresSeccion"
+  ).style.display = "none");
+  const accidenteSeccion = (document.getElementById(
+    "accidenteSeccion"
+  ).style.display = "none");
+  const prevencionSeccion = (document.getElementById(
+    "prevencionSeccion"
+  ).style.display = "none");
+  const formulariosSeccion = (document.getElementById(
+    "formulariosSeccion"
+  ).style.display = "none");
+  const cotizacionesSeccion = (document.getElementById(
+    "cotizacionesSeccion"
+  ).style.display = "none");
+  const preguntasSeccion = (document.getElementById(
+    "preguntasSeccion"
+  ).style.display = "none");
+  const normativaSeccion = (document.getElementById(
+    "normativaSeccion"
+  ).style.display = "none");
+  const formacionSeccion = (document.getElementById(
+    "formacionSeccion"
+  ).style.display = "none");
 }
 
 //--------------MOSTRAR MAIN-----------------------//
@@ -154,4 +178,127 @@ function mostrarConsultas(){
   "Quejas, Consultas y Reclamos");
 const descripcion = document.getElementById("dSeccion").innerHTML =
 "Complete los campos y envíe su queja, consulta o reclamo.";
+}
+
+//--------------CAMBIO DE CATEGORIAS EN FORMULARIO DE CONSULTA----------------//
+function cambiarOptions(cambio){
+switch (cambio.value) {
+  case "6":
+    const categoria1=document.getElementById("categoria").innerHTML="<option value=''>--SELECCIONAR--</option><option value='21'>Exámenes Periódicos</option>";
+    break;
+  case "5":
+    const categoria2=document.getElementById("categoria").innerHTML="<option value=''>--SELECCIONAR--</option><option value='18'>Alcance de la Cobertura</option><option value='20'>Otros</option><option value='19'>Presentación de Documentos</option><option value='17'>Tarifas</option>";
+    break;
+    case "4":
+    const categoria3=document.getElementById("categoria").innerHTML="<option value=''>--SELECCIONAR--</option><option value='16'>Otros</option><option value='15'>Presentación de Documentos</option><option value='14'>Visitas a Establecimientos</option>";
+    break;
+    case "3":
+    const categoria4=document.getElementById("categoria").innerHTML="<option value=''>--SELECCIONAR--</option><option value='13'>Otros</option><option value='12'>Solicitud de documentación para trámites</option><option value='11'>Turnos</option>";
+    break;
+    case "2":
+    const categoria5=document.getElementById("categoria").innerHTML="<option value=''>--SELECCIONAR--</option><option value='10'>Otros</option><option value='9'>Pago de incapacidades</option><option value='8'>Pago directo de ILT</option><option value='7'>Reintegros de ILT</option>";
+    break;
+    case "1":
+    const categoria6=document.getElementById("categoria").innerHTML="<option value=''>--SELECCIONAR--</option><option value='2'>Demora de Prestaciones</option><option value='6'>Otros</option><option value='5'>Reintegros de gastos</option><option value='4'>Solicitud de historia clínica</option><option value='1'>Traslado</option><option value='3'>Turno</option>";
+    break;
+  default:
+    const categoria=document.getElementById("categoria").innerHTML="<option value=''>--SELECCIONAR--</option>";
+    break;
+}
+}
+
+//----------MOSTRAR SECCION PRESTADORES------------//
+function mostrarPrestadores(){
+  ocultarTodo();
+  const prestadoresSeccion = (document.getElementById(
+    "prestadoresSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+  "Cartilla de Prestadores");
+const descripcion = document.getElementById("dSeccion").innerHTML =
+"Consulte nuestra Cartilla de profesionales y prestadores más cercanos a su zona.";
+}
+
+//----------MOSTRAR SECCION INDICACIONES FRENTE ACCIDENTE------------//
+function mostrarAccidente(){
+  ocultarTodo();
+  const accidenteSeccion = (document.getElementById(
+    "accidenteSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+  "Indicaciones en caso de Accidente");
+const descripcion = document.getElementById("dSeccion").innerHTML =
+"Sr. Empleador en caso de un accidente siga estas instrucciones.";
+}
+
+//----------MOSTRAR SECCION PREVENCION DE FRAUDES------------//
+function mostrarPrevencion(){
+  ocultarTodo();
+  const prevencionSeccion = (document.getElementById(
+    "prevencionSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+  "Prevención de Fraudes en Riesgos del Trabajo.");
+const descripcion = document.getElementById("dSeccion").innerHTML =
+"La SRT brinda asesoramiento jurídico y servicio de patrocinio gratuito. ¡Estamos para asesorarte y asistirte Gracias por confiar en MEOPP ART MUTUAL!";
+}
+
+//----------MOSTRAR SECCION DESCARGA DE FORMULARIOS------------//
+function mostrarFormularios(){
+  ocultarTodo();
+  const formulariosSeccion = (document.getElementById(
+    "formulariosSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+  "FORMULARIOS.");
+const descripcion = document.getElementById("dSeccion").innerHTML =
+"Consulte On-Line y descargue los formularios específicos que le soliciten.";
+}
+
+//----------MOSTRAR SECCION COTIZACIONES Y AFILIACIONES------------//
+function mostrarCotizaciones(){
+  ocultarTodo();
+  const cotizacionesSeccion = (document.getElementById(
+    "cotizacionesSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+  "Pedido de Cotización y Afiliaciones.");
+const descripcion = document.getElementById("dSeccion").innerHTML =
+"Cómo tramitar un traspaso a MEOPP ART MUTUAL. Nuevo servicio de póliza digital (RES 46/2018 SRT).";
+}
+
+//----------MOSTRAR SECCION PREGUNTAS FRECUENTES------------//
+function mostrarPreguntas(){
+  ocultarTodo();
+  const preguntasSeccion = (document.getElementById(
+    "preguntasSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+  "Preguntas Frecuentes.");
+const descripcion = document.getElementById("dSeccion").innerHTML =
+"Consulte todas sus dudas sobre el mundo de la ART.";
+}
+
+//----------MOSTRAR SECCION NORMATIVAS------------//
+function mostrarNormativa(){
+  ocultarTodo();
+  const normativaSeccion = (document.getElementById(
+    "normativaSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+  "Normativas.");
+const descripcion = document.getElementById("dSeccion").innerHTML =
+"Consulte On-Line los textos de las leyes y resolución que regulan la actividad de Riesgos del Trabajo.";
+}
+
+//----------MOSTRAR SECCION CENTRO DE FORMACIÓN------------//
+function mostrarFormacion(){
+  ocultarTodo();
+  const formacionSeccion = (document.getElementById(
+    "formacionSeccion"
+  ).style.display = "block");
+  const titulo = (document.getElementById("tituloSeccion").innerHTML =
+  "Centro de Formación.");
+const descripcion = document.getElementById("dSeccion").innerHTML =
+"Centro de Formación On-Line de ART MUTUAL. Esta sección ha sido creada para que las empresas puedan seleccionar el material que necesita su personal para mantenerse actualizado.";
 }
