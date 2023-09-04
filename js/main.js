@@ -3,7 +3,7 @@ mostrarMain();
 
 //-----OCULTAR TODO PREVIO MOSTRAR SECCION-------//
 function ocultarTodo() {
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/oficinas.jpeg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/oficinas.jpeg')";
   const brieftarjetas = (document.getElementById(
     "tarjetasSeccion"
   ).style.display = "none");
