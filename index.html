@@ -88,10 +88,12 @@
                 <a class="nav-link text-center text-white" href="#" onclick="mostrarFormularios()">Formularios</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center text-white" href="#" onclick="mostrarCotizaciones()">Cotizaciones y Afiliaciones</a>
+                <a class="nav-link text-center text-white" href="#" onclick="mostrarCotizaciones()">Cotizaciones y
+                  Afiliaciones</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-center text-white" href="#" onclick="mostrarPreguntas()">Preguntas Frecuentes</a>
+                <a class="nav-link text-center text-white" href="#" onclick="mostrarPreguntas()">Preguntas
+                  Frecuentes</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-center text-white" href="#" onclick="mostrarNormativa()">Normativa</a>
@@ -116,14 +118,14 @@
 
     <section class="container-fluid" id="briefSeccion">
       <div class="row justify-content-center rounded mt-3 p-0 ">
-        <div class="col-11 imagenBack text-white text-center rounded mt-2 mb-2 d-flex flex-column p-0 overflow-hidden" id="infoSeccion">
-          <div class="w-100 h-100 briefInfo p-3 pt-5">
+        <div class="col-11 imagenBack text-white text-center rounded mt-2 mb-2 d-flex flex-column p-0 overflow-hidden"
+          id="infoSeccion">
+          <div class="w-100 h-100 briefInfo p-3 pt-5" id="backGradient">
             <h4 id="tituloSeccion">
               Le damos la bienvenida a la web de MEOPP ART MUTUAL.
             </h4>
             <h5 id="dSeccion">
-              Aquí encontrará todas nuestras herramientas y la información
-              completa que necesitan nuestros Asociados.
+              Aquí encontrará todas nuestras herramientas y la información completa que necesitan nuestros Asociados.
             </h5>
           </div>
         </div>
@@ -158,7 +160,7 @@
                   <div class="card-body text-center">
                     <h4 class="card-title">Consultas y Reclamos</h4>
                     <p class="card-text">
-                      Yrigoyen 315 Cipolletti <br/>
+                      Yrigoyen 315 Cipolletti <br />
                       (CP:8424) Tel:0299-4429320
                     </p>
                     <a href="#" class="btn btn-outline-success mt-2" onclick="mostrarConsultas()">Contactar</a>
@@ -705,7 +707,8 @@
 
               <div class="col-lg-6 mt-3 col-12">
                 <label for="Tema de Consulta">Tema de Consulta:</label>
-                <select name="tema_consulta" class="form-control" id="tema_consulta" required="required" onchange="cambiarOptions(this)">
+                <select name="tema_consulta" class="form-control" id="tema_consulta" required="required"
+                  onchange="cambiarOptions(this)">
                   <option value="">-- SELECCIONAR--</option>
                   <option value="6">Exámenes Periódicos</option>
                   <option value="5">Afiliación y Contratos</option>
@@ -752,17 +755,144 @@
       <div class="row justify-content-center bg-none rounded mt-3 p-4">
         <!-- CONTENIDO DE SECCION -->
         <div class="col-12 col-lg-9 col-md-12 mt-2 m-lg-0 rounded overflow-hidden order-1 p-3 bg-white">
+          <form class="contact-form " id="prestadores" name="prestadores" method="post">
+            <section class="row"> <!-- section -->
+              <div class="col-md-3 mt-3"> Provincia:
+                <select name="id_provincia" id="provincia" name="provincia" required="required" input type="Provincia"
+                  class="form-control " required="" placeholder="Provincia" onkeypress="">
+                  <option value="" selected="">Seleccionar</option>
+                  <option value="TODOS">Todos</option>
+                  <option value="BUENOS AIRES">BUENOS AIRES</option>
+                  <option value="Buenos Aires-GBA">Buenos Aires-GBA</option>
+                  <option value="CAPITAL FEDERAL">CAPITAL FEDERAL</option>
+                  <option value="CATAMARCA">CATAMARCA</option>
+                  <option value="CHACO">CHACO</option>
+                  <option value="CHUBUT">CHUBUT</option>
+                  <option value="CORDOBA">CORDOBA</option>
+                  <option value="CORRIENTES">CORRIENTES</option>
+                  <option value="ENTRE RIOS">ENTRE RIOS</option>
+                  <option value="FORMOSA">FORMOSA</option>
+                  <option value="JUJUY">JUJUY</option>
+                  <option value="LA PAMPA">LA PAMPA</option>
+                  <option value="LA RIOJA">LA RIOJA</option>
+                  <option value="MENDOZA">MENDOZA</option>
+                  <option value="MISIONES">MISIONES</option>
+                  <option value="NACIONAL">NACIONAL</option>
+                  <option value="NEUQUEN">NEUQUEN</option>
+                  <option value="RIO NEGRO">RIO NEGRO</option>
+                  <option value="SALTA">SALTA</option>
+                  <option value="SAN JUAN">SAN JUAN</option>
+                  <option value="SAN LUIS">SAN LUIS</option>
+                  <option value="SANTA CRUZ">SANTA CRUZ</option>
+                  <option value="SANTA FE">SANTA FE</option>
+                  <option value="SANTIAGO DEL ESTERO">SANTIAGO DEL ESTERO</option>
+                  <option value="TIERRA DEL FUEGO">TIERRA DEL FUEGO</option>
+                  <option value="TUCUMAN">TUCUMAN</option>
+                </select>
+              </div>
+              <div class="col-md-3 mt-3">
+                <label for="Localidad">Localidad:</label>
+                <select id="localidad" input type="Localidad" class="form-control" placeholder="Localidad"
+                  name="Localidad" required="" onkeypress="">
+                  <option value="" selected="">Todas</option>
+                </select>
+              </div>
+              <div class="col-md-3 mt-3">
+                <label for="Especialidad">Especialidad:</label>
+                <select id="tipo" name="tipo" input type="Especialidad" class="form-control" placeholder="Especialidad"
+                  required="" onkeypress="">
+                  <option value="" selected="">Todos</option>
+                  &nbsp;
+                </select>
+              </div>
+              <div class="col-md-3 mt-3 d-flex justify-content-center align-items-end">
+                <input name="buscar" button type="button" class="btn btn-primary" value="Consultar"></button>
 
+              </div>
+              <div class="col-12 mt-3 d-flex justify-content-center">
+                <input name="PDF" type="button" value="Imprimir Cartilla" class="listadoPdfPres btn btn-success">
+              </div>
+            </section>
+          </form>
+
+          <div id="resultado">
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SECCION ACCIDENTE -->
     <section class="container-fluid" id="accidenteSeccion">
-      <div class="row justify-content-center bg-none rounded mt-3 p-4">
+      <div class="row justify-content-center bg-none rounded mt-1 p-4">
         <!-- CONTENIDO DE SECCION -->
-        <div class="col-12 col-lg-9 col-md-12 mt-2 m-lg-0 rounded overflow-hidden order-1 p-3 bg-white">
+        <div class="card mt-3 col-12 col-md-9  p-0 overflow-hidden feature">
+          <div class="row g-0 d-flex align-items-center">
+            <div class="col-2">
+              <h1 class="text-center text-success font-weight">1</h1>
+            </div>
+            <div class="col-10">
+              <div class="card-body text-center">
+                <h4 class="card-title text-success">Comuníquese con CECAP (Centro Coordinador de Atención Permanente)
+                </h4>
+                <p class="card-text">
+                  <strong>El accidentado deberá ser derivado a un centro médico de la red de prestadores de ART
+                    MUTUAL.</strong> <br>Para agilizar el traslado y dar aviso del accidente, <strong>comuníquese con
+                    nuestro CECAP</strong> (Centro Coordinador de Atención Permanente) al teléfono
+                  <strong>0800-222-2787</strong> .
+                </p>
+                <a href="tel:0800-222-2787" class="btn btn-outline-success mt-2 d-flex">Llamar al CECAP</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="card mt-3 col-12 col-md-9  p-0 overflow-hidden feature">
+          <div class="row g-0 d-flex align-items-center">
+            <div class="col-2">
+              <h1 class="text-center text-success font-weight">2</h1>
+            </div>
+            <div class="col-10">
+              <div class="card-body text-center">
+                <h4 class="card-title text-success">Seleccione el Prestador Médico (De la red de Prestadores de ART
+                  MUTUAL)</h4>
+                <p class="card-text">
+                  El CECAP le indicará un centro médico de la red de prestadores de ART MUTUAL MEOPP más cercano a su
+                  zona y se encargará de coordinar el traslado si fuese necesario.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-3 col-12 col-md-9  p-0 overflow-hidden feature">
+          <div class="row g-0 d-flex align-items-center">
+            <div class="col-2">
+              <h1 class="text-center text-success font-weight">3</h1>
+            </div>
+            <div class="col-10">
+              <div class="card-body text-center">
+                <h4 class="card-title text-success">Envíe la Denuncia del Siniestro (ART MUTUAL MEOPP)</h4>
+                <p class="card-text">
+                  Dentro de las 48 hs. de ocurrido el accidente el Empleador <strong> deberá realizar la denuncia
+                    Administrativa a ART MUTUAL</strong>, para ello puede bajar el formulario de Denuncia de Siniestros
+                  de nuestra WEB, completarlo y enviarlo por mail a <a
+                    href="mailto:siniestros-art@meopp-art.org.ar"><strong>siniestros-art@meopp-art.org.ar</strong></a> .
+                </p>
+                <a href="#" class="btn btn-outline-success mt-2 d-flex" onclick="mostrarFormularios()">Descargar
+                  Formulario</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-9 col-md-12 mt-2 m-lg-2 rounded overflow-hidden p-3 bg-white">
+          <h4>Accidentes In Itinere:</h4>
+          <p class="text-center lh-base">Si el accidentado se halla en condiciones de movilizarse por sus propios
+            medios, el mismo deberá trasladarse para la primera atención a un establecimiento asistencial de la red de
+            prestadores de ART MUTUAL MEOPP (siga los pasos desde el punto 2). <br>
+            Si el accidente fuese grave y el accidentado fue derivado a un prestador público para su primera asistencia,
+            en cuanto el empleador tome conocimiento de lo acontecido, <strong>deberá de proceder siguiendo los pasos
+              desde el punto 1</strong>.</p>
         </div>
       </div>
     </section>
@@ -771,8 +901,152 @@
     <section class="container-fluid" id="prevencionSeccion">
       <div class="row justify-content-center bg-none rounded mt-3 p-4">
         <!-- CONTENIDO DE SECCION -->
-        <div class="col-12 col-lg-9 col-md-12 mt-2 m-lg-0 rounded overflow-hidden order-1 p-3 bg-white">
+        <div class="col-12 col-lg-9 col-md-12 mt-2 m-lg-0 rounded overflow-hidden p-3 bg-white">
+          <h4 class="text-center text-danger">Prevención de Fraudes en Riesgos del Trabajo</h4>
+          <p class="justify">El fraude es un delito penado legal, ética y socialmente, por cuanto causa daños a toda la
+            comunidad. En materia de seguros, se trata de un engaño a una compañía de seguros para obtener un beneficio
+            económico ilegalmente y su impacto incide directamente en los costos de las pólizas, perjudicando a los
+            asegurados. Por eso, es importante que todos seamos parte de la lucha contra esta forma de comportamiento
+            ilegal. <br>Si advertís actos sospechosos, podes comunicarte con nosotros y denunciarlo. Garantizamos la
+            absoluta confidencialidad de la información que brindes. Escribinos a <a
+              href="mailto:prevenciondefraude@meopp-art.org.ar"><strong>prevenciondefraude@meopp-art.org.ar</strong></a>,
+            procurando aportar la mayor cantidad de datos que nos permitan investigar el caso.</p>
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 p-3 d-flex justify-content-center">
+              <img src="images/secciones/PrevenciondeFraude1.png" alt="prevencionDatos" class="img-fluid rounded">
+            </div>
+            <div class="col-12 col-md-6 p-3 d-flex justify-content-center">
+              <img src="images/secciones/PrevenciondeFraude2.png" alt="prevencionDatos" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 col-md-12 mt-2 mt-lg-2 rounded overflow-hidden p-3 bg-white">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed font-weight fs-5" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  Prevención del Fraude. Información importante para empleadores y trabajadores.
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body justify">
+                  En cumplimiento por lo dispuesto en la Res. 38.477, las entidades aseguradoras deben implementar
+                  acciones de disuasión y prevención, alertando a los tomadores y asegurados, sobre posibles actos que
+                  podrían derivar en acciones fraudulentas. En este sentido le solicitamos que tenga en cuenta lo
+                  siguiente:
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="bi bi-caret-right-fill"></i> Nunca deben firmar en blanco
+                      formularios de reclamos o denuncias de
+                      siniestros.</li>
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i class="bi bi-caret-right-fill"></i>Nunca
+                      deben aceptar dinero, o suscribir documentos o acordar
+                      apoderamientos cuyos alcances y efectos no comprendan, como tampoco reconocer hechos que no han
+                      sucedido, ni aceptar la asistencia letrada proporcionada por terceros desconocidos.</li>
+                    <li class="list-group-item"><i class="bi bi-caret-right-fill"></i>El fraude que se dirige contra el
+                      asegurador causa daños a toda la
+                      comunidad, incide en los costos de las primas, y ocurre cuando la gente engaña a la compañía (y/o
+                      al productor asesor de seguros) para cobrar dinero u obtener alguna otra ventaja a la que no tiene
+                      derecho.</li>
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i class="bi bi-caret-right-fill"></i>El
+                      fraude que afecta al asegurador es un delito. La variación,
+                      simulación o tergiversación de circunstancias personales, temporales, objetivas, de causalidad, de
+                      lugar, y la provocación deliberada, o la simulación total o parcial del acaecimiento del
+                      siniestro, son algunas de las formas de fraudes más comunes, lo que lleva a admitirlo como
+                      natural, sin comprender la gravedad que conlleva.
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-caret-right-fill"></i>Las declaraciones falsas o toda
+                      reticencia de circunstancias conocidas
+                      por el asegurado, aun hechas de buena fe, que de ser tomadas en cuenta hubiesen impedido el
+                      contrato o modificado sus condiciones, hacen nulo el contrato, resultando de mayor gravedad las
+                      consecuencias frente a actitudes dolosas o de mala fe.
+                    </li>
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i
+                        class="bi bi-caret-right-fill"></i>Recuerden que pueden ser voluntaria o involuntariamente
+                      implicados en
+                      una maniobra de fraude. Siempre existe el riesgo de que alguna persona con muy malas intenciones
+                      los induzcan a realizar prácticas que están por fuera de la ley.
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-caret-right-fill"></i>Nunca deben avenirse a cooperar en
+                      la realización de una maniobra de fraude.
+                    </li>
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i class="bi bi-caret-right-fill"></i>Nunca
+                      deben facilitar los datos ni el acceso de sus pólizas a terceros cuando ello no se justifique, ni
+                      permitir que se sustituyan o simulen las reales circunstancias personales, temporales, objetivas o
+                      causales, relativas al acaecimiento de un siniestro.
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-caret-right-fill"></i>Deben mantenerse alerta sobre
+                      accidentes repentinos o de extraña modalidad que sufra, especialmente si están involucrados
+                      presuntos afectados en bicicleta o motocicleta.
+                    </li>
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i class="bi bi-caret-right-fill"></i>Deben
+                      procurar obtener datos de testigos reales y documentar, acorde a sus posibilidades, las
+                      circunstancias del siniestro, mediante fotografías, filmaciones, etc. para evitar que aquellas
+                      sean distorsionadas en su contra.
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-caret-right-fill"></i>Siempre deben consultar con su
+                      aseguradora ante cualquier duda o eventualidad y comunicar novedades que surjan.
+                    </li>
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i
+                        class="bi bi-caret-right-fill"></i>Recuerden que deben formular la denuncia del acaecimiento del
+                      siniestro. Procuren formalizar dicha denuncia y que le sea informado el número de siniestro por el
+                      que tramitará internamente en la entidad.
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-caret-right-fill"></i>Tengan presente que sus coberturas
+                      pueden tener limitaciones, en orden a ítems, riesgos o conceptos no cubiertos, en virtud de
+                      franquicias o por la adopción de sistemas personalizados, usualmente conocidos “de scoring”, en
+                      los que la prima se define acorde a mediciones estadísticas respecto de la siniestralidad,
+                      dependiendo de distintas variables personales, del bien asegurado, de su uso y geográficas, que
+                      deben ser respetadas.
+                    </li>
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i class="bi bi-caret-right-fill"></i>Si bien
+                      está permitido asegurar el mismo interés y el mismo riesgo con más de un asegurador, en su caso
+                      tal extremo debe ser notificado a todas las entidades. No es lícito que la indemnización supere el
+                      monto de daño sufrido, como tampoco perseguir el cobro respecto de un siniestro que ya fue
+                      reparado por alguna otra aseguradora.
+                    </li>
+                  </ul>
+                  Si se ha enterado de un posible hecho de fraude o toma conocimiento de situaciones irregulares que
+                  podrían estar relacionadas a una conducta fraudulenta, comuníquese con nosotros vía mail a: <a
+                    href="mailto:prevenciondefraude@meopp-art.org.ar"><strong>prevenciondefraude@meopp-art.org.ar</strong></a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed font-weight fs-5" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo">
+                  Información importante para prevenir fraude en riesgos del trabajo.
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body justify">
+                  ¿Qué tener en cuenta si sufriste un accidente laboral?
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i class="bi bi-caret-right-fill"></i> En primer lugar, saber que la ART está obligada a brindarte todas las prestaciones médicas necesarias para tu recuperación y vos tenés la obligación de cumplir con el tratamiento indicado.
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-caret-right-fill"></i>También, es importante que tengas presente que no es necesaria la intervención de abogados para el cumplimiento de tu tratamiento, por eso, si recibís llamados y/o citaciones de intermediarios ajenos a la ART, es imprescindible que lo comuniques a esta aseguradora.
+                    </li>
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i class="bi bi-caret-right-fill"></i>La Superintendencia de Riesgo de Trabajo (SRT) es el organismo estatal que controla a las aseguradoras para garantizar que se otorguen las prestaciones médico-asistenciales y dinerarias en caso de accidente de trabajo o enfermedades profesionales.
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-caret-right-fill"></i>Recordá que, si recibís una carta documento en tu domicilio y te surgen dudas al respecto, podés comunicarte a <a href="mailto:siniestros-art@meopp-art.org.ar"><strong>siniestros-art@meopp-art.org.ar</strong></a>  o <a href="mailto:contacto@meopp-art.org.ar"><strong>contacto@meopp-art.org.ar</strong></a> para obtener una respuesta inmediata.
+                    </li>
+                    <li class="list-group-item bg-secondary bg-opacity-10"><i class="bi bi-caret-right-fill"></i> En primer lugar, saber que la ART está obligada a brindarte todas las prestaciones médicas necesarias para tu recuperación y vos tenés la obligación de cumplir con el tratamiento indicado.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 col-md-12 mt-2 mt-lg-2 rounded overflow-hidden p-3 bg-white">
+          <h2 class="text-success text-center">¡No pagues de más!</h2>
+          <p class="text-center font-weight"><strong>La SRT brinda asesoramiento jurídico y servicio de patrocinio gratuito.</strong>  <br> Para más información ingresá en: <a href="https://www.argentina.gob.ar/srt/patrocinio-letrado/servicio-patrocinio-letrado">https://www.argentina.gob.ar/srt/patrocinio-letrado/servicio-patrocinio-letrado</a> <br> 
 
+            <strong>¡Estamos para asesorarte y asistirte Gracias por confiar en MEOPP ART MUTUAL!</strong></p>
         </div>
       </div>
     </section>
@@ -782,7 +1056,7 @@
       <div class="row justify-content-center bg-none rounded mt-3 p-4">
         <!-- CONTENIDO DE SECCION -->
         <div class="col-12 col-lg-9 col-md-12 mt-2 m-lg-0 rounded overflow-hidden order-1 p-3 bg-white">
-
+          
         </div>
       </div>
     </section>
@@ -835,7 +1109,7 @@
           <div class="modal-content">
             <div class="modal-header d-flex justify-content-center briefInfo">
               <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Números de Emergencia</h1>
-              
+
             </div>
             <div class="modal-body">
               <div class="row">
@@ -889,7 +1163,8 @@
               <a href="#" class="nav-link px-2 text-white">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-white" data-bs-toggle="modal" data-bs-target="#modalContacto">Contacto</a>
+              <a href="#" class="nav-link px-2 text-white" data-bs-toggle="modal"
+                data-bs-target="#modalContacto">Contacto</a>
             </li>
             <li class="nav-item" onclick="mostrarAgencias()">
               <a href="#" class="nav-link px-2 text-white">Agencias</a>

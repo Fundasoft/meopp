@@ -12,19 +12,10 @@ body::-webkit-scrollbar{
 .arriba{
     height:fit-content;
     z-index: 0;
-
-    background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.89) 3%,
-    rgba(235, 235, 235, 0.63) 38%,
-    rgba(238, 238, 238, 0.212) 68%
-    
-  );
-  animation: gradient 10s ease infinite;
-  background-size: 400% 400%;
-  background-attachment: fixed;
-
-
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0.89) 3%,rgba(235, 235, 235, 0.63) 38%,rgba(238, 238, 238, 0.212) 68%);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
 }
 
 .imgback{
@@ -81,9 +72,7 @@ h5{
 }
 
 .briefInfo{
-    
-    
-    background: linear-gradient(-45deg, #2b2b2b9d, #7979799c, #313131bb, #7979799c);
+    background: linear-gradient(-45deg, #2b2b2b9d, #5f5f5f9c, #313131bb, #3d3d3d6b);
 	background-size: 400% 200%;
 	animation: gradient 10s ease infinite;
     backdrop-filter: blur(3px);
@@ -94,7 +83,7 @@ box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.397);
 }
 
 .imagenBack{
-    height: 200px;
+    height: 180px;
     background-image: url("../images/briefInfo/oficinas.jpeg");
     transition: all 0.5s;
     background-size: cover;

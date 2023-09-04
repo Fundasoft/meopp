@@ -3,6 +3,7 @@ mostrarMain();
 
 //-----OCULTAR TODO PREVIO MOSTRAR SECCION-------//
 function ocultarTodo() {
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/oficinas.jpeg')";
   const brieftarjetas = (document.getElementById(
     "tarjetasSeccion"
   ).style.display = "none");
@@ -147,6 +148,7 @@ function verPassword(element){
 //---------SECCION NUEVO USUARIO----------//
 function mostrarNewUsuario(){
   ocultarTodo();
+
   const loginSeccion = (document.getElementById(
     "newUsuarioSeccion"
   ).style.display = "block");
@@ -171,6 +173,7 @@ function mostrarInstitucional(){
 //--------------MOSTRAR SECCION CONSULTAS Y RECLAMOS----------------//
 function mostrarConsultas(){
   ocultarTodo();
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/consultasReclamos.png')";
   const consultasSeccion = (document.getElementById(
     "consultasSeccion"
   ).style.display = "block");
@@ -210,6 +213,7 @@ switch (cambio.value) {
 //----------MOSTRAR SECCION PRESTADORES------------//
 function mostrarPrestadores(){
   ocultarTodo();
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/prestadoresBrief.png')";
   const prestadoresSeccion = (document.getElementById(
     "prestadoresSeccion"
   ).style.display = "block");
@@ -222,6 +226,7 @@ const descripcion = document.getElementById("dSeccion").innerHTML =
 //----------MOSTRAR SECCION INDICACIONES FRENTE ACCIDENTE------------//
 function mostrarAccidente(){
   ocultarTodo();
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/accidente.png')";
   const accidenteSeccion = (document.getElementById(
     "accidenteSeccion"
   ).style.display = "block");
@@ -234,6 +239,7 @@ const descripcion = document.getElementById("dSeccion").innerHTML =
 //----------MOSTRAR SECCION PREVENCION DE FRAUDES------------//
 function mostrarPrevencion(){
   ocultarTodo();
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/prevencion.png')";
   const prevencionSeccion = (document.getElementById(
     "prevencionSeccion"
   ).style.display = "block");
