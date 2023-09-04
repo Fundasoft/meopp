@@ -439,7 +439,7 @@ function mostrarNormativaSeccion(boton){
 //----------MOSTRAR SECCION CENTRO DE FORMACIÓN------------//
 function mostrarFormacion(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/Capacitacion.jpg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/Capacitacion.jpg')";
   const formacionSeccion = (document.getElementById(
     "formacionSeccion"
   ).style.display = "block");
