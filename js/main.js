@@ -68,6 +68,24 @@ function ocultarTodo() {
   const formsExamenes = (document.getElementById(
     "formsExamenes"
   ).style.display = "none");
+  const normsRiesgos = (document.getElementById(
+    "normsRiesgos"
+  ).style.display = "none");
+  const normsHigiene = (document.getElementById(
+    "normsHigiene"
+  ).style.display = "none");
+  const normsCovid = (document.getElementById(
+    "normsCovid"
+  ).style.display = "none");
+  const normsComisiones = (document.getElementById(
+    "normsComisiones"
+  ).style.display = "none");
+  const normsPoliza = (document.getElementById(
+    "normsPoliza"
+  ).style.display = "none");
+  const normsVentanilla = (document.getElementById(
+    "normsVentanilla"
+  ).style.display = "none");
 }
 
 //--------------MOSTRAR MAIN-----------------------//
@@ -378,7 +396,71 @@ function mostrarNormativa(){
   "Normativas.");
 const descripcion = document.getElementById("dSeccion").innerHTML =
 "Consulte On-Line los textos de las leyes y resolución que regulan la actividad de Riesgos del Trabajo.";
+const normsRiesgos = (document.getElementById(
+  "normsRiesgos"
+).style.display = "block");
 }
+
+function ocultarNormativas(){
+  const normsRiesgos = (document.getElementById(
+    "normsRiesgos"
+  ).style.display = "none");
+  const normsHigiene = (document.getElementById(
+    "normsHigiene"
+  ).style.display = "none");
+  const normsCovid = (document.getElementById(
+    "normsCovid"
+  ).style.display = "none");
+  const normsComisiones = (document.getElementById(
+    "normsComisiones"
+  ).style.display = "none");
+  const normsPoliza = (document.getElementById(
+    "normsPoliza"
+  ).style.display = "none");
+  const normsVentanilla = (document.getElementById(
+    "normsVentanilla"
+  ).style.display = "none");
+}
+
+function mostrarNormativaSeccion(boton){
+  ocultarNormativas();
+  switch (boton.id) {
+    case "friesgo":
+      const normsRiesgos = (document.getElementById(
+        "normsRiesgos"
+      ).style.display = "block");
+    break;
+    case "fhigiene":
+      const normsHigiene = (document.getElementById(
+        "normsHigiene"
+      ).style.display = "block");
+    break;
+    case "fcovid":
+      const normsCovid = (document.getElementById(
+        "normsCovid"
+      ).style.display = "block");
+    break;
+    case "fcomisiones":
+      const normsComisiones = (document.getElementById(
+        "normsComisiones"
+      ).style.display = "block");
+    break;
+    case "fpoliza":
+      const normsPoliza = (document.getElementById(
+        "normsPoliza"
+      ).style.display = "block");
+    break;
+    case "fventanilla":
+      const normsVentanilla = (document.getElementById(
+        "normsVentanilla"
+      ).style.display = "block");
+    break;
+    default:
+
+    break;
+  }
+}
+
 
 //----------MOSTRAR SECCION CENTRO DE FORMACIÓN------------//
 function mostrarFormacion(){
