@@ -115,7 +115,7 @@ function cambioAgencia(boton) {
 //--------------MOSTRAR SECCION TRABAJADOR----------------//
 function mostrarTrabajador() {
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/trabajadores.webp')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/trabajadores.webp')";
   const titulo = (document.getElementById("tituloSeccion").innerHTML =
     "Acceso a Plataforma de Trabajadores");
   const descripcion = (document.getElementById("dSeccion").innerHTML =
@@ -129,7 +129,7 @@ function mostrarTrabajador() {
 
 function mostrarLogin() {
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/loginPetroleo.jpg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/loginPetroleo.jpg')";
   const loginSeccion = (document.getElementById(
     "loginSeccion"
   ).style.display = "block");
@@ -153,7 +153,7 @@ function verPassword(element){
 //---------SECCION NUEVO USUARIO----------//
 function mostrarNewUsuario(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('/images/briefInfo/loginPetroleo.jpg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/loginPetroleo.jpg')";
   const loginSeccion = (document.getElementById(
     "newUsuarioSeccion"
   ).style.display = "block");
@@ -166,7 +166,7 @@ function mostrarNewUsuario(){
 //--------------MOSTRAR SECCION INSTITUCIONAL----------------//
 function mostrarInstitucional(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/institucional.png')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/institucional.png')";
   const institucionalSeccion = (document.getElementById(
     "institucionalSeccion"
   ).style.display = "block");
@@ -179,7 +179,7 @@ function mostrarInstitucional(){
 //--------------MOSTRAR SECCION CONSULTAS Y RECLAMOS----------------//
 function mostrarConsultas(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/consultasReclamos.png')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/consultasReclamos.png')";
   const consultasSeccion = (document.getElementById(
     "consultasSeccion"
   ).style.display = "block");
@@ -219,7 +219,7 @@ switch (cambio.value) {
 //----------MOSTRAR SECCION PRESTADORES------------//
 function mostrarPrestadores(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/prestadoresBrief.png')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/prestadoresBrief.png')";
   const prestadoresSeccion = (document.getElementById(
     "prestadoresSeccion"
   ).style.display = "block");
@@ -232,7 +232,7 @@ const descripcion = document.getElementById("dSeccion").innerHTML =
 //----------MOSTRAR SECCION INDICACIONES FRENTE ACCIDENTE------------//
 function mostrarAccidente(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/accidente.png')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/accidente.png')";
   const accidenteSeccion = (document.getElementById(
     "accidenteSeccion"
   ).style.display = "block");
@@ -245,7 +245,7 @@ const descripcion = document.getElementById("dSeccion").innerHTML =
 //----------MOSTRAR SECCION PREVENCION DE FRAUDES------------//
 function mostrarPrevencion(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/prevencion.png')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/prevencion.png')";
   const prevencionSeccion = (document.getElementById(
     "prevencionSeccion"
   ).style.display = "block");
@@ -258,7 +258,7 @@ const descripcion = document.getElementById("dSeccion").innerHTML =
 //----------MOSTRAR SECCION DESCARGA DE FORMULARIOS------------//
 function mostrarFormularios(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/formularios.jpg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/formularios.jpg')";
   const formulariosSeccion = (document.getElementById(
     "formulariosSeccion"
   ).style.display = "block");
@@ -336,7 +336,7 @@ function mostrarFormsSeccion(boton){
 //----------MOSTRAR SECCION COTIZACIONES Y AFILIACIONES------------//
 function mostrarCotizaciones(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/PedidoCotizacion.jpg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/PedidoCotizacion.jpg')";
   const cotizacionesSeccion = (document.getElementById(
     "cotizacionesSeccion"
   ).style.display = "block");
@@ -349,7 +349,7 @@ const descripcion = document.getElementById("dSeccion").innerHTML =
 //----------MOSTRAR SECCION PREGUNTAS FRECUENTES------------//
 function mostrarPreguntas(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/preguntasFrecuentes.jpg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/preguntasFrecuentes.jpg')";
   const preguntasSeccion = (document.getElementById(
     "preguntasSeccion"
   ).style.display = "block");
@@ -362,7 +362,7 @@ const descripcion = document.getElementById("dSeccion").innerHTML =
 //----------MOSTRAR SECCION NORMATIVAS------------//
 function mostrarNormativa(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/normativa.jpg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/normativa.jpg')";
   const normativaSeccion = (document.getElementById(
     "normativaSeccion"
   ).style.display = "block");
@@ -439,7 +439,7 @@ function mostrarNormativaSeccion(boton){
 //----------MOSTRAR SECCION CENTRO DE FORMACIÓN------------//
 function mostrarFormacion(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('../images/briefInfo/Capacitacion.jpg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/Capacitacion.jpg')";
   const formacionSeccion = (document.getElementById(
     "formacionSeccion"
   ).style.display = "block");
