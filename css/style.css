@@ -84,7 +84,7 @@ box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.397);
 
 .imagenBack{
     height: 180px;
-    background-image: url("images/briefInfo/oficinas.jpeg");
+    background-image: url("../images/briefInfo/oficinas.jpeg");
     transition: all 0.5s;
     background-size: cover;
 }

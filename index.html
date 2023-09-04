@@ -492,7 +492,7 @@
             <form class="w-lg-75 w-100">
               <div class="input-group mb-3">
                 <span class="input-group-text">CUIT</span>
-                <input type="text" class="form-control" placeholder="Inserte su CUIT" id="cuit" name="cuit" required
+                <input type="text" class="form-control" placeholder="Inserte su CUIT" id="cuitNewUsuario" name="cuitNewUsuario" required
                   maxlength="11" />
               </div>
 
@@ -511,8 +511,8 @@
 
               <div class="input-group mb-3">
                 <span class="input-group-text">E-mail @</span>
-                <input type="email" class="form-control" placeholder="direccioncorreo@institucion.com" id="email"
-                  name="email" required />
+                <input type="email" class="form-control" placeholder="direccioncorreo@institucion.com" id="emailNewUsuario"
+                  name="emailNewUsuario" required />
               </div>
               <div class="d-flex">
                 <button class="btn btn-primary w-50 py-2 m-2" type="submit">
@@ -678,8 +678,8 @@
                   required="" />
               </div>
               <div class="col-6 mt-3">
-                <label for="CUIT:">CUIT:</label>
-                <input type="number" maxlength="11" class="form-control" id="cuit" placeholder="CUIT" name="cuit"
+                <label for="cuitConsulta">CUIT:</label>
+                <input type="number" maxlength="11" class="form-control" id="cuitConsulta" placeholder="CUIT" name="cuitConsulta"
                   required="" />
               </div>
               <div class="col-6 mt-3">
@@ -701,8 +701,8 @@
                   required="required" />
               </div>
               <div class="col-lg-6 mt-3 col-12">
-                <label for="Email">Email:</label>
-                <input type="Email" class="form-control" id="email" name="email" required="" placeholder="Email"
+                <label for="email">Email:</label>
+                <input type="Email" class="form-control" id="emailConsultas" name="emailConsultas" required="" placeholder="Email"
                   onkeypress="" />
               </div>
 
@@ -1538,7 +1538,7 @@
             <div class="row align-items-center">
               <div class="col-md-6 mt-1"> Cuit: <input type="text" maxlength="11" id="cuit" name="cuit" required
                   onkeypress="return soloNumeros(event)" class="form-control " /> </div>
-              <div class="col-md-6 mt-1"> Razon Social: <input type="text" id="razon_social" name="razon_social"
+              <div class="col-md-6 mt-1"> Razon Social: <input type="text" id="razon_socialCotizaciones" name="razon_socialCotizaciones"
                   class="form-control " required />
               </div>
               <div class="col-md-6 mt-1"> Nombre y Apellido del Contacto: <input type="text" id="nombre_apellido"
@@ -1547,7 +1547,7 @@
                   required /> </div>
               <div class="col-md-6 mt-1"> Teléfono: <input type="text" id="telefono" name="telefono"
                   class="form-control " required onkeypress="return soloNumeros(event)" /> </div>
-              <div class="col-md-3 mt-2"> Localidad: <input type="text" id="localidad" name="localidad"
+              <div class="col-md-3 mt-2"> Localidad: <input type="text" id="localidadCotizaciones" name="localidadCotizaciones"
                   class="form-control " required /> </div>
               <div class="col-md-3 mt-2">
                 Provincia
@@ -1630,7 +1630,7 @@
               <div class="col-md-12 mt-2">
                 <br />
                 Mensaje:
-                <textarea name="mensaje" id="mensaje" class="form-control" required></textarea>
+                <textarea name="mensajeCotizaciones" id="mensajeCotizaciones" class="form-control" required></textarea>
               </div>
               <div class="col-md-3 mt-2">
                 <button class="form-control btn btn-success" type="submit">Enviar</button>
