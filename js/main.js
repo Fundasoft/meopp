@@ -50,6 +50,24 @@ function ocultarTodo() {
   const formacionSeccion = (document.getElementById(
     "formacionSeccion"
   ).style.display = "none");
+  const formsGenerales = (document.getElementById(
+    "formsGenerales"
+  ).style.display = "none");
+  const formsAfiliaciones = (document.getElementById(
+    "formsAfiliaciones"
+  ).style.display = "none");
+  const formsPrevencion = (document.getElementById(
+    "formsPrevencion"
+  ).style.display = "none");
+  const formsPrestaciones = (document.getElementById(
+    "formsPrestaciones"
+  ).style.display = "none");
+  const formsPrestadores = (document.getElementById(
+    "formsPrestadores"
+  ).style.display = "none");
+  const formsExamenes = (document.getElementById(
+    "formsExamenes"
+  ).style.display = "none");
 }
 
 //--------------MOSTRAR MAIN-----------------------//
@@ -259,7 +277,72 @@ function mostrarFormularios(){
   "FORMULARIOS.");
 const descripcion = document.getElementById("dSeccion").innerHTML =
 "Consulte On-Line y descargue los formularios específicos que le soliciten.";
+const formsGenerales = (document.getElementById(
+  "formsGenerales"
+).style.display = "block");
 }
+
+function ocultarFormularios(){
+  const formsGenerales = (document.getElementById(
+    "formsGenerales"
+  ).style.display = "none");
+  const formsAfiliaciones = (document.getElementById(
+    "formsAfiliaciones"
+  ).style.display = "none");
+  const formsPrevencion = (document.getElementById(
+    "formsPrevencion"
+  ).style.display = "none");
+  const formsPrestaciones = (document.getElementById(
+    "formsPrestaciones"
+  ).style.display = "none");
+  const formsPrestadores = (document.getElementById(
+    "formsPrestadores"
+  ).style.display = "none");
+  const formsExamenes = (document.getElementById(
+    "formsExamenes"
+  ).style.display = "none");
+}
+
+function mostrarFormsSeccion(boton){
+  ocultarFormularios();
+  switch (boton.id) {
+    case "fgenerales":
+      const formsGenerales = (document.getElementById(
+        "formsGenerales"
+      ).style.display = "block");
+    break;
+    case "fafiliaciones":
+      const formsAfiliaciones = (document.getElementById(
+        "formsAfiliaciones"
+      ).style.display = "block");
+    break;
+    case "fprevencion":
+      const formsPrevencion = (document.getElementById(
+        "formsPrevencion"
+      ).style.display = "block");
+    break;
+    case "fprestaciones":
+      const formsPrestaciones = (document.getElementById(
+        "formsPrestaciones"
+      ).style.display = "block");
+    break;
+    case "fprestadores":
+      const formsPrestadores = (document.getElementById(
+        "formsPrestadores"
+      ).style.display = "block");
+    break;
+    case "fexamenes":
+      const formsExamenes = (document.getElementById(
+        "formsExamenes"
+      ).style.display = "block");
+    break;
+    default:
+
+    break;
+  }
+}
+
+
 
 //----------MOSTRAR SECCION COTIZACIONES Y AFILIACIONES------------//
 function mostrarCotizaciones(){
