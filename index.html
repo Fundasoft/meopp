@@ -2559,8 +2559,7 @@
                 <div class="col-12 col-md-8">
                   <h4>Superintendencia de Riesgos del Trabajo - SRT</h4>
                 </div>
-                <div class="col-12 col-md-4 d-flex justify-content-end"><a href="https://www.argentina.gob.ar/srt" target="_blank"><button type="button" class="btn btn-primary"><i
-                  class="bi bi-arrow-down-square"></i> Consultar</button></a></div>
+                <div class="col-12 col-md-4 d-flex justify-content-end"><a href="https://www.argentina.gob.ar/srt" target="_blank"><button type="button" class="btn btn-primary"> Ir a la Web</button></a></div>
               </div>
             </li>
           </ul>
@@ -2571,8 +2570,7 @@
                 <div class="col-12 col-md-8">
                   <h4>Superintendencia de Riesgos del Trabajo - SRT</h4>
                 </div>
-                <div class="col-12 col-md-4 d-flex justify-content-end"><a href="https://www.argentina.gob.ar/srt" target="_blank"><button type="button" class="btn btn-primary"><i
-                  class="bi bi-arrow-down-square"></i> Consultar</button></a></div>
+                <div class="col-12 col-md-4 d-flex justify-content-end"><a href="https://www.argentina.gob.ar/srt" target="_blank"><button type="button" class="btn btn-primary"> Ir a la Web</button></a></div>
               </div>
             </li>
           </ul>
@@ -2597,8 +2595,109 @@
     <section class="container-fluid" id="formacionSeccion">
       <div class="row justify-content-center bg-none rounded mt-3 p-4">
         <!-- CONTENIDO DE SECCION -->
-        <div class="col-12 col-lg-9 col-md-12 mt-2 m-lg-0 rounded overflow-hidden order-1 p-3 bg-white">
+        <div class="col-12 col-lg-3 col-md-3 mt-2 m-lg-0 rounded overflow-hidden order-1 p-1 bg-white">
+          <div class="btn-group-vertical w-100" role="group" aria-label="Basic radio toggle button group">
 
+            <input type="radio" class="btn-check" name="btnradio" id="fcapacitaciones" autocomplete="off"
+              onclick="mostrarFormacionSeccion(this)" checked>
+            <label class="btn btn-outline-success" for="fcapacitaciones">Plan Anual de Capacitaciones 2023.</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="ffoco" autocomplete="off"
+              onclick="mostrarFormacionSeccion(this)">
+            <label class="btn btn-outline-success" for="ffoco">FoCo - Centro de Formación Continua Virtual de Meopp ART Mutual.</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="ffolletos" autocomplete="off"
+              onclick="mostrarFormacionSeccion(this)">
+            <label class="btn btn-outline-success" for="ffolletos">Folletos y Flayers.</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="fcampana" autocomplete="off"
+              onclick="mostrarFormacionSeccion(this)">
+            <label class="btn btn-outline-success" for="fcampana">Campaña Señales de Comunidad.</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="frecomendaciones" autocomplete="off"
+              onclick="mostrarFormacionSeccion(this)">
+            <label class="btn btn-outline-success" for="frecomendaciones">Recomendaciones Covid-19.</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="fbienestar" autocomplete="off"
+              onclick="mostrarFormacionSeccion(this)">
+            <label class="btn btn-outline-success" for="fbienestar">Bienestar Laboral.</label>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 col-md-8 mt-2 ms-lg-2 rounded overflow-hidden order-2 p-3 bg-white">
+          
+          <!-- SECCION PLAN ANUAL DE CAPACITACIONES 2023 -->
+          <ul class="list-group" id="centroCapacitaciones">
+            <li class="list-group-item">
+              <div class="row p-0">
+                <div class="col-12 col-md-8">
+                  <h4> Plan Anual de Capacitaciones 2023
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-end"><button type="button" class="btn btn-primary"><i
+                      class="bi bi-arrow-down-square"></i> Descargar</button></div>
+                <div class="col-12 mt-2"><img src="images/formacion/planAnual.png" alt="planAnual" class="img-fluid"></div>
+              </div>
+            </li>
+          </ul>
+          <!-- SECCION FOCO DENTRO DE FORMACION CONTINUA VIRTUAL -->
+          <ul class="list-group" id="centroFoco">
+            <li class="list-group-item">
+              <div class="row p-0">
+                <div class="col-12 col-md-8">
+                  <h4> Plan Anual de Capacitaciones 2023
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-end"><button type="button" class="btn btn-primary">Ir a la Web</button></div>
+                <div class="col-12 mt-2"><img src="images/formacion/focoFormacion.png" alt="planAnual" class="img-fluid"></div>
+              </div>
+            </li>
+          </ul>
+          <!-- SECCION FOLLETOS Y FLYERS -->
+          <ul class="list-group" id="centroFolletos">
+            <li class="list-group-item">
+              <div class="row p-0">
+                <div class="col-12 col-md-8">
+                  <h4> centro folletos
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-end"><button type="button" class="btn btn-primary">Ir a la Web</button></div>
+                
+              </div>
+            </li>
+          </ul>
+          <!-- SECCION CAMPAÑA SEÑALES DE COMUNIDAD -->
+          <ul class="list-group" id="centroCampana">
+            <li class="list-group-item">
+              <div class="row p-0">
+                <div class="col-12 col-md-8">
+                  <h4> CAMPAÑA SEÑALES DE COMUNIDAD
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-end"><button type="button" class="btn btn-primary">Ir a la Web</button></div>
+                
+              </div>
+            </li>
+          </ul>
+          <!-- SECCION RECOMENDACIONES COVID-19 -->
+          <ul class="list-group" id="centroRecomendaciones">
+            <li class="list-group-item">
+              <div class="row p-0">
+                <div class="col-12 col-md-8">
+                  <h4> COVID-19
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-end"><button type="button" class="btn btn-primary">Ir a la Web</button></div>
+                
+              </div>
+            </li>
+          </ul>
+          <!-- SECCION BIENESTAR LABORAL -->
+          <ul class="list-group" id="centroBienestar">
+            <li class="list-group-item">
+              <div class="row p-0">
+                <div class="col-12 col-md-8">
+                  <h4> BIENESTAR LABORAL
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-end"><button type="button" class="btn btn-primary">Ir a la Web</button></div>
+                
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

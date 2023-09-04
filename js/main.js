@@ -472,4 +472,68 @@ function mostrarFormacion(){
   "Centro de Formación.");
 const descripcion = document.getElementById("dSeccion").innerHTML =
 "Centro de Formación On-Line de ART MUTUAL. Esta sección ha sido creada para que las empresas puedan seleccionar el material que necesita su personal para mantenerse actualizado.";
+const centroCapacitaciones = (document.getElementById(
+  "centroCapacitaciones"
+).style.display = "block");
+}
+
+function ocultarFormacion(){
+  const centroCapacitaciones = (document.getElementById(
+    "centroCapacitaciones"
+  ).style.display = "none");
+  const centroFoco = (document.getElementById(
+    "centroFoco"
+  ).style.display = "none");
+  const centroFolletos = (document.getElementById(
+    "centroFolletos"
+  ).style.display = "none");
+  const centroCampana = (document.getElementById(
+    "centroCampana"
+  ).style.display = "none");
+  const centroRecomendaciones = (document.getElementById(
+    "centroRecomendaciones"
+  ).style.display = "none");
+  const centroBienestar = (document.getElementById(
+    "centroBienestar"
+  ).style.display = "none");
+}
+
+
+function mostrarFormacionSeccion(boton){
+  ocultarFormacion();
+  switch (boton.id) {
+    case "fcapacitaciones":
+      const centroCapacitaciones = (document.getElementById(
+        "centroCapacitaciones"
+      ).style.display = "block");
+    break;
+    case "ffoco":
+      const centroFoco = (document.getElementById(
+        "centroFoco"
+      ).style.display = "block");
+    break;
+    case "ffolletos":
+      const centroFolletos = (document.getElementById(
+        "centroFolletos"
+      ).style.display = "block");
+    break;
+    case "fcampana":
+      const centroCampana = (document.getElementById(
+        "centroCampana"
+      ).style.display = "block");
+    break;
+    case "frecomendaciones":
+      const centroRecomendaciones = (document.getElementById(
+        "centroRecomendaciones"
+      ).style.display = "block");
+    break;
+    case "fbienestar":
+      const centroBienestar = (document.getElementById(
+        "centroBienestar"
+      ).style.display = "block");
+    break;
+    default:
+
+    break;
+  }
 }
