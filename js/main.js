@@ -50,42 +50,9 @@ function ocultarTodo() {
   const formacionSeccion = (document.getElementById(
     "formacionSeccion"
   ).style.display = "none");
-  const formsGenerales = (document.getElementById(
-    "formsGenerales"
-  ).style.display = "none");
-  const formsAfiliaciones = (document.getElementById(
-    "formsAfiliaciones"
-  ).style.display = "none");
-  const formsPrevencion = (document.getElementById(
-    "formsPrevencion"
-  ).style.display = "none");
-  const formsPrestaciones = (document.getElementById(
-    "formsPrestaciones"
-  ).style.display = "none");
-  const formsPrestadores = (document.getElementById(
-    "formsPrestadores"
-  ).style.display = "none");
-  const formsExamenes = (document.getElementById(
-    "formsExamenes"
-  ).style.display = "none");
-  const normsRiesgos = (document.getElementById(
-    "normsRiesgos"
-  ).style.display = "none");
-  const normsHigiene = (document.getElementById(
-    "normsHigiene"
-  ).style.display = "none");
-  const normsCovid = (document.getElementById(
-    "normsCovid"
-  ).style.display = "none");
-  const normsComisiones = (document.getElementById(
-    "normsComisiones"
-  ).style.display = "none");
-  const normsPoliza = (document.getElementById(
-    "normsPoliza"
-  ).style.display = "none");
-  const normsVentanilla = (document.getElementById(
-    "normsVentanilla"
-  ).style.display = "none");
+  ocultarFormularios();
+  ocultarNormativas();
+  ocultarFormacion();
 }
 
 //--------------MOSTRAR MAIN-----------------------//
