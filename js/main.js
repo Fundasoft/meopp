@@ -153,7 +153,7 @@ function verPassword(element){
 //---------SECCION NUEVO USUARIO----------//
 function mostrarNewUsuario(){
   ocultarTodo();
-  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('images/briefInfo/loginPetroleo.jpg')";
+  const backimagen= document.getElementById("infoSeccion").style.backgroundImage="url('/images/briefInfo/loginPetroleo.jpg')";
   const loginSeccion = (document.getElementById(
     "newUsuarioSeccion"
   ).style.display = "block");
