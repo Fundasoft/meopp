@@ -666,15 +666,15 @@
               </div>
 
               <div class="col-lg-4 col-12">
-                <label for="Siniestro:">Siniestro:</label>
+                <label for="num_siniestro">Siniestro:</label>
                 <input type="Siniestro" class="form-control" id="num_siniestro" placeholder="Siniestro"
                   name="num_siniestro" required="" />
               </div>
             </div>
             <div class="row">
               <div class="col-6 mt-3">
-                <label for="DNI:">DNI:</label>
-                <input type="number" class="form-control" maxlength="8" id="dni" placeholder="DNI" name="dni"
+                <label for="dniCotizacion">DNI:</label>
+                <input type="number" class="form-control" maxlength="8" id="dniCotizacion" placeholder="DNI" name="dni"
                   required="" />
               </div>
               <div class="col-6 mt-3">
@@ -683,12 +683,12 @@
                   required="" />
               </div>
               <div class="col-6 mt-3">
-                <label for="Teléfono Particular:">Tel. Particular:</label>
+                <label for="telefono_part">Tel. Particular:</label>
                 <input type="number" class="form-control" required="required" id="telefono_part"
                   placeholder="Teléfono Particular" name="telefono_part" />
               </div>
               <div class="col-6 mt-3">
-                <label for="Teléfono Laboral:">Tel. Laboral:</label>
+                <label for="telefono_lab">Tel. Laboral:</label>
                 <input type="number" class="form-control" required="required" id="telefono_lab"
                   placeholder="Teléfono Laboral" name="telefono_lab" />
               </div>
@@ -696,7 +696,7 @@
             </div>
             <div class="row">
               <div class="col-lg-6 mt-3 col-12">
-                <label for="Dirección:">Dirección:</label>
+                <label for="calle">Dirección:</label>
                 <input type="Dirección" class="form-control" id="calle" placeholder="Dirección" name="calle"
                   required="required" />
               </div>
@@ -707,7 +707,7 @@
               </div>
 
               <div class="col-lg-6 mt-3 col-12">
-                <label for="Tema de Consulta">Tema de Consulta:</label>
+                <label for="tema_consulta">Tema de Consulta:</label>
                 <select name="tema_consulta" class="form-control" id="tema_consulta" required="required"
                   onchange="cambiarOptions(this)">
                   <option value="">-- SELECCIONAR--</option>
@@ -720,7 +720,7 @@
                 </select>
               </div>
               <div class="col-lg-6 mt-3 col-12">
-                <label for="Categoria de Consulta">Categoria de Consulta:</label>
+                <label for="categoria">Categoria de Consulta:</label>
                 <select name="categoria" class="form-control" id="categoria" required="required">
                   <option value="">-- SELECCIONAR--</option>
                 </select>
@@ -728,7 +728,7 @@
             </div>
             <div class="row justify-content-center">
               <div class="col-12 mt-3">
-                <label for="Mensaje">Mensaje:</label>
+                <label for="mensaje">Mensaje:</label>
                 <textarea name="observaciones" class="form-control" id="mensaje" placeholder="Mensaje" required=""
                   style="height: 40px"></textarea>
               </div>
@@ -792,14 +792,14 @@
                 </select>
               </div>
               <div class="col-md-3 mt-3">
-                <label for="Localidad">Localidad:</label>
+                <label for="localidad">Localidad:</label>
                 <select id="localidad" input type="Localidad" class="form-control" placeholder="Localidad"
                   name="Localidad" required="" onkeypress="">
                   <option value="" selected="">Todas</option>
                 </select>
               </div>
               <div class="col-md-3 mt-3">
-                <label for="Especialidad">Especialidad:</label>
+                <label for="tipo">Especialidad:</label>
                 <select id="tipo" name="tipo" input type="Especialidad" class="form-control" placeholder="Especialidad"
                   required="" onkeypress="">
                   <option value="" selected="">Todos</option>
@@ -1543,7 +1543,7 @@
               </div>
               <div class="col-md-6 mt-1"> Nombre y Apellido del Contacto: <input type="text" id="nombre_apellido"
                   name="nombre_apellido" class="form-control " required /> </div>
-              <div class="col-md-6 mt-1"> E-mail: <input type="email" id="email" name="email" class="form-control "
+              <div class="col-md-6 mt-1"> E-mail: <input type="email" id="email" name="email" class="form-control " autocomplete="off"
                   required /> </div>
               <div class="col-md-6 mt-1"> Teléfono: <input type="text" id="telefono" name="telefono"
                   class="form-control " required onkeypress="return soloNumeros(event)" /> </div>
