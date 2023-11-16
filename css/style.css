@@ -58,7 +58,8 @@ h5{
 
 .tarjetas{
     
-    height: 31rem;
+    min-height: 80vh;
+
 }
 
 .tarjetas:hover{
@@ -158,3 +159,4 @@ i{
 		background-position: 0% 50%;
 	}
 }
+
