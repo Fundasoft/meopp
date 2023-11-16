@@ -2,11 +2,11 @@
 Repositorio de nueva web MEOPP ART MUTUAL
 Realizada con BOOTSTRAP 5.3, JS
 
-Cambios a realizados 16-11-23 : 
+Cambios realizados 16-11-23 : 
 
 Poner el boton de Agencia Central arriba del todo en la lista de direcciones.
 
-Agregar la punto de direccion y ubicacion en el mapa de la Agencia Centro, igual a la sede del sindicato petrolero.
+Agregar el punto de direccion y ubicacion en el mapa de la Agencia Centro, igual a la sede del sindicato petrolero.
 
 Hacer que cierre automatico la barra Nav al tocar un boton.
 
