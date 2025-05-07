@@ -1,14 +1,55 @@
-# MVC
+# mvc
 views/public/js/*
 views/public/css/*
 data/sen
 data/server
 
-server
+# xen
+data/Y
+proyecto.ini
+rollup.config.mjs
+.build/
+logs/
+repositorio/
+sen
+package.json
 
-views/public/libs/cen/constantes.js
-#!public/css/fundasoft.css
+# extensiones
+.~lock*
+*.lic
+*.exe
+*.dll
+*.bin
+*.o
+*.so
+*.a
+*.mac
+*.bat
+*.sh
+*.html
+*.zip
+*.rar
+*.swp
+*.bak
+*.tmp
+*.class
+*.jar
+*.pyc
+*.env
+*.sen
 
+/server
+/pasantia
+
+# vscode
+.env
+.vscode/
+.idea/
+
+# mac
+.DS_Store
+
+# npm
 package-lock.json
 
 # Logs
@@ -53,8 +94,6 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-data/Y
-data/server.ini
 backup/
 
 # TypeScript v1 declaration files
