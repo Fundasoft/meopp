@@ -1,5 +1,5 @@
 <script>
-    let telefonoStr = PROYECTO.cliente.telefono;
+    let telefonoStr = XEN.client.phone;
     let telefono = telefonoStr.replace(/[+\s-]/g, '');
 </script>
 

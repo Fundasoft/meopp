@@ -1,5 +1,5 @@
 <script>
-    let CLIENTE = PROYECTO.cliente.nombre
+    let CLIENTE = XEN.client.name
 </script>
 
 <section >
