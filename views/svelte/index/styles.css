@@ -1,0 +1,17 @@
+:root{
+    --green-neon-normal:#93d500;
+    --green-darker:#193b15;
+    --green-light: #edf6ec;
+    --green-light-50: rgba(237, 246, 236, 0.5);
+    --green-darker-90: rgba(25, 59, 21, 0.9);
+    --green-normal-20: rgba(71, 169, 60, 0.2);
+    --green-01: #334B00;
+    --green-02: #3D5900;
+    --green-03: #588000;
+    --green-04: #84C000;
+    --green-05: #A7E028;
+}
+.resaltado {
+    color: var(--green-neon-normal);
+    font-weight: bold;
+}
