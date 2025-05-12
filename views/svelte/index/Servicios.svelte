@@ -34,7 +34,7 @@
     ];
 </script>
 
-<div class="container">
+<section class="my-3">
     <div class="cards-container">
     {#each cards as card, index}
         <div class="card" style="color: var(--green-02);" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -80,7 +80,7 @@
         </div>
     {/each}
     </div>
-</div>
+</section>
 
 <style>
     .container {
