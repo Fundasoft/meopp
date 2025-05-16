@@ -6,9 +6,7 @@
 	<div class="footer-container">
 		<div class="footer-columns">
 			<div class="column">
-				<h4>MEOPP</h4>
-				<p>Mutual de Empleados y Obreros Petroleros Privados</p>
-        <img src="./images/logo/light.png" alt="meopp logo">
+				<img src="./images/logo/light.png" alt="meopp logo">
 			</div>
 
 			<div class="column">
@@ -21,21 +19,16 @@
 				</ul>
 			</div>
 
-      
-
-
-
 			<div class="column">
-				<h4>Inscripta en el Registro Nacional de
-Mutualidades de la Provincia de Neuquén.</h4>
+				<h4>Inscripta en el Registro Nacional de Mutualidades de la Provincia de Neuquén.</h4>
 				<ul>
 					<li>Matrícula n°5.</li>
 					<li>Resolución n°511 del 20/12/73.</li>
 					<!-- 
-          <li>Email: info@meopp.org.ar</li>
-					<li>Tel: +54 299 123 4567</li>
-					<li>Dirección: Calle Ejemplo 123, Neuquén</li> 
-          -->
+					<li>Email: info@meopp.org.ar</li>
+								<li>Tel: +54 299 123 4567</li>
+								<li>Dirección: Calle Ejemplo 123, Neuquén</li> 
+					-->
 				</ul>
 			</div>
 		</div>

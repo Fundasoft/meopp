@@ -22,7 +22,7 @@
         {
             img: "./images/meopp/meopp.webp",
             titulo: "Meopp",
-            subtitulo: "Cada dia más cerca",
+            subtitulo: "Cada día más cerca",
             resaltar:["cerca"]
         }
         // {
@@ -64,11 +64,11 @@
                     <img 
                         srcset="{contenido.img.replace(".webp",'.mobile.webp')} 570w, {contenido.img} 1200w"
                         class="d-block w-100 imagesC zoom-in" 
+                        sizes="(max-width: 570px) 100vw, 1200px"
                         alt="img_{i}"
                         loading="lazy"
                         />
 
-                    <!-- sizes="(max-width: 570px) 100vw, 1200px" -->
                     <!-- src="{contenido.img}"  -->
 
                     <div class="phrase-container">

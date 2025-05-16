@@ -27,11 +27,12 @@
 
 <div class="obra-social-container container">
     {#each secciones as seccion, i}
+    <!-- data-aos="fade-{i % 2 === 0 ? 'right' : 'left'}"  no anda porque se hace scroll en x-->
         <div class="seccion " 
             class:invertido={seccion.invertido}
-            data-aos="fade-{i % 2 === 0 ? 'right' : 'left'}" 
+            data-aos="fade-{i % 2 === 0 ? 'right' : 'right'}" 
             data-aos-easing="linear" 
-            data-aos-duration="1200"    
+            data-aos-duration="400"    
             >
             <div class="contenido{i%2?"-02":""}">
                 <h2>{seccion.titulo}</h2>
@@ -49,7 +50,7 @@
                     </svg>
                     <div class="info-contacto">
                         <p><strong>Teléfono:</strong> 0800-123-4567</p>
-                        <p><strong>Email:</strong> contacto@osalud.com.ar</p>
+                        <p><strong>Email:</strong> contacto@meopp.com.ar</p>
                         <p><strong>Horario:</strong> Lun a Vie 8:00 a 18:00</p>
                     </div>
                     </div>
