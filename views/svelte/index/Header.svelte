@@ -49,7 +49,7 @@ function handleDocumentClick(event) {
                 <ul class="navbar-nav mx-auto">
 
                     <li class="nav-item carrito">
-                        <a class="nav-link fixed" href="index.html?render=ingresar" role="button">
+                        <a class="nav-link fixed" href="index.html" role="button">
                             Inicio
                         </a>
                     </li>
