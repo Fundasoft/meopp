@@ -72,7 +72,7 @@
                     <!-- src="{contenido.img}"  -->
 
                     <div class="phrase-container">
-                        <div class="phrase d-none d-lg-block">
+                        <div class="phrase">
                             <h2 class="phrase-title">
                                 {contenido.titulo}
                             </h2>
@@ -183,9 +183,8 @@
 
     .phrase{
         position: absolute;
-        /* top: 30%; */
+        top: 30%;
         left: 10%;
-        bottom: 30%;
         border-radius: 10px;
         z-index: 1;
         padding: 1rem;
@@ -193,7 +192,6 @@
         color: white;
         max-width: 60ch;
     }
-
 
 
     .phrase-title{
