@@ -41,9 +41,9 @@
 
 
 <style>
-  img{
-    max-width: 300px;
-  }
+	img{
+		max-width: 300px;
+	}
 
 	footer {
 		background-color: var(--dark);
