@@ -27,7 +27,7 @@ function handleDocumentClick(event) {
 <svelte:window bind:scrollY={y} />
 
 <!-- svelte-ignore missing-declaration -->
-<nav class="navbar navbar-expand-lg stricky fixed-top {RENDER !="index" ? "fondo":""} sps { y > navHeight ? "sps--blw":"sps--abv"} p-3 " id="minav" bind:clientHeight={navHeight}>
+<nav class="navbar navbar-expand-lg stricky fixed-top {RENDER !="index" ? "fondo":""} sps { y > navHeight ? "sps--blw":"sps--abv"} p-2 " id="minav" bind:clientHeight={navHeight}>
     <div class="container">
         <a class="navbar-brand" href="index.html">
             <img class="img_logo" src="images/logo/dark.png" alt="meopp" />
@@ -178,7 +178,7 @@ function handleDocumentClick(event) {
 }
 
 .img_logo{
-    max-width:60%;
+    max-width:200px;
 }
 
 .social-icons ul li {

@@ -12,23 +12,25 @@
 
     let heroContent =[
         {
+            img: "./images/meopp/2.webp",
+            titulo: "En MEOPP cuidamos tu salud y la de tu familia.",
+            subtitulo: "Somos la obra social privada de los trabajadores del petróleo, con cobertura médica de calidad, prestadores en todo el país y beneficios exclusivos para el sector.",
+            resaltar:["obra social privada", "cobertura médica de calidad", "beneficios exclusivos"],
+            texto:"Afiliate ahora",
+            url:"./index.html"
+        },
+        {
             img: "./images/meopp/meopp.webp",
             titulo: "Meopp",
             subtitulo: "Cada dia más cerca",
             resaltar:["cerca"]
-        },
-        {
-            img: "./images/meopp/1.webp",
-            titulo: "Titulo 2",
-            subtitulo: "Subtitulo 2, otros y algo para ver",
-            resaltar:["otros", "1"]
-        },
-        {
-            img: "./images/meopp/2.webp",
-            titulo: "Titulo 2",
-            subtitulo: "Subtitulo 2, otros y algo para ver",
-            resaltar:["otros", "1"]
-        },
+        }
+        // {
+        //     img: "./images/meopp/1.webp",
+        //     titulo: "Titulo 2",
+        //     subtitulo: "Subtitulo 2, otros y algo para ver",
+        //     resaltar:["otros", "1"]
+        // },
         
     ];
 
@@ -57,36 +59,36 @@
         </div>
         
         <div class="carousel-inner" >
-        {#each heroContent as contenido,i}
-            <div class="carousel-item {i===0 ? "active" :""}">
-                <img 
-                    src="{contenido.img}" 
-                    srcset="{contenido.img.replace(/.(\w+)$/,'.movil.$1')} 570w, {contenido.img} 1200w"
-                    sizes="(max-width: 570px) 100vw, 1200px"
-                    class="d-block w-100 imagesC zoom-in" 
-                    alt="img_{i}"
-                    />
+            {#each heroContent as contenido,i}
+                <div class="carousel-item {i===0 ? "active" :""}">
+                    <img 
+                        srcset="{contenido.img.replace(".webp",'.mobile.webp')} 570w, {contenido.img} 1200w"
+                        class="d-block w-100 imagesC zoom-in" 
+                        alt="img_{i}"
+                        loading="lazy"
+                        />
 
-                <!-- <picture >
-                    <source media="(max-width: 570px)" srcset="{contenido.img.replace(/.(\w+)$/,'.movil.$1')}">
-                    <img class="d-block w-100 imagesC zoom-in" src="{contenido.img}" alt="carourel {i}">
-                </picture> -->
+                    <!-- sizes="(max-width: 570px) 100vw, 1200px" -->
+                    <!-- src="{contenido.img}"  -->
 
-                <div class="phrase-container">
-                    <div class="phrase d-none d-lg-block">
-                        <p >
-                            {contenido.titulo}
-                        </p>
-                        <h2>
-                            <p>{@html resaltarTexto(contenido.subtitulo, contenido.resaltar)}</p>
-                            <!-- {contenido.subtitulo} -->
+                    <div class="phrase-container">
+                        <div class="phrase d-none d-lg-block">
+                            <h2 class="phrase-title">
+                                {contenido.titulo}
+                            </h2>
+                            <p class="phrase-text">{@html resaltarTexto(contenido.subtitulo, contenido.resaltar)}</p>
                             <br>
-                        </h2>
+
+                            <!-- <a class="button-hero" href="./index.html">
+                                Afiliate ahora
+                            </a> -->
+                            
+                        </div>
                     </div>
                 </div>
-            </div>
-        {/each}
-        </div>  
+                {/each}
+        </div> 
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -102,6 +104,35 @@
 
 
 <style>
+    .carousel_container{
+        position: relative;
+    }
+
+    /* .button-hero {
+        text-decoration-line: none;
+        align-self: flex-start;
+        padding: 0.8rem 1.5rem;
+        background-color: white;
+        color: var(--green-02);
+        border: none;
+        border-radius: 4px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        z-index: 10 !important;
+        position: absolute;
+        bottom: 20%;
+        left: 20%;
+    }
+
+    .button-hero:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    } */
+
     .carousel1{
         flex-direction: column;
         justify-content: center;
@@ -114,6 +145,9 @@
         min-height: 100vh;
         max-height: 100vh;
         object-fit: cover;
+        z-index: 1 !important;
+        /* position: absolute; */
+
     }
 
     .carousel-control-next, .carousel-control-prev {
@@ -149,20 +183,25 @@
 
     .phrase{
         position: absolute;
-        top: 30%;
-        left: 20%;
+        /* top: 30%; */
+        left: 10%;
+        bottom: 30%;
         border-radius: 10px;
         z-index: 1;
         padding: 1rem;
-        font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.3rem;
         color: white;
+        max-width: 60ch;
     }
 
 
 
-    .phrase > p {
-        line-height: 1;
+    .phrase-title{
+        margin-bottom: 1.5rem;
+    }
+
+    .phrase-text{
+        line-height: 1.3;
     }
 
     .carousel-control-next:active,
