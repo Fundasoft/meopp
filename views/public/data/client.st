@@ -1,1 +1,1 @@
-{"name":"meopp","cuit":"0","phone":"","domain":"","type":""}
+{"name":"meopp","cuit":"0","phone":"","domain":"sindicatopetroleros.org","type":"org"}
