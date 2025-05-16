@@ -8,5 +8,7 @@
     "https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js",
     "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff",
     "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2",
-    "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
+    "https://unpkg.com/aos@2.3.1/dist/aos.css", 
+    "https://unpkg.com/aos@2.3.1/dist/aos.js"
 ]

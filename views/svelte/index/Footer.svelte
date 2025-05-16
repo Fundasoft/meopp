@@ -1,12 +1,112 @@
+<script>
+	// Puedes agregar lógica aquí si necesitas dinámicamente cambiar cosas
+</script>
+
+<footer>
+	<div class="footer-container">
+		<div class="footer-columns">
+			<div class="column">
+				<h4>MEOPP</h4>
+				<p>Mutual de Empleados y Obreros Petroleros Privados</p>
+        <img src="./images/logo/light.png" alt="">
+			</div>
+
+			<div class="column">
+				<h4>Enlaces</h4>
+				<ul>
+					<li><a href="/nosotros">Nosotros</a></li>
+					<li><a href="/servicios">Servicios</a></li>
+					<li><a href="/beneficios">Beneficios</a></li>
+					<li><a href="/contacto">Contacto</a></li>
+				</ul>
+			</div>
+
+      
 
 
-<footer class="container-fluid py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-2 mb-1">
-      <li class="nav-item m-0 p-0"><a href="https://www.instagram.com/fundasoft.cordoba/" class="nav-link px-2 text-body-secondary"> <strong>Instagram</strong></a></li>
-      <li class="nav-item m-0 p-0"><a href="https://discord.com/invite/aks2XgByyN" class="nav-link px-2 text-body-secondary"> <strong>Discord</strong></a></li>
-      <li class="nav-item m-0 p-0"><a href="https://www.youtube.com/c/FundasoftC%C3%B3rdoba/featured" class="nav-link px-2 text-body-secondary"> <strong>Youtube</strong></a></li>
-      <li class="nav-item m-0 p-0"><a href="https://www.linkedin.com/in/fundasoft/" class="nav-link px-2 text-body-secondary"> <strong>Linkedin</strong></a></li>
-      <li class="nav-item m-0 p-0"><a href="https://github.com/Fundasoft" class="nav-link px-2 text-body-secondary"><strong>Github</strong></a></li>
-    </ul>
-    <p class="text-center fs-6 m-0" >2023 Fundacion Fundasoft. Todos los derechos reservados.</p>
+
+			<div class="column">
+				<h4>Inscripta en el Registro Nacional de
+Mutualidades de la Provincia de Neuquén.</h4>
+				<ul>
+					<li>Matrícula n°5.</li>
+					<li>Resolución n°511 del 20/12/73.</li>
+					<!-- 
+          <li>Email: info@meopp.org.ar</li>
+					<li>Tel: +54 299 123 4567</li>
+					<li>Dirección: Calle Ejemplo 123, Neuquén</li> 
+          -->
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			&copy; {new Date().getFullYear()} MEoPP. Todos los derechos reservados.
+		</div>
+	</div>
 </footer>
+
+
+<style>
+	footer {
+		background-color: var(--green-01);
+		color: white;
+		padding: 2rem 1rem;
+		text-align: center;
+	}
+
+	.footer-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.footer-columns {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		text-align: left;
+		gap: 1.5rem;
+	}
+
+	.column {
+		flex: 1 1 200px;
+	}
+
+	.column h4 {
+		margin-bottom: 0.5rem;
+		font-size: 1.1rem;
+		color:var(--green-light);
+	}
+
+	.column ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.column li {
+		margin-bottom: 0.5rem;
+	}
+
+	.column a {
+		color: white;
+		text-decoration: none;
+		font-size: 0.95rem;
+		transition: color 0.2s ease;
+	}
+
+	.column a:hover {
+		color: var(--green-05);
+	}
+
+	.footer-bottom {
+		margin-top: 2rem;
+		font-size: 0.9rem;
+		color: #94a3b8;
+		border-top: 1px solid var(--green-03);
+		padding-top: 1rem;
+	}
+</style>

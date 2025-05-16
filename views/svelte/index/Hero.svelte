@@ -12,19 +12,19 @@
 
     let heroContent =[
         {
-            img: "../images/meopp/meopp.webp",
+            img: "./images/meopp/meopp.webp",
             titulo: "Meopp",
             subtitulo: "Cada dia más cerca",
             resaltar:["cerca"]
         },
         {
-            img: "../images/meopp/1.webp",
+            img: "./images/meopp/1.webp",
             titulo: "Titulo 2",
             subtitulo: "Subtitulo 2, otros y algo para ver",
             resaltar:["otros", "1"]
         },
         {
-            img: "../images/meopp/2.webp",
+            img: "./images/meopp/2.webp",
             titulo: "Titulo 2",
             subtitulo: "Subtitulo 2, otros y algo para ver",
             resaltar:["otros", "1"]
@@ -51,20 +51,27 @@
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" >
     <div id="carousel-container" class="carousel1">
         <div class="carousel-indicators">
-        {#each heroContent as image,i }
-            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{i}" class="{i=== 0 ? "active" :""}" aria-current="true" aria-label="Slide {i}"></button>
-        {/each}
+            {#each heroContent as image,i }
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{i}" class="{i=== 0 ? "active" :""}" aria-current="true" aria-label="Slide {i}"></button>
+            {/each}
         </div>
         
         <div class="carousel-inner" >
         {#each heroContent as contenido,i}
             <div class="carousel-item {i===0 ? "active" :""}">
                 <img 
-                    src="{contenido.img}"
-                    alt="img_{i}" 
+                    src="{contenido.img}" 
+                    srcset="{contenido.img.replace(/.(\w+)$/,'.movil.$1')} 570w, {contenido.img} 1200w"
+                    sizes="(max-width: 570px) 100vw, 1200px"
                     class="d-block w-100 imagesC zoom-in" 
-                    loading="lazy"
-                />
+                    alt="img_{i}"
+                    />
+
+                <!-- <picture >
+                    <source media="(max-width: 570px)" srcset="{contenido.img.replace(/.(\w+)$/,'.movil.$1')}">
+                    <img class="d-block w-100 imagesC zoom-in" src="{contenido.img}" alt="carourel {i}">
+                </picture> -->
+
                 <div class="phrase-container">
                     <div class="phrase d-none d-lg-block">
                         <p >
@@ -88,17 +95,6 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
         </button>
-        <!-- <div class="phrase-container d-flex justify-content-center ">
-            <div class="phrase d-none d-lg-block">
-                <p >
-                MEOPP
-                </p>
-                <h2>
-                Cada dia más cerca 
-                <br>
-                </h2>
-            </div>
-        </div> -->
     </div>
     </div>
     
@@ -106,10 +102,6 @@
 
 
 <style>
-    /* .carousel_container{
-        background-color: rgba(1, 157, 226,0.8);
-    } */
-
     .carousel1{
         flex-direction: column;
         justify-content: center;

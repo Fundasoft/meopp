@@ -11,6 +11,7 @@
     --green-04: #84C000;
     --green-05: #A7E028;
 }
+
 .resaltado {
     color: var(--green-neon-normal);
     font-weight: bold;
