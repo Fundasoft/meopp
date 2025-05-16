@@ -8,7 +8,7 @@
 			<div class="column">
 				<h4>MEOPP</h4>
 				<p>Mutual de Empleados y Obreros Petroleros Privados</p>
-        <img src="./images/logo/light.png" alt="">
+        <img src="./images/logo/light.png" alt="meopp logo">
 			</div>
 
 			<div class="column">
@@ -48,8 +48,13 @@ Mutualidades de la Provincia de Neuquén.</h4>
 
 
 <style>
+  img{
+    max-width: 300px;
+  }
+
 	footer {
-		background-color: var(--green-01);
+		background-color: var(--dark);
+		/* background-color: var(--green-01); */
 		color: white;
 		padding: 2rem 1rem;
 		text-align: center;
