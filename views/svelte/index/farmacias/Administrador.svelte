@@ -1,6 +1,7 @@
 <script>
     import Card from './Card.svelte';
     import Beneficios from './Beneficios.svelte';
+    import MensajeInicio from './MensajeInicio.svelte';
     import { onMount } from 'svelte';
     import SectionsHero from '../SectionsHero.svelte';
     
@@ -21,6 +22,8 @@
             })
         );
     })
+
+    modal("",html(MensajeInicio),{footer:false})
 </script>
 
 <SectionsHero 
