@@ -1,0 +1,122 @@
+[
+    {
+        "nombre": "Chos Malal",
+        "direccion": "25 de Mayo esquina Brown",
+        "horarios": "Lun a Vie de 8:30 a 12:30 y 16:00 a 20:00 - Sab 9:00 a 13:00",
+        "ubicacion": [
+            -38.9309542,
+            -68.0004147
+        ],
+        "telefono": "299-5801044"
+    },
+    {
+        "nombre": "Neuquén Capital",
+        "direccion": "Santa Cruz 275",
+        "horarios": "Lun a Vie de 8 a 20 - Sab 9 a 13",
+        "ubicacion": [
+            -38.957657,
+            -68.0537593
+        ],
+        "telefono": "299-5554784"
+    },
+    {
+        "nombre": "Neuquén Capital - Oeste",
+        "direccion": "Godoy 85",
+        "horarios": "Lun a Vie de 8 a 20 - Sab 9 a 13",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-4518744"
+    },
+    {
+        "nombre": "Añelo",
+        "direccion": "Calle N° 15 y Calle N° 2",
+        "horarios": "Lun a Vie de 9 a 13 y 14 a 19 - Sab 9 a 13",
+        "ubicacion": [
+            -38.3536538,
+            -68.7895209
+        ],
+        "telefono": "299-5320059"
+    },
+    {
+        "nombre": "Buta Ranquil",
+        "direccion": "Pehuenches e Islas Malvinas",
+        "horarios": "Lun a Vie de 8:30 a 12:30 y 16 a 20 - Sab 9 a 13",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-4603561"
+    },
+    {
+        "nombre": "Cutral Co",
+        "direccion": "Santa Cruz e Yrigoyen ",
+        "horarios": "Lun a Vie de 8:30 a 12:30 y 16 a 20 - Sab 9 a 13 ",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-4601925"
+    },
+    {
+        "nombre": "Centenario",
+        "direccion": "Irigoyen 75",
+        "horarios": "Lun a Vie de 8:30 a 12:30 y 16 a 20 - Sab 9 a 13",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-4098389"
+    },
+    {
+        "nombre": "25 de mayo",
+        "direccion": "Don Bosco 66",
+        "horarios": "Lun a Vie d 8:30 a 12:30 y 16:30 a 20:30 - Sab 9 a 13",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-4278704"
+    },
+    {
+        "nombre": "Rincón de los Sauces",
+        "direccion": "Salta 145",
+        "horarios": "Lun a Vie de 8:30 a 13 y 16:30 a 20:30 - Sab 9 a 13",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-5320000"
+    },
+    {
+        "nombre": "Plottier",
+        "direccion": "Planicie Banderita esquina Rio Bermejo",
+        "horarios": "Lun a Vie de 8:30 a 12:30 y 16 a 20 - Sab 9 a 13",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-4104039"
+    },
+    {
+        "nombre": "Catriel",
+        "direccion": "Rene favaloro 446",
+        "horarios": "Lun a Vie de 8:30 a 12:30 y 16:30 a 20:30 - Sab 9 a 13",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-4604112"
+    },
+    {
+        "nombre": "Plaza Huincul",
+        "direccion": "Carmen Funes 1000",
+        "horarios": "Lun a Vie de 8:30 a 12:30 y 16:30 a 20:30 - Sab 9 a 13",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-5320071"
+    }
+]

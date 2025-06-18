@@ -3,7 +3,7 @@
 // --------------------------------------------------------------
 
 // import Seo from './panel/Seo.svelte';
-import PanelIndex from './xenplate/PanelIndex.svelte';
+import AdminFarmacias from './panel/farmacias/Administrador.svelte';
 
 // --------------------------------------------------------------
 // import externo
@@ -22,4 +22,5 @@ setting({titulo:"meopp",loader:1000});
 // --------------------------------------------------------------
 
 // menu('Index', permiso(ADMINISTRADOR) ? view(Seo,{title:"Estadisticas"}) : view(PanelIndex));
-menu('Index', view(PanelIndex,{title:'Panel de Administrador'}), {icon:"house"});
+// menu('Index', view(PanelIndex,{title:'Panel de Administrador'}), {icon:"house"});
+menu('Farmacias', view(AdminFarmacias), {icon:"clipboard-plus"});

@@ -2,7 +2,6 @@
 import { onMount } from 'svelte';
 
 let isNavbarOpen = false;
-
 let y=0 ,navHeight;
 
 setTimeout(e=>{
@@ -55,24 +54,31 @@ function handleDocumentClick(event) {
                     </li>
                     <li class="nav-item carrito">
                         <a class="nav-link fixed" href="index.html" role="button">
-                            Protocolo
-                        </a>
-                    </li>
-                    <li class="nav-item carrito">
-                        <a class="nav-link fixed" href="index.html" role="button">
                             Afiliaciones
                         </a>
                     </li>
                     <li class="nav-item carrito">
-                        <a class="nav-link fixed" href="index.html" role="button">
-                            Salud
+                        <a class="nav-link fixed" href="index.html?render=autoridades" role="button">
+                            Autoridades
                         </a>
                     </li>
                     <li class="nav-item carrito">
                         <a class="nav-link fixed" href="index.html" role="button">
-                            <i class="bi bi-search"></i>
+                            Novedades y Noticias
                         </a>
                     </li>
+                    <!-- 
+                    <li class="nav-item carrito">
+                        <a class="nav-link fixed" href="index.html" role="button">
+                            Salud
+                        </a>
+                    </li> 
+                    -->
+                    <!-- <li class="nav-item carrito">
+                        <a class="nav-link fixed" href="index.html" role="button">
+                            <i class="bi bi-search"></i>
+                        </a>
+                    </li> -->
                 </ul>
             </div>
         {/if}

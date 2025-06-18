@@ -1,0 +1,84 @@
+[
+    {
+        "title": "Casamiento",
+        "subtitle":"Requisitos",
+        "icon": "./images/icons/wedding.svg",
+        "alt": "Icono de casamiento",
+        "monto": "$420.000",
+        "requisitos": [
+            "Acta de matrimonio",
+            "Copia DNI asociado titular",
+            "Copia DNI del cónyuge",
+            "Último recibo de sueldo",
+            "CBU del afiliado titular, emitido por entidad bancaria",
+            "Plazo de presentación 30 días desde la fecha de casamiento"
+        ],
+        "botonTexto": "Solicitar subsidio de casamiento"
+    },
+    {
+        "title": "Nacimiento",
+        "subtitle":"Requisitos",
+        "icon": "./images/icons/baby.svg",
+        "alt": "Icono de nacimiento",
+        "monto": "$330.000",
+        "requisitos": [
+            "Acta de nacimiento",
+            "Copia del DNI del menor",
+            "DNI del asociado titular",
+            "Ultimo recibo de sueldo",
+            "CBU del asociado titular, emitido por entidad bancaria",
+            "es condición que el hijo/a este de alta en la ficha del titular (gestionar en afiliaciones@ospepri.org.ar)",
+            "Plazo de presentación 30 días desde la fecha del nacimiento"
+        ],
+        "botonTexto": "Solicitar subsidio de nacimiento"
+    },
+    {
+        "title": "Defunción de titular",
+        "subtitle":"Requisitos de titular",
+        "icon": "./images/icons/memorial.svg",
+        "alt": "Icono de defuncion",
+        "monto": "$363.000",
+        "requisitos": [
+            "Partida de defunción ",
+            "DNI del asociado titular ",
+            "DNI del esposo/a o conviviente ",
+            "Ultimo recibo de sueldo del asociado titular ",
+            "CBU de esposo/a, emitido por entidad bancaria o homebanking ",
+            "En caso de no existir cónyuge o conviviente declarado, podrá ser percibido por los restantes miembros del grupo familiar, registrados en la Mutual. ",
+            "Plazo de presentación 30 días desde la fecha de defunción."
+        ],
+        "botonTexto": "Solicitar subsidio defuncion del titular"
+    },
+    {
+        "title": "Defunción de esposo/a o conviviente",
+        "subtitle":"Requisitos de esposo/a o conviviente",
+        "icon": "./images/icons/memorial.svg",
+        "alt": "Icono de defuncion",
+        "monto": "$363.000",
+        "requisitos": [
+            "Partida de defunción ",
+            "DNI del asociado titular ",
+            "DNI del fallecido ",
+            "Ultimo recibo de sueldo ",
+            "CBU del Asociado titular, emitido por entidad bancaria o homebanking ",
+            "Plazo de presentación 30 días desde la fecha de defunción."
+        ],
+        "botonTexto": "Solicitar subsidio de defunción del esposo/a o conviviente"
+    },
+    {
+        "title": "Defunción de hijo/a",
+        "subtitle":"Requisitos de hijo/a",
+        "icon": "./images/icons/memorial.svg",
+        "alt": "Icono de defuncion",
+        "monto": "$363.000",
+        "requisitos": [
+            "Partida de defunción",
+            "DNI del asociado titular",
+            "DNI del fallecido ",
+            "Ultimo recibo de sueldo ",
+            "CBU del Asociado titular emitido por entidad bancaria o homebanking ",
+            "Plazo de presentación 30 días desde la fecha de defunción."
+        ],
+        "botonTexto": "Solicitar subsidio de defunción de hijo/a"
+    }
+]
