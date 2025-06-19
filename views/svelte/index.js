@@ -9,7 +9,7 @@
     import Autoridades from './index/Autoridades.svelte';
     import Informacion from './index/Informacion.svelte';
     import Footer from './index/Footer.svelte';
-    import Whatsapp from './xenplate/Whatsapp.svelte';
+    // import Whatsapp from './xenplate/Whatsapp.svelte';
 
     import "./index/styles.css";
 
@@ -54,7 +54,6 @@ switch (RENDER) {
         break;
     case 'jubilados':
         section(Jubilados);
-        section(WhatsApp);
         break;
     case 'autoridades':
         section(Autoridades);
@@ -62,7 +61,7 @@ switch (RENDER) {
     default: break;
 }
 
-    section(Whatsapp);  
+    // section(Whatsapp);  
 
     // --------------------------------------------------------------
     // footer
