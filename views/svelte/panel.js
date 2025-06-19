@@ -24,3 +24,4 @@ setting({titulo:"meopp",loader:1000});
 // menu('Index', permiso(ADMINISTRADOR) ? view(Seo,{title:"Estadisticas"}) : view(PanelIndex));
 // menu('Index', view(PanelIndex,{title:'Panel de Administrador'}), {icon:"house"});
 menu('Farmacias', view(AdminFarmacias), {icon:"clipboard-plus"});
+// menu('Opticas', view(AdminOpticas), {icon:"clipboard-plus"});

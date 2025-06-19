@@ -10,7 +10,7 @@
             grid(_OPTICAS, {
                 // buttons: ['++'],
                 sync: {
-                    read:[_habilitado,IGUAL,true]
+                    read:[_habilitado,IGUAL,1]
                 },
                 filter: true,
                 item: Card,

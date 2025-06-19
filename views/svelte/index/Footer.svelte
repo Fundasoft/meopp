@@ -33,7 +33,7 @@
 	const enlaces = [
 		{ 
 			texto: 'Nosotros', 
-			url: '/nosotros' 
+			url: '#' 
 		},
 		{ 
 			texto: 'Servicios', 
@@ -45,7 +45,7 @@
 		// },
 		{ 
 			texto: 'Contacto', 
-			url: '#contacto' 
+			url: '#' 
 		}
 	];
 	
@@ -362,12 +362,6 @@
 		text-align: center;
 	}
 
-	.social-title {
-		color: var(--green-neon-normal);
-		font-size: 1.2rem;
-		font-weight: 600;
-		margin: 0 0 1.5rem 0;
-	}
 
 	.social-buttons {
 		display: flex;
@@ -430,7 +424,7 @@
 		margin: 0;
 	}
 
-	.footer-bottom-links {
+	/* .footer-bottom-links {
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
@@ -450,7 +444,7 @@
 	.separator {
 		color: var(--green-03);
 		font-size: 0.8rem;
-	}
+	} */
 
 	/* Responsive */
 	@media (max-width: 768px) {

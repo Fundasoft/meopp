@@ -7,27 +7,26 @@
     {
         "articulo":"CRISTAL BLANCO - graduación intermedia (Par)",
         "precio": 76299.13,
-        "habilitado": true
+        "habilitado": 1
     },
     {
         "articulo":"CRISTAL BLANCO - graduación alta (Par)",
         "precio": 150000.00,
-        "habilitado": true
+        "habilitado": 1
     },
     {
         "articulo":"ARMAZON",
         "precio": 60683.29,
-        "habilitado": false
+        "habilitado": 1
     },
     {
         "articulo":"MULTIFOCAL/ BIFOCALES (Par)",
         "precio": 163674.45,
-        "habilitado": true
-        
+        "habilitado": 1
     },
     {
         "articulo":"LENTES DE CONTACTO",
         "precio": 300000.00,
-        "habilitado": true
+        "habilitado": 1
     }
 ]
