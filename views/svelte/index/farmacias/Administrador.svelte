@@ -11,6 +11,7 @@
         contenedor.append(
             grid(_FARMACIAS, {
                 // buttons: ['++'],
+                
                 filter: true,
                 item: Card,
                 columns: [

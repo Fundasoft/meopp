@@ -2,8 +2,16 @@
 
 <style>
     img{
-        max-height: 100%;
-        max-width: 100%;
-        object-fit: cover;
+        max-width: 80%;
+        max-height: 70vh;
     }
+    
+    @media (max-width: 640px) {
+        img{
+            max-width: 100%;
+            /* max-height: none; */
+        }
+    }
+
+
 </style>
