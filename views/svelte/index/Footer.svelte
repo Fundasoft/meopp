@@ -6,7 +6,7 @@
 	const socialLinks = [
 		{
 			name: 'Facebook',
-			// icon: Facebook,
+			icon: "facebook",
 			url: 'https://www.facebook.com/meopp.mutual',
 			color: '#1877F2'
 		},
@@ -18,13 +18,13 @@
 		// },
 		{
 			name: 'Instagram',
-			// icon: Instagram,
+			icon: "instagram",
 			url: 'https://www.instagram.com/meopp.mutual/',
 			color: '#E4405F'
 		},
 		{
 			name: 'YouTube',
-			// icon: Youtube,
+			icon: "youtube",
 			url: 'https://www.youtube.com/channel/UCNNd12EOZiMlGbLO3fHK0hg?view_as=subscriber',
 			color: '#FF0000'
 		}
@@ -142,6 +142,7 @@
 							style="--social-color: {social.color}"
 						>
 							<!-- <social.icon class="social-icon" size={20} /> -->
+							<i class="bi bi-{social.icon}"></i>
 							<span class="social-name">{social.name}</span>
 						</a>
 					{/each}
