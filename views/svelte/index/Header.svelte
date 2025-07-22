@@ -47,24 +47,29 @@ function handleDocumentClick(event) {
             <div class="collapse navbar-collapse" id="navbarNavDropdown" class:show={isNavbarOpen} >
                 <ul class="navbar-nav mx-auto">
 
-                    <li class="nav-item carrito">
+                    <li class="nav-item">
                         <a class="nav-link fixed" href="index.html" role="button">
                             Inicio
                         </a>
                     </li>
-                    <li class="nav-item carrito">
+                    <li class="nav-item">
                         <a class="nav-link fixed" href="index.html" role="button">
                             Afiliaciones
                         </a>
                     </li>
-                    <li class="nav-item carrito">
+                    <li class="nav-item">
                         <a class="nav-link fixed" href="index.html?render=autoridades" role="button">
                             Autoridades
                         </a>
                     </li>
-                    <li class="nav-item carrito">
+                    <li class="nav-item">
                         <a class="nav-link fixed" href="index.html" role="button">
                             Novedades y Noticias
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fixed" aria-current="page" href="./login.html">
+                            <i class="bi bi-person"></i>
                         </a>
                     </li>
                     <!-- 
@@ -74,7 +79,7 @@ function handleDocumentClick(event) {
                         </a>
                     </li> 
                     -->
-                    <!-- <li class="nav-item carrito">
+                    <!-- <li class="nav-item ">
                         <a class="nav-link fixed" href="index.html" role="button">
                             <i class="bi bi-search"></i>
                         </a>
@@ -137,10 +142,8 @@ function handleDocumentClick(event) {
 
 .nav-item{
     padding: 0;
-}
-
-.nav-link{
     transition-duration: 300ms;
+    margin-inline: 5px !important;
 }
 
 .nav-item:hover .nav-link {
@@ -173,10 +176,6 @@ function handleDocumentClick(event) {
 
 .nav-link.fixed:hover::after {
     width: 100%;
-}
-
-.carrito{
-    margin-inline: 5px !important;
 }
 
 .navbar-brand{

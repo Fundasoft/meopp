@@ -12,7 +12,7 @@
 
     <div class="card-body">
         {#if value.precio}
-            <p class="price">$ {new Intl.NumberFormat('de-DE').format((value.precio).toFixed(2))}</p>
+            <p class="price">$ {new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true}).format(value.precio)}</p>
         {:else}
             <p>Consultar</p>
         {/if}

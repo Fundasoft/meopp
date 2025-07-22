@@ -1,11 +1,12 @@
 module.exports={
     "bd": "json",
-    "key": "63a5bc6a1f8649e56e60f562451e5ce3adf1ff034c27e9fa15713c11d3e8fada",
+    "key": "f1010373b68076c6064512c213e35e8c3a74ef8b35ab97d53ff1f1707f844ae2",
     "permiso": [
         "ADMINISTRADOR"
     ],
     "PERMISO": "public",
     "columnas": {
+        "codigo": "",
         "articulo": "",
         "precio": 0,
         "habilitado": true

@@ -6,23 +6,30 @@
     import SectionsHero from '../SectionsHero.svelte';
     
     let contenedor;
-
-    onMount(()=>{
-        contenedor.append(
-            grid(_FARMACIAS, {
-                // buttons: ['++'],
-                filter: true,
-                item: Card,
-                columns: [
-                    { key: "nombre", value: ""},
-                    { key: "direccion", value: ""},
-                    { key: "horarios", value: ""},
-                    { key: "telefono", value: ""}
-                ],
-            })
-        );
+    let grilla = grid([],{
+        // buttons: ['++'],
+        sync: {
+            read:false
+        },
+        filter: true,
+        item: Card,
+        columns: [
+            { key: "nombre", value: ""},
+            { key: "direccion", value: ""},
+            { key: "horarios", value: ""},
+            { key: "telefono", value: ""}
+        ],
     })
-
+    
+    FARMACIAS.read([_habilitado,IGUAL,1]).then((_farmacias) => {
+        grilla.value=_farmacias;
+        log.farm(_farmacias)
+    })
+    
+    onMount(()=>{
+        contenedor.append(grilla);
+    })
+    
     modal("",html(MensajeInicio),{footer:false})
 </script>
 

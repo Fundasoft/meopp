@@ -4,22 +4,25 @@
     import SectionsHero from '../SectionsHero.svelte';
     
     let contenedor;
+    let grilla=grid([],{
+        // buttons: ['++'],
+        sync: {
+            read:false
+        },
+        filter: true,
+        item: Card,
+        columns: [
+            { key: "articulo", value: ""},
+            { key: "precio", value: ""}
+        ],
+    });
+
+    OPTICAS.read([_habilitado,IGUAL,1]).then((_opticas) => {
+        grilla.value=_opticas;
+    })
     
     onMount(()=>{
-        contenedor.append(
-            grid(_OPTICAS, {
-                // buttons: ['++'],
-                // sync: {
-                //     read:[_habilitado,IGUAL,1]
-                // },
-                filter: true,
-                item: Card,
-                columns: [
-                    { key: "articulo", value: ""},
-                    { key: "precio", value: ""}
-                ],
-            })
-        );
+        contenedor.append(grilla);
     })
 </script>
 <SectionsHero 

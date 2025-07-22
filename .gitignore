@@ -5,8 +5,7 @@ data/sen
 data/server
 
 # xen
-data/Y
-proyecto.ini
+setting.ini
 rollup.config.mjs
 .build/
 logs/

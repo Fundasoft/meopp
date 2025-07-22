@@ -7,7 +7,8 @@
             -38.9309542,
             -68.0004147
         ],
-        "telefono": "299-5801044"
+        "telefono": "299-5801044",
+        "habilitado": 1        
     },
     {
         "nombre": "Neuquén Capital",
@@ -17,7 +18,8 @@
             -38.957657,
             -68.0537593
         ],
-        "telefono": "299-5554784"
+        "telefono": "299-5554784",
+        "habilitado": 1        
     },
     {
         "nombre": "Neuquén Capital - Oeste",
@@ -27,7 +29,8 @@
             -38.955726,
             -68.0891166
         ],
-        "telefono": "299-4518744"
+        "telefono": "299-4518744",
+        "habilitado": 1        
     },
     {
         "nombre": "Añelo",
@@ -37,7 +40,8 @@
             -38.3536538,
             -68.7895209
         ],
-        "telefono": "299-5320059"
+        "telefono": "299-5320059",
+        "habilitado": 1        
     },
     {
         "nombre": "Buta Ranquil",
@@ -47,7 +51,8 @@
             -38.955726,
             -68.0891166
         ],
-        "telefono": "299-4603561"
+        "telefono": "299-4603561",
+        "habilitado": 1        
     },
     {
         "nombre": "Cutral Co",
@@ -57,7 +62,8 @@
             -38.955726,
             -68.0891166
         ],
-        "telefono": "299-4601925"
+        "telefono": "299-4601925",
+        "habilitado": 1        
     },
     {
         "nombre": "Centenario",
@@ -67,7 +73,8 @@
             -38.955726,
             -68.0891166
         ],
-        "telefono": "299-4098389"
+        "telefono": "299-4098389",
+        "habilitado": 1        
     },
     {
         "nombre": "25 de mayo",
@@ -77,7 +84,8 @@
             -38.955726,
             -68.0891166
         ],
-        "telefono": "299-4278704"
+        "telefono": "299-4278704",
+        "habilitado": 1        
     },
     {
         "nombre": "Rincón de los Sauces",
@@ -87,7 +95,8 @@
             -38.955726,
             -68.0891166
         ],
-        "telefono": "299-5320000"
+        "telefono": "299-5320000",
+        "habilitado": 1        
     },
     {
         "nombre": "Plottier",
@@ -97,7 +106,8 @@
             -38.955726,
             -68.0891166
         ],
-        "telefono": "299-4104039"
+        "telefono": "299-4104039",
+        "habilitado": 1        
     },
     {
         "nombre": "Catriel",
@@ -107,7 +117,8 @@
             -38.955726,
             -68.0891166
         ],
-        "telefono": "299-4604112"
+        "telefono": "299-4604112",
+        "habilitado": 1        
     },
     {
         "nombre": "Plaza Huincul",
@@ -117,6 +128,18 @@
             -38.955726,
             -68.0891166
         ],
-        "telefono": "299-5320071"
+        "telefono": "299-5320071",
+        "habilitado": 1        
+    },
+    {
+        "nombre": "Prueba",
+        "direccion": "Prueba habilitado",
+        "horarios": "Prueba habilitado",
+        "ubicacion": [
+            -38.955726,
+            -68.0891166
+        ],
+        "telefono": "299-5320071",
+        "habilitado": 1        
     }
 ]

@@ -43,7 +43,11 @@
                     custom:Ubicacion,
                     modal:true,   
                     size:"md"
-                }
+                },
+                {
+                    key:"habilitado",
+                    value:false
+                },
                 // {
                 //     USUARIOS.CREATE({nick:'pepinito'},_SOCIOS,26)
                 // }
