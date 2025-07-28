@@ -1,16 +1,30 @@
 <script>
     import SectionsHero from './SectionsHero.svelte';
 
-	const info = {
-		cuotas: [
-			{ valor: '$38.557,90', periodo: 'del 1 al 15 de cada mes' },
-			{ valor: '$40.485,80', periodo: 'del 15 al 28 de cada mes' }
-		],
+	let info = {
+		cuotas: {
+			inicial:{
+				valor:0,
+				periodo: 'del 1 al 15 de cada mes'
+			},
+			tardia: {
+				valor:0,
+				periodo: 'del 15 al 28 de cada mes'
+			}
+		},
+
 		contacto: '2994122082 (vía WhatsApp)',
 		organizacion: 'Agrupación Jubilados',
 		horario: '8:30 a 16:30 hs - Lunes a Viernes',
 		direccion: 'Calle Santa Cruz 356, Neuquén'
 	};
+
+	async function actualizarCuota(){
+		info.cuotas.inicial.valor = await variable(VAR_PUBLIC_JUBILADOS_CUOTA_INICIAL);
+		info.cuotas.tardia.valor = await variable(VAR_PUBLIC_JUBILADOS_CUOTA_TARDIA);
+	};
+
+	actualizarCuota();
 </script>
 
 <SectionsHero 
@@ -29,12 +43,16 @@
 		<div class="section cuotas-section">
 			<h2 class="section-title">Valores de Cuotas Mensuales</h2>
 			<div class="cuotas-grid">
-				{#each info.cuotas as cuota, index}
+				{#key info}
 					<div class="cuota-box">
-						<div class="cuota-valor">{cuota.valor}</div>
-						<div class="cuota-periodo">{cuota.periodo}</div>
+						<div class="cuota-valor">$ {info.cuotas.inicial.valor ? new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true}).format(info.cuotas.inicial.valor) : "-" }</div>
+						<div class="cuota-periodo">{info.cuotas.inicial.periodo}</div>
 					</div>
-				{/each}
+					<div class="cuota-box">
+						<div class="cuota-valor">$ {info.cuotas.tardia.valor ? new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true}).format(info.cuotas.tardia.valor) : "-" }</div>
+						<div class="cuota-periodo">{info.cuotas.tardia.periodo}</div>
+					</div>
+				{/key}
 			</div>
 		</div>
 		
