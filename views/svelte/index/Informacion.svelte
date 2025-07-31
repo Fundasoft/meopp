@@ -13,14 +13,14 @@
             descripcion: "",
             botonTexto: "Contactar",
             invertido: true
-        },
-        {
-            titulo: "Autorizaciones y Órdenes Médicas",
-            descripcion: "Gestioná tus autorizaciones médicas de manera rápida y sencilla. Contamos con un sistema digital que te permite solicitar y recibir aprobaciones para estudios y tratamientos .",
-            botonTexto: "Solicitar",
-            imagen: "../images/meopp/2.webp",
-            invertido: false
         }
+        // {
+        //     titulo: "Autorizaciones y Órdenes Médicas",
+        //     descripcion: "Gestioná tus autorizaciones médicas de manera rápida y sencilla. Contamos con un sistema digital que te permite solicitar y recibir aprobaciones para estudios y tratamientos .",
+        //     botonTexto: "Solicitar",
+        //     imagen: "../images/meopp/2.webp",
+        //     invertido: false
+        // }
     ];
 
 </script>
