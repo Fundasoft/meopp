@@ -22,6 +22,12 @@
     // configuracion
     // --------------------------------------------------------------
 
+    // PARA PRENDER EL DEMO
+    // https://fundasoft.org/demo/up/21 => MEOPP
+    // https://fundasoft.org/demo/up/22 => SINDICATOPETROLEROS
+    // https://fundasoft.org/demo/up/23 => OSPEPRI
+    // https://fundasoft.org/demo/up/26 => GENESIS
+
     // setting({});
 
     // --------------------------------------------------------------

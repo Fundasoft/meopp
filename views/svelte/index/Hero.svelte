@@ -10,9 +10,11 @@
     carousel.cycle();
     })
 
+    let path = "./images/meopp/"
+
     let heroContent =[
         {
-            img: "./images/meopp/2.webp",
+            img: "meopp",
             titulo: "En MEOPP cuidamos tu salud y la de tu familia.",
             subtitulo: "Somos la obra social privada de los trabajadores del petróleo, con cobertura médica de calidad, prestadores en todo el país y beneficios exclusivos para el sector.",
             resaltar:["obra social privada", "cobertura médica de calidad", "beneficios exclusivos"],
@@ -20,7 +22,7 @@
             url:"./index.html"
         },
         {
-            img: "./images/meopp/meopp.webp",
+            img: "family",
             titulo: "Meopp",
             subtitulo: "Cada día más cerca",
             resaltar:["cerca"]
@@ -34,7 +36,6 @@
         
     ];
 
-
     function resaltarTexto(texto, palabras) {
         // Escapa palabras para usar en regex
         const escaped = palabras.map(p =>
@@ -46,58 +47,57 @@
         // Reemplaza las coincidencias con span resaltado
         return texto.replace(regex, '<span style="font-weight:bold !important" class="resaltado">$1</span>');
     }
-
 </script>  
 
 <div class="carousel_container">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false" >
-    <div id="carousel-container" class="carousel1">
-        <div class="carousel-indicators">
-            {#each heroContent as image,i }
-                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{i}" class="{i=== 0 ? "active" :""}" aria-current="true" aria-label="Slide {i}"></button>
-            {/each}
-        </div>
-        
-        <div class="carousel-inner" >
-            {#each heroContent as contenido,i}
-                <div class="carousel-item {i===0 ? "active" :""}">
-                    <img 
-                        srcset="{contenido.img.replace(".webp",'.mobile.webp')} 570w, {contenido.img} 1200w"
-                        class="d-block w-100 imagesC zoom-in" 
-                        sizes="(max-width: 570px) 100vw, 1200px"
-                        alt="img_{i}"
-                        loading="lazy"
-                        />
+        <div id="carousel-container" class="carousel">
+            <div class="carousel-indicators">
+                {#each heroContent as image,i }
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="{i}" class="{i=== 0 ? "active" :""}" aria-current="true" aria-label="Slide {i}"></button>
+                {/each}
+            </div>
+            
+            <div class="carousel-inner" >
+                {#each heroContent as contenido,i}
+                    <div class="carousel-item {i===0 ? "active" :""}">
+                        <img 
+                            srcset="{path}{contenido.img}.mobile.webp 570w, {path}{contenido.img}.webp 1200w"
+                            class="d-block w-100 imagesC zoom-in" 
+                            sizes="(max-width: 570px) 100vw, 1200px"
+                            alt="img_{i}"
+                            loading="lazy"
+                            /> 
 
-                    <!-- src="{contenido.img}"  -->
+                        <div class="overlay"></div>
 
-                    <div class="phrase-container">
-                        <div class="phrase">
-                            <h2 class="phrase-title">
-                                {contenido.titulo}
-                            </h2>
-                            <p class="phrase-text">{@html resaltarTexto(contenido.subtitulo, contenido.resaltar)}</p>
-                            <br>
+                        <div class="phrase-container">
+                            <div class="phrase">
+                                <h2 class="phrase-title">
+                                    {contenido.titulo}
+                                </h2>
+                                <p class="phrase-text">{@html resaltarTexto(contenido.subtitulo, contenido.resaltar)}</p>
+                                <br>
 
-                            <!-- <a class="button-hero" href="./index.html">
-                                Afiliate ahora
-                            </a> -->
-                            
+                                <!-- <a class="button-hero" href="./index.html">
+                                    Afiliate ahora
+                                </a> -->
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
-                {/each}
-        </div> 
+                    {/each}
+            </div> 
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
     
 </div>
@@ -106,6 +106,9 @@
 <style>
     .carousel_container{
         position: relative;
+    }
+    .carousel-item{
+        overflow: hidden;
     }
 
     /* .button-hero {
@@ -133,7 +136,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     } */
 
-    .carousel1{
+    .carousel{
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -146,8 +149,6 @@
         max-height: 100vh;
         object-fit: cover;
         z-index: 1 !important;
-        /* position: absolute; */
-
     }
 
     .carousel-control-next, .carousel-control-prev {
@@ -167,6 +168,22 @@
         }
     }
 
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5); /* sombreado/oscurecido */
+        pointer-events: none; /* para no bloquear clics */
+    }
+
+    .phrase-container {
+        position: absolute;
+        font-size: 2rem;
+        z-index: 2;
+    }
+
     .phrase-container{
         display: flex;
         justify-content: center;
@@ -177,9 +194,20 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0,0,0,0.5);
-        /* background: linear-gradient(90deg, var(--green-darker-90), var(--green-normal-20)); */
     }
+    
+    /* .carousel-inner{
+        justify-content: center;
+        align-items: center; 
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        
+    } */
 
     .phrase{
         position: absolute;

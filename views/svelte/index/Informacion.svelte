@@ -30,7 +30,7 @@
     <!-- data-aos="fade-{i % 2 === 0 ? 'right' : 'left'}"  no anda porque se hace scroll en x-->
         <div class="seccion " 
             class:invertido={seccion.invertido}
-            data-aos="fade-{i % 2 === 0 ? 'right' : 'right'}" 
+            data-aos="fade-right" 
             data-aos-easing="linear" 
             data-aos-duration="400"    
             >
@@ -83,7 +83,7 @@
     }
 
     .seccion.invertido {
-    flex-direction: row-reverse;
+        flex-direction: row-reverse;
     }
 
     .contenido {
@@ -110,12 +110,15 @@
         flex: 1;
         position: relative;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
     }
 
     .imagen-container img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        display: block;
     }
 
     h2 {
@@ -179,26 +182,26 @@
 
     /* Responsive styles */
     @media (max-width: 900px) {
-    .seccion, .seccion.invertido {
-        flex-direction: column;
-    }
+        .seccion, .seccion.invertido {
+            flex-direction: column;
+        }
 
-    .contenido, .imagen-container {
-        width: 100%;
-    }
+        .contenido, .imagen-container {
+            width: 100%;
+        }
 
-    .imagen-container {
-        min-height: 300px;
-    }
+        /* .imagen-container {
+            min-height: 300px;
+        } */
     }
 
     @media (max-width: 600px) {
-    .contenido {
-        padding: 2rem;
-    }
+        .contenido {
+            padding: 2rem;
+        }
 
-    h2 {
-        font-size: 1.8rem;
-    }
+        h2 {
+            font-size: 1.8rem;
+        }
     }
 </style>

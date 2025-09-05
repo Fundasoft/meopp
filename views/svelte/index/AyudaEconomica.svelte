@@ -30,11 +30,11 @@
         (0299) 447 08 06
     </p>
 
-    <div class="main-button-container">
+    <!-- <div class="main-button-container">
         <a class="main-button" href="./documents/pdf/Instructivo-Pago-Cuotas-AYUDAS-MEOPP.pdf" target="_blank" rel="noopener noreferrer">
             <span>Instrucciones de pago</span>
         </a>
-    </div>
+    </div> -->
 </section>
 
 <style>

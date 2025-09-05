@@ -36,7 +36,44 @@ package.json
 *.pyc
 *.env
 *.sen
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.asc
+*.gpg
+*.bak
+*.old
+*.sqlite
+*.db
+*.secrets
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+*.so
+*.dylib
+*.class
+*.o
+*.obj
+*.pyc
+*.jar
+*.war
+*.apk
+*.app
+*.iso
+*.img
+*.swp
+*.swo
+*.tmp
+*.temp
+*.DS_Store
+Thumbs.db
+*.Trash-*
 
+# servidores
 /server
 /pasantia
 

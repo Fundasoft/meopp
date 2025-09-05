@@ -16,7 +16,7 @@ import AdminOpticas from './panel/opticas/Administrador.svelte';
 // configuracion
 // --------------------------------------------------------------
 
-setting({titulo:"meopp",loader:1000});
+setting({[SETTING_TITLE]:"meopp"});
 
 // --------------------------------------------------------------
 // menu + vistas

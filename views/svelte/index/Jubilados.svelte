@@ -33,70 +33,66 @@
     subtitulo="" />
 
 <section class="container">
-
-    <h1>
-        Contacte vía mail o teléfono
-    </h1>
     
-    <div class="compact-container">
-	<div class="info-panel">
-		<div class="section cuotas-section">
-			<h2 class="section-title">Valores de Cuotas Mensuales</h2>
-			<div class="cuotas-grid">
-				{#key info}
-					<div class="cuota-box">
-						<div class="cuota-valor">$ {info.cuotas.inicial.valor ? new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true}).format(info.cuotas.inicial.valor) : "-" }</div>
-						<div class="cuota-periodo">{info.cuotas.inicial.periodo}</div>
-					</div>
-					<div class="cuota-box">
-						<div class="cuota-valor">$ {info.cuotas.tardia.valor ? new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true}).format(info.cuotas.tardia.valor) : "-" }</div>
-						<div class="cuota-periodo">{info.cuotas.tardia.periodo}</div>
-					</div>
-				{/key}
-			</div>
-		</div>
-		
-		<div class="divider"></div>
-		
-		<div class="section contact-section">
-			<h2 class="section-title">📞 Información de Contacto</h2>
-			<div class="contact-grid">
-				<div class="contact-item">
-					<div class="contact-label">Teléfono:</div>
-					<div class="contact-value">{info.contacto}</div>
-				</div>
-				<div class="contact-item">
-					<div class="contact-label">Organización:</div>
-					<div class="contact-value">{info.organizacion}</div>
+	<div class="compact-container">
+		<div class="info-panel">
+			<div class="section cuotas-section">
+				<h2 class="section-title">Valores de Cuotas Mensuales</h2>
+				<div class="cuotas-grid">
+					{#key info}
+						<div class="cuota-box">
+							<div class="cuota-valor">$ {info.cuotas.inicial.valor ? new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true}).format(info.cuotas.inicial.valor) : "-" }</div>
+							<div class="cuota-periodo">{info.cuotas.inicial.periodo}</div>
+						</div>
+						<div class="cuota-box">
+							<div class="cuota-valor">$ {info.cuotas.tardia.valor ? new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: true}).format(info.cuotas.tardia.valor) : "-" }</div>
+							<div class="cuota-periodo">{info.cuotas.tardia.periodo}</div>
+						</div>
+					{/key}
 				</div>
 			</div>
-		</div>
-		
-		<div class="divider"></div>
-		
-		<div class="section details-section">
-			<h2 class="section-title">Horarios y Ubicación</h2>
-			<div class="details-grid">
-				<div class="detail-item">
-					<div class="detail-icon">🕐</div>
-					<div class="detail-content">
-						<div class="detail-label">Horario de Atención:</div>
-						<div class="detail-value">{info.horario}</div>
+			
+			<div class="divider"></div>
+			
+			<div class="section contact-section">
+				<h2 class="section-title">📞 Información de Contacto</h2>
+				<div class="contact-grid">
+					<div class="contact-item">
+						<div class="contact-label">Teléfono:</div>
+						<div class="contact-value">{info.contacto}</div>
+					</div>
+					<div class="contact-item">
+						<div class="contact-label">Organización:</div>
+						<div class="contact-value">{info.organizacion}</div>
 					</div>
 				</div>
-				<div class="detail-item">
-					<div class="detail-icon">
-                        <i class="bi bi-geo-alt"></i>
-                    </div>
-					<div class="detail-content">
-						<div class="detail-label">Dirección:</div>
-						<div class="detail-value">{info.direccion}</div>
+			</div>
+			
+			<div class="divider"></div>
+			
+			<div class="section details-section">
+				<h2 class="section-title">Horarios y Ubicación</h2>
+				<div class="details-grid">
+					<div class="detail-item">
+						<div class="detail-icon">🕐</div>
+						<div class="detail-content">
+							<div class="detail-label">Horario de Atención:</div>
+							<div class="detail-value">{info.horario}</div>
+						</div>
+					</div>
+					<div class="detail-item">
+						<div class="detail-icon">
+							<i class="bi bi-geo-alt"></i>
+						</div>
+						<div class="detail-content">
+							<div class="detail-label">Dirección:</div>
+							<div class="detail-value">{info.direccion}</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
     <div class="map">
         <!-- svelte-ignore a11y-missing-attribute -->

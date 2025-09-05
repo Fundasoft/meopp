@@ -5,7 +5,7 @@ import { test } from './testing/test.js';
 // configuracion
 // --------------------------------------------------------------
 
-setting({unlogged:'index.html'});
+setting({[SETTING_URL_UNLOGGED]:'index.html'});
 
 // --------------------------------------------------------------
 // tareas
