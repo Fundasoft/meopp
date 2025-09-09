@@ -14,7 +14,8 @@
                 "CBU del afiliado titular, emitido por entidad bancaria",
                 "Plazo de presentación 30 días desde la fecha de casamiento"
             ],
-            botonTexto: "Solicitar subsidio de casamiento"
+            botonTexto: "Solicitar subsidio de casamiento",
+            botonUrl: "https://sindicatopetroleros.org.ar/subsidios/index.php?tipoSolicitud=c"
         },
         {
             title: "Nacimiento",
@@ -31,7 +32,8 @@
                 "es condición que el hijo/a este de alta en la ficha del titular (gestionar en afiliaciones@ospepri.org.ar)",
                 "Plazo de presentación 30 días desde la fecha del nacimiento"
             ],
-            botonTexto: "Solicitar subsidio de nacimiento"
+            botonTexto: "Solicitar subsidio de nacimiento",
+            botonUrl: "https://sindicatopetroleros.org.ar/subsidios/index.php?tipoSolicitud=n"
         },
         {
             title: "Defunción de titular",
@@ -48,7 +50,8 @@
                 "En caso de no existir cónyuge o conviviente declarado, podrá ser percibido por los restantes miembros del grupo familiar, registrados en la Mutual. ",
                 "Plazo de presentación 30 días desde la fecha de defunción."
             ],
-            botonTexto: "Solicitar subsidio defuncion del titular"
+            botonTexto: "Solicitar subsidio defuncion del titular",
+            botonUrl:"https://sindicatopetroleros.org.ar/subsidios/index.php?tipoSolicitud=dt"
         },
         {
             title: "Defunción de esposo/a o conviviente",
@@ -64,7 +67,8 @@
                 "CBU del Asociado titular, emitido por entidad bancaria o homebanking ",
                 "Plazo de presentación 30 días desde la fecha de defunción."
             ],
-            botonTexto: "Solicitar subsidio de defunción del esposo/a o conviviente"
+            botonTexto: "Solicitar subsidio de defunción del esposo/a o conviviente",
+            botonUrl:"https://sindicatopetroleros.org.ar/subsidios/index.php?tipoSolicitud=de"
         },
         {
             title: "Defunción de hijo/a",
@@ -80,7 +84,8 @@
                 "CBU del Asociado titular emitido por entidad bancaria o homebanking ",
                 "Plazo de presentación 30 días desde la fecha de defunción."
             ],
-            botonTexto: "Solicitar subsidio de defunción de hijo/a"
+            botonTexto: "Solicitar subsidio de defunción de hijo/a",
+            botonUrl:"https://sindicatopetroleros.org.ar/subsidios/index.php?tipoSolicitud=de"
         }
     ];
 
@@ -145,9 +150,9 @@
                     </div>
                 </div>
                 <div class="action-section">
-                    <button class="action-button">
+                    <a class="action-button" href="botonUrl">
                         {item.botonTexto}
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

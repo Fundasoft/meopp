@@ -67,11 +67,6 @@ function handleDocumentClick(event) {
                             Novedades y Noticias
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fixed" aria-current="page" href="./login.html">
-                            <i class="bi bi-person"></i>
-                        </a>
-                    </li>
                     <!-- 
                     <li class="nav-item carrito">
                         <a class="nav-link fixed" href="index.html" role="button">

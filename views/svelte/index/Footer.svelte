@@ -157,8 +157,9 @@
 		<div class="footer-bottom">
 			<div class="footer-bottom-content">
 				<p class="copyright">
-					&copy; {currentYear} MEoPP. Todos los derechos reservados.
+					&copy; {currentYear} <a class="login" aria-current="page" href="./login.html">MEoPP.</a>  Todos los derechos reservados.
 				</p>
+
 				<!-- 
 				<div class="footer-bottom-links">
 					<a href="/privacidad" class="bottom-link">Política de Privacidad</a>
@@ -178,6 +179,10 @@
 		padding: 3rem 1rem 1rem;
 		position: relative;
 		overflow: hidden;
+	}
+
+	.login{
+		text-decoration: none;
 	}
 	
 	.footer::before {
