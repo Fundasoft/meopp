@@ -53,7 +53,7 @@ function handleDocumentClick(event) {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fixed" href="index.html" role="button">
+                        <a class="nav-link fixed" href="index.html?render=afiliaciones" role="button">
                             Afiliaciones
                         </a>
                     </li>
