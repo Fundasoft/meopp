@@ -28,8 +28,8 @@
 
     function enviarMail() {
         const to = encodeURIComponent("consultasmeopp@ospepri.org.ar");
-        const subject = encodeURIComponent("Soy prestador");
-        const body = encodeURIComponent("Hola!.\n\nSoy prestador");
+        const subject = encodeURIComponent("Especificar Asunto");
+        const body = encodeURIComponent("Hola!.\n\n ");
 
         const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 

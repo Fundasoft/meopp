@@ -68,10 +68,6 @@
 		border-bottom: 2px solid var(--green-light);
 	}
 	
-
-	
-
-	
 	.contact-grid {
 		display: grid;
 		gap: 15px;
