@@ -36,22 +36,56 @@
             botonUrl: "https://sindicatopetroleros.org.ar/subsidios/index.php?tipoSolicitud=n"
         },
         {
-            title: "Defunción",
-            subtitle:"Ver opciones disponibles",
+            title: "Defunción de titular",
+            subtitle:"Requisitos de titular",
             icon: "./images/icons/memorial.svg",
             alt: "Icono de defuncion",
             monto: "$363.000",
             requisitos: [
-                "Subsidio por defunción de titular",
-                "Subsidio por defunción de esposo/a o conviviente",
-                "Subsidio por defunción de hijo/a",
-                "Monto único para todas las opciones",
-                "Requisitos específicos según el caso",
-                "Plazo de presentación 30 días desde la fecha de defunción"
+                "Partida de defunción ",
+                "DNI del asociado titular ",
+                "DNI del esposo/a o conviviente ",
+                "Ultimo recibo de sueldo del asociado titular ",
+                "CBU de esposo/a, emitido por entidad bancaria o homebanking ",
+                "En caso de no existir cónyuge o conviviente declarado, podrá ser percibido por los restantes miembros del grupo familiar, registrados en la Mutual. ",
+                "Plazo de presentación 30 días desde la fecha de defunción."
             ],
-            botonTexto: "Ver opciones de defunción",
-            botonUrl: "index.html?render=defuncion", // Ruta a la nueva página de defunciones
-            isDefuncionGroup: true
+            botonTexto: "Solicitar subsidio defuncion del titular",
+            botonUrl:"https://sindicatopetroleros.org.ar/subsidios/index.php?tipoSolicitud=dt"
+        },
+        {
+            title: "Defunción de esposo/a o conviviente",
+            subtitle:"Requisitos de esposo/a o conviviente",
+            icon: "./images/icons/memorial.svg",
+            alt: "Icono de defuncion",
+            monto: "$363.000",
+            requisitos: [
+                "Partida de defunción ",
+                "DNI del asociado titular ",
+                "DNI del fallecido ",
+                "Ultimo recibo de sueldo ",
+                "CBU del Asociado titular, emitido por entidad bancaria o homebanking ",
+                "Plazo de presentación 30 días desde la fecha de defunción."
+            ],
+            botonTexto: "Solicitar subsidio de defunción del esposo/a o conviviente",
+            botonUrl:"https://sindicatopetroleros.org.ar/subsidios/index.php?tipoSolicitud=de"
+        },
+        {
+            title: "Defunción de hijo/a",
+            subtitle:"Requisitos de hijo/a",
+            icon: "./images/icons/memorial.svg",
+            alt: "Icono de defuncion",
+            monto: "$363.000",
+            requisitos: [
+                "Partida de defunción",
+                "DNI del asociado titular",
+                "DNI del fallecido ",
+                "Ultimo recibo de sueldo ",
+                "CBU del Asociado titular emitido por entidad bancaria o homebanking ",
+                "Plazo de presentación 30 días desde la fecha de defunción."
+            ],
+            botonTexto: "Solicitar subsidio de defunción de hijo/a",
+            botonUrl:"https://sindicatopetroleros.org.ar/subsidios/index.php?tipoSolicitud=de"
         }
     ];
 
@@ -62,6 +96,7 @@
         isOpenArray[index] = !isOpenArray[index];
     }
 </script>
+
 
 {#each subsidios as item, index}
     <div class="container">
@@ -105,7 +140,7 @@
                         <div class="requirements-content">
                             <ul class="requirements-list">
                                 {#each item.requisitos as req}
-                                    <li class="requirement-item" class:defuncion-option={item.isDefuncionGroup}>
+                                    <li class="requirement-item">
                                         <div class="bullet"></div><span>{req}</span>
                                     </li>
                                 {/each}
@@ -114,9 +149,8 @@
                         </div>
                     </div>
                 </div>
-              
                 <div class="action-section">
-                    <a class="action-button" href={item.botonUrl}>
+                    <a class="action-button" href="botonUrl">
                         {item.botonTexto}
                     </a>
                 </div>
@@ -125,11 +159,8 @@
     </div>
 {/each}
 
+
 <style>
-    :root {
-        --green-04: #8bc34a;
-        --green-03: #7cb342;
-    }
 
     .icon{
         width: 150px;
@@ -287,11 +318,6 @@
         color: #374151;
     }
 
-    .defuncion-option {
-        font-weight: 500;
-        color: var(--green-04);
-    }
-
     .bullet {
         width: 6px;
         height: 6px;
@@ -323,9 +349,6 @@
         font-weight: 500;
         cursor: pointer;
         transition: background-color 0.2s;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
     }
 
     .action-button:hover {

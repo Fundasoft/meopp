@@ -1,31 +1,44 @@
 <script>
-	const autoridad = {
-		nombre: 'Guillermo Leiton',
-		cargo: 'Presidente',
-		imagen: './images/meopp/Guillermo_Leiton.webp'
-	};
+	const autoridades = [
+		{
+			nombre: 'Guillermo Leiton',
+			cargo: 'Presidente',
+			imagen: './images/meopp/Guillermo_Leiton.webp'
+		},
+		{
+			nombre: 'Marcelo Rucci',
+			cargo: 'Secretario General',
+			imagen: './images/meopp/Marcelo_Rucci.webp'
+		}
+	]
 </script>
 
 <section class="autoridades-section">
-	<h2 class="section-title">Autoridades</h2>
-	
-	<div class="autoridad-container">
-        <p class="autoridad-cargo">{autoridad.cargo}</p>
-		<div class="imagen-container">
-			<img 
-				src={autoridad.imagen || "/placeholder.svg"} 
-				alt="Foto de {autoridad.nombre}"
-				class="autoridad-imagen"
-			/>
+	<h2 class="page-title">Autoridades</h2>
+
+	{#each autoridades as autoridad }	
+		<div class="autoridades-card">
+			<div class="autoridad-container">
+				<p class="autoridad-cargo">{autoridad.cargo}</p>
+				<div class="imagen-container">
+					<img 
+						src={autoridad.imagen || "/placeholder.svg"} 
+						alt="Foto de {autoridad.nombre}"
+						class="autoridad-imagen"
+					/>
+				</div>
+				<div class="autoridad-info">
+					<h3 class="autoridad-nombre">{autoridad.nombre}</h3>
+				</div>
+			</div>
 		</div>
-		<div class="autoridad-info">
-			<h3 class="autoridad-nombre">{autoridad.nombre}</h3>
-		</div>
-	</div>
+	{/each}
+
 </section>
 
 <style>
-	.autoridades-section {
+
+	.autoridades-card {
 		background: var(--white);
 		border-radius: 16px;
 		padding: 30px;
@@ -34,15 +47,25 @@
 		max-width: 400px;
 		margin: 2rem auto;
 	}
+
+	.page-title {
+		/* font-size: 1.5rem; */
+		color: var(--green-darker);
+		margin: 0 0 20px 0;
+		font-weight: 600;
+		text-align: center;
+		padding-bottom: 10px;
+		border-bottom: 2px solid var(--green-light);
+	}
 	
-	.section-title {
+	/* .section-title {
 		color: var(--green-darker);
 		font-size: 1.8rem;
 		margin: 0 0 25px 0;
 		font-weight: 600;
 		border-bottom: 2px solid var(--green-light);
 		padding-bottom: 10px;
-	}
+	} */
 	
 	.autoridad-container {
 		display: flex;

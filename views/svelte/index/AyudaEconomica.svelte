@@ -52,7 +52,7 @@
         font-size: 1rem;
     }
 
-    .main-button-container {
+    /* .main-button-container {
         text-align: center;
         margin-bottom: 32px;
     }
@@ -76,7 +76,7 @@
     .main-button:hover {
         box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         transform: scale(1.05);
-    }
+    } */
 
 
 </style>

@@ -120,10 +120,10 @@
         padding-block: 0.5rem;
     }
 
-    h1{
+    /* h1{
         font-size: 1.3rem;
         color: var(--green-03);
-    }
+    } */
 
 	.compact-container {
 		max-width: 900px;

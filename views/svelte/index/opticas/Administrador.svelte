@@ -25,7 +25,6 @@
         contenedor.append(grilla);
     })
 
-
     function enviarMail() {
         const to = encodeURIComponent("consultasmeopp@ospepri.org.ar");
         const subject = encodeURIComponent("Especificar Asunto");

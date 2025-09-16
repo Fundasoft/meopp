@@ -4,6 +4,7 @@
     import AdminOpticas from './index/opticas/Administrador.svelte';
     import Hero from './index/Hero.svelte';
     import Subsidios from './index/Subsidios.svelte';
+    import Defuncion from './index/Defuncion.svelte';
     import AyudaEconomica from './index/AyudaEconomica.svelte';
     import Afiliaciones from './index/Afiliaciones.svelte';
     import Jubilados from './index/Jubilados.svelte';
@@ -61,6 +62,9 @@ switch (RENDER) {
         break;
     case 'subsidios':
         section(Subsidios);
+        break;
+    case 'defuncion':
+        section(Defuncion);
         break;
     case 'jubilados':
         section(Jubilados);
