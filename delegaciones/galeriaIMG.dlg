@@ -1,0 +1,10 @@
+{
+  "name":"GaleriaIMG",
+  "description":"Galeria de imagenes mediante file",
+  "author":"xen",
+  "type":"code",
+  "import":[
+    "xenplate",
+    "views/svelte/xenplates/files/galleryIMG/*"
+  ]
+}

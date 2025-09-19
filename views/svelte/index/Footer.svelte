@@ -173,6 +173,7 @@
 </footer>
 
 <style>
+
 	.footer {
 		background: linear-gradient(135deg, var(--dark), var(--green-01));
 		color: var(--white);
@@ -504,4 +505,7 @@
 			justify-content: center;
 		}
 	}
+
+
+
 </style>

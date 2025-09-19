@@ -1,0 +1,14 @@
+{
+  "name":"Novedades",
+  "description":"Novedades/Noticias con autogestión",
+  "author":"xen",
+  "type":"code",
+  "import":[
+    "xenplate",
+    "views/svelte/xenplates/novedades/*",
+    "views/svelte/novedades.js",
+    "models/NOVEDADES.js",
+    "models/NOVEDADES_CONTENIDOS.js",
+    "models/NOVEDADES_ETIQUETAS.js"
+  ]
+}

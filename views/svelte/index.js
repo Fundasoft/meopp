@@ -1,4 +1,4 @@
-    import Header from './index/Header.svelte'; 
+    import Navbar from './index/Navbar.svelte'; 
     import Servicios from './index/Servicios.svelte';
     import AdminFarmacias from './index/farmacias/Administrador.svelte';
     import AdminOpticas from './index/opticas/Administrador.svelte';
@@ -13,7 +13,7 @@
     import Footer from './index/Footer.svelte';
     // import Whatsapp from './xenplate/Whatsapp.svelte';
 
-    import "./index/styles.css";
+    import "./index/style.css";
 
     cdns(
         'https://unpkg.com/aos@2.3.1/dist/aos.css', 
@@ -33,10 +33,10 @@
     // setting({});
 
     // --------------------------------------------------------------
-    // header
+    // Navbar
     // --------------------------------------------------------------
 
-    section(Header);
+    section(Navbar);
 
     // --------------------------------------------------------------
     // render
