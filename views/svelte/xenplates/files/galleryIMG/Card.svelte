@@ -22,7 +22,6 @@
 		loader = true, setTimeout(e=>loader = false, 3000);
 	}
 
-
 	[render,trash,edit];
 	
 </script>

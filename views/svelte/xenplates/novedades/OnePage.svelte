@@ -25,7 +25,7 @@
         columns: [
             { key: "titulo", value: ""},
             { key: "subtitulo", value: ""}
-        ],
+        ]
     });
 
     log.QUERY_tag(QUERY.tag);
@@ -57,7 +57,10 @@
                 <FileNotFoundSvg />
                 <h2>No se encontraron resultados</h2>
                 <p>Tal vez no esté disponible en este momento.</p>
-                <a href="/novedades" class="btn-link">Ir a novedades</a>
+                <!-- svelte-ignore missing-declaration -->
+                {#if (QUERY.tag || QUERY.novedad )}
+                    <a href="/novedades" class="btn-link">Ir a novedades</a>
+                {/if}
             </div>
         {/if}
     <!-- {/key} -->

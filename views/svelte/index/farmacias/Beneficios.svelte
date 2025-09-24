@@ -69,10 +69,10 @@
         
         <div class="external-buttons">
             
-        <a class="external-button" href="./documents/pdf/camara-neuquina-de-farmacias.pdf" target="_blank" rel="noopener noreferrer">
+        <!-- <a class="external-button" href="./documents/pdf/camara-neuquina-de-farmacias.pdf" target="_blank" rel="noopener noreferrer">
             <span>Cámara Neuquina de Farmacias</span>
             <i class="bi bi-clipboard2-plus icon-external"></i>
-        </a>
+        </a> -->
 
         <a class="external-button" href="./documents/pdf/listado-farmacias.pdf" target="_blank" rel="noopener noreferrer">
             <span>Listado de Farmacias</span>

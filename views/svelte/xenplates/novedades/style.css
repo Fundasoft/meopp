@@ -134,14 +134,18 @@ img{
         .novedad-subtitle { font-size: 0.9rem; }
     } 
 
+    .xen-grid-novedades .xen-grid{grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;}
     .xen-grid-novedades .xen-grid-item { margin: 0px; padding: 10px !important; background-color: transparent !important; border: none !important; cursor: default !important; width: 100%; } 
     .xen-grid-novedades { gap: 1rem !important; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important; max-width: 100%; justify-items: center; height: min-content !important; } 
     .xen-grid-novedades .container-grid{justify-items: center;align-items: center;}
     
     @media (max-width: 640px) {
-    .xen-grid-novedades { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important; max-width: 100%; justify-items: center; height: 100% !important; } } 
+        .xen-grid-novedades { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important; max-width: 100%; justify-items: center; height: 100% !important; } 
+    } 
+
     .xen-modal-body { text-align: center; } 
     .xen-grid-novedades .xen-grid-item { max-width: 350px !important;height:100%;} 
+
     .carousel-item { align-content: center; } 
     .card-novedad { display: flex; flex-direction: column; background: #fff; border-radius: 0.5rem; overflow: hidden;height: 100%; border: 1px solid #eee; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: transform 0.25s ease, box-shadow 0.25s ease; max-width: 400px; margin: auto; } 
     .card-novedad:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); } 

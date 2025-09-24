@@ -130,8 +130,12 @@
                                                 {/if}
                                             </div>
                                             <div class="post-content">
-                                                <h6>{post.titulo}</h6>
-                                                <time datetime="{new Date(post.fecha).toISOString()}">{new Date(post.fecha).toLocaleDateString('es-AR')}</time>
+                                                {#if post.titulo}
+                                                    <h6>{post.titulo}</h6>
+                                                {/if}
+                                                {#if post.fecha}
+                                                    <time datetime="{new Date(post.fecha).toISOString()}">{new Date(post.fecha).toLocaleDateString('es-AR')}</time>
+                                                {/if}
                                             </div>
                                         </a>
                                     {/each}

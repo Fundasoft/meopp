@@ -59,10 +59,6 @@
 		log.fileInput_files(fileInput.files)
 	}
 
-	// function getImageUrl(file) {	
-	// 	return URL.createObjectURL(file);
-	// }
-
 	function getImageUrl(file) {
 		return new Promise((resolve, reject) => {
 			const reader = new FileReader();

@@ -22,8 +22,9 @@
         background-repeat: no-repeat;
         position: relative;
         overflow: hidden;
-        height: 40vh;
+        min-height: 40vh;
         border-bottom: solid 5px var(--green-03);
+        align-content: center;
     }
 
     .overlay {
@@ -75,13 +76,16 @@
 
     @media (max-width: 767px) {
         .title {
-        font-size: 2.2rem;
+            font-size: 2.2rem;
         }
     }
 
     @media (max-width: 576px) {
         .title {
-        font-size: 1.8rem;
+            font-size: 1.6rem;
+        }
+        .subtitle {
+            font-size: 1rem;
         }
     }
 

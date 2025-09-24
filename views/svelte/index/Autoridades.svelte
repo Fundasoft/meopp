@@ -1,14 +1,14 @@
 <script>
 	const autoridades = [
 		{
-			nombre: 'Guillermo Leiton',
-			cargo: 'Presidente',
-			imagen: './images/meopp/Guillermo_Leiton.webp'
-		},
-		{
 			nombre: 'Marcelo Rucci',
 			cargo: 'Secretario General',
 			imagen: './images/meopp/Marcelo_Rucci.webp'
+		},
+		{
+			nombre: 'Guillermo Leiton',
+			cargo: 'Presidente',
+			imagen: './images/meopp/Guillermo_Leiton.webp'
 		}
 	]
 </script>

@@ -55,11 +55,17 @@
         {/if}
 
         <div class="card-header-info">
-            <h3 class="card-novedad-titulo">{value.titulo}</h3>
-            <time class="card-novedad-fecha">{new Date(value.fecha).toLocaleDateString('es-AR')}</time>
+            {#if value.titulo}
+                <h3 class="card-novedad-titulo">{value.titulo}</h3>
+            {/if}
+                {#if value.fecha}
+                    <time class="card-novedad-fecha" datetime="{new Date(value.fecha).toISOString()}">{new Date(value.fecha).toLocaleDateString('es-AR')}</time>
+                    <!-- <time class="card-novedad-fecha">{new Date(value.fecha).toLocaleDateString('es-AR')}</time> -->
+                {/if}
         </div>
-        
-        <p class="card-novedad-subtitulo">{value.subtitulo}</p>
+        {#if value.subtitulo}
+            <p class="card-novedad-subtitulo">{value.subtitulo}</p>
+        {/if}
         
         <div class="card-footer">
             <a class="card-novedad-btn-leer" href="novedades.html?render=novedad&y={value.Y}">

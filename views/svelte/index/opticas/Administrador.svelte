@@ -76,15 +76,12 @@
 		padding-bottom: 10px;
 		border-bottom: 2px solid var(--green-light);
 	}
-
-
-
     
     .contact-info {
         background: var(--green-light-50);
         border: 2px solid var(--green-04);
         border-radius: 12px;
-        padding: 2rem;
+        padding: 1.5rem;
         margin-bottom: 2rem;
     }
     
@@ -100,11 +97,12 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        font-size: 1.3rem;
         font-weight: 600;
         color: var(--green-03);
         text-decoration: none;
         transition: var(--transition);
+        font-size: clamp(14px, 4vw, 20px); 
+        line-height: 1.3;
     }
     
     .mail-link:hover {

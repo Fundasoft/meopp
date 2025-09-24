@@ -19,6 +19,7 @@
     export let path = "", publico = true, sync={};
     
     export function GET() {
+        log.galeria_value(galeria.value)
         return galeria.value; // return files;
     }
 
@@ -37,9 +38,9 @@
 
     function add(){
         modal(html(Input),{
-        cancel:false,
-        header:false
-    }).accept(create);
+            cancel:false,
+            header:false
+        }).accept(create);
     }
 
     async function create(archivos) {
