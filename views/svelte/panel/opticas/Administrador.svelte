@@ -7,15 +7,14 @@
         ];
     }
 	
-	function onmount(){
+	export function onmount(){
         
         contenedor.append(table(_OPTICAS,{
             filter:true,
 			buttons:[
-                '++',
-                '-',
-                'u', 
-                'c'
+                VEN_BTN_ADD_WITH_FORM,
+                VEN_BTN_DELETE,
+                VEN_BTN_SETTING
             ],
 			columns:[
                 {
@@ -40,11 +39,8 @@
 
 </script>
 
-
-
-
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<section on:mount={onmount}>
+<section>
 	<div bind:this={contenedor}></div>
 </section>
 

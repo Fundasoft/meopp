@@ -1,6 +1,5 @@
 <script>
-    export let number = XEN.client.phone;
-    // log.number(number)
+    export let number = setting[SETTING_CLIENT_PHONE];
 </script>
 
 <!-- svelte-ignore missing-declaration -->

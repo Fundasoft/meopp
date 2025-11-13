@@ -9,15 +9,14 @@
         ];
     }
 	
-	function onmount(){
+	export function onmount(){
         
         contenedor.append(table(_FARMACIAS,{
             filter:true,
 			buttons:[
-                '++',
-                '-',
-                'u', 
-                'c'
+                VEN_BTN_ADD_WITH_FORM,
+                VEN_BTN_DELETE,
+                VEN_BTN_SETTING
             ],
 			columns:[
                 {
@@ -47,10 +46,7 @@
                 {
                     key:"habilitado",
                     value:false
-                },
-                // {
-                //     USUARIOS.CREATE({nick:'pepinito'},_SOCIOS,26)
-                // }
+                }
 			]
 		}));
 	}
@@ -61,7 +57,7 @@
 
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<section on:mount={onmount}>
+<section>
 	<div bind:this={contenedor}></div>
 </section>
 

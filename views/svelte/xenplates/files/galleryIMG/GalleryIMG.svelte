@@ -19,7 +19,6 @@
     export let path = "", publico = true, sync={};
     
     export function GET() {
-        log.galeria_value(galeria.value)
         return galeria.value; // return files;
     }
 
@@ -66,12 +65,6 @@
         class:"galeria",
         item: Card,
         buttons:[{"+:Agregar:add":add}], 
-        on:{
-            delete: v => {
-                galeria.value = galeria.value.filter(img=>img.Y!=v); // para evitar parpadeos
-                files.delete(path, v, publico).then(render)
-            }
-        },
         columns: [
             { key: "extension", value: ""},
             { key: "inf", value: ""},
@@ -87,6 +80,12 @@
         contenedor.append(galeria);
         render();
     });
+
+
+    galeria.on(ondelete,  v => {
+        galeria.value = galeria.value.filter(img=>img.Y!=v); // para evitar parpadeos
+        files.delete(path, v, publico).then(render)
+    })
     
 </script>
 

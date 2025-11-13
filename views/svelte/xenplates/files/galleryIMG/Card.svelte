@@ -2,7 +2,8 @@
 
 	import Spinner from "../../recursos/Spinner.svelte";
 
-	export let value, trash, render, edit, loader;
+	export let value, GRID;
+	[];
 
 	export function ondrop(valor) {
 		console.log(valor,value);
@@ -19,23 +20,21 @@
 	}
 
 	function imgonerror(){
-		loader = true, setTimeout(e=>loader = false, 3000);
+		GRID.loader = true, setTimeout(e=>GRID.loader = false, 3000);
 	}
 
-	[render,trash,edit];
-	
 </script>
 
 
 <div class="thumbnail">
     {#if Object.keys(value).length}
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-				{#if loader}
+				{#if GRID.loader}
 					<Spinner/>
 				{:else}
 					<img src={value.src} alt={value.name} on:click={showImageFunction} on:error={imgonerror} loading="lazy"/>
 				{/if}        
-        <button on:click={trash} class="remove-btn">
+        <button on:click={GRID.trash} class="remove-btn">
             ×
         </button>
         <p>{value.name}</p>

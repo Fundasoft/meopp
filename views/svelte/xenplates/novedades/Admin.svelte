@@ -79,7 +79,7 @@
 				buttons: [
 					{'-plus': addNovedad},
 					// {'-tags': tags},
-					"-" 
+					VEN_BTN_DELETE
 				],
 				filter:true,
 				columns: [

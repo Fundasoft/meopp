@@ -1,12 +1,12 @@
 [
-  "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/fonts/bootstrap-icons.woff",
-  "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/fonts/bootstrap-icons.woff2",
-  "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
-  "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css",
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css",
-  "https://cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css",
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js",
-  "https://cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js",
+  "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.1/fonts/bootstrap-icons.woff",
+  "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.1/fonts/bootstrap-icons.woff2",
+  "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.1/animate.min.css",
+  "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.1/bootstrap-icons.min.css",
+  "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.1/bootstrap.min.css",
+  "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.1/alertify.min.css",
+  "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.1/bootstrap.bundle.min.js",
+  "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.1/alertify.min.js",
   "https://unpkg.com/aos@2.3.1/dist/aos.css", 
   "https://unpkg.com/aos@2.3.1/dist/aos.js"
 ]
