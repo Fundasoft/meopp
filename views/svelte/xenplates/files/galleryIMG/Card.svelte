@@ -1,16 +1,9 @@
 <script>
-
 	import Spinner from "../../recursos/Spinner.svelte";
-
 	export let value, GRID;
-	[];
-
-	export function ondrop(valor) {
-		console.log(valor,value);
-	} 
 	
 	function showImageFunction(){
-			modal(html(`<div class="w-100 text-center"><img src="${value.src}" style=" max-height: 70vh; height: auto; max-width: 100%; min-width:auto" class="img-show" alt="inmueble"></div>`), {
+			modal(html(`<div class="w-100 text-center"><img src="${value.src}" style=" max-height: 70vh; height: auto; max-width: 100%; min-width:auto" class="img-show" alt="${value.name}"></div>`), {
 					// props:{img},
 					size:"xl",
 					center:true,
@@ -19,7 +12,7 @@
 			});
 	}
 
-	function imgonerror(){
+	function imgOnError(){
 		GRID.loader = true, setTimeout(e=>GRID.loader = false, 3000);
 	}
 
@@ -29,11 +22,11 @@
 <div class="thumbnail">
     {#if Object.keys(value).length}
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-				{#if GRID.loader}
-					<Spinner/>
-				{:else}
-					<img src={value.src} alt={value.name} on:click={showImageFunction} on:error={imgonerror} loading="lazy"/>
-				{/if}        
+		{#if GRID.loader}
+			<Spinner/>
+		{:else}
+			<img src={value.src} alt={value.name} on:click={showImageFunction} on:error={imgOnError} loading="lazy"/>
+		{/if}        
         <button on:click={GRID.trash} class="remove-btn">
             ×
         </button>
@@ -81,6 +74,7 @@
 		line-height: 1;
 		opacity: 0;
 		transition: opacity 0.3s ease;
+        background: rgba(0,0,0,0.4);
 	}
 
 	.thumbnail:hover .remove-btn {
@@ -88,6 +82,7 @@
 	}
 
 	.remove-btn:hover {
-		background: var(--color-primario);
+		background: rgba(0,0,0,0.2);
+		/* background: var(--color-primario); */
 	}
 </style>

@@ -1,5 +1,4 @@
 <script>
-
     // --------------------------------------------------------------
     // Import - Solo si necesitás funciones de otros módulos
     // --------------------------------------------------------------
@@ -17,17 +16,21 @@
     // --------------------------------------------------------------
 
     export let path = "", publico = true, sync={};
-    
     export function GET() {
         return galeria.value; // return files;
     }
+    
+    let {Y, model, key} = sync, error='', contenedor; 
+    let tipoPermiso = publico ? PUBLIC : PRIVATE;
+    if (model) path += '/' + Y;
+
 
     // --------------------------------------------------------------
     // Funcionalidad
     // --------------------------------------------------------------
 
     function render(){
-        files.read(path,publico).then(value => {
+        FILES.read(path, tipoPermiso).then(value => {
             galeria.value=value;
             if (model) {
                 model.update({Y,[key]:value.map(v=>v.Y)})
@@ -46,7 +49,7 @@
         if(archivos.length) {
             error='';
             for (let file of archivos) {
-                if(!await files.create(path, file, publico)) {
+                if(!await FILES.create(path, file, tipoPermiso)) {
                     error = `carga ${file.names} fallida`;
                 }    
             }
@@ -60,21 +63,21 @@
     // Logica de modulo
     // --------------------------------------------------------------
 
-    let {Y, model, key} = sync, error='', contenedor, galeria = grid([], {
+    let galeria = grid([], {
         filter: true,
         class:"galeria",
+        draggable:false,
         item: Card,
-        buttons:[{"+:Agregar:add":add}], 
+        buttons:[{"+:Agregar:add":e=>add()}], 
         columns: [
-            { key: "extension", value: ""},
-            { key: "inf", value: ""},
-            { key: "src", value: ""},
-            { key: "name", value: ""},
-            { key: "thumbnail", value: ""}
-        ],
+            // { key: "extension", value: ""},
+            // { key: "inf", value: ""},
+            // { key: "src", value: ""},
+            // { key: "thumbnail", value: ""},
+            { key: "name", value: ""}
+        ]
     });
 
-    if (model) path+='/'+Y;
 
     onMount(()=>{
         contenedor.append(galeria);
@@ -82,9 +85,12 @@
     });
 
 
-    galeria.on(ondelete,  v => {
-        galeria.value = galeria.value.filter(img=>img.Y!=v); // para evitar parpadeos
-        files.delete(path, v, publico).then(render)
+    galeria.on(ondelete,  (e, v) => {
+        log.delete_e(e);
+        log.delete_v(v);
+        // para evitar parpadeos
+        galeria.value = galeria.value.filter(img=>img.Y!=v[0]); 
+        FILES.delete(path, v, tipoPermiso).then(render);
     })
     
 </script>

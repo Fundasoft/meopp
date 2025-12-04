@@ -1,6 +1,6 @@
 module.exports={
     "bd": "json",
-    "key": "2a263c7bd5b9aa3b4a0d0ee6cdcd3edb33f412022be2300db28d7a95b1628058",
+    "key": "2f46119f2bdbee43142d07d3791779b5e765573e85cd0844aac6c0bec6cc9e0c",
     "permiso": [
         "ADMINISTRADOR"
     ],
@@ -22,9 +22,17 @@ module.exports={
         "etiquetas": []
     },
     "custom": {
+        "creates": {
+            "crud": "creates",
+            "permiso": [
+                "ADMINISTRADOR"
+            ]
+        },
         "updates": {
             "crud": "updates",
-            "permiso": "ADMINISTRADOR"
+            "permiso": [
+                "ADMINISTRADOR"
+            ]
         }
     }
 };

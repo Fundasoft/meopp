@@ -74,7 +74,7 @@
 				<h2 class="section-title">Horarios y Ubicación</h2>
 				<div class="details-grid">
 					<div class="detail-item">
-						<div class="detail-icon">🕐</div>
+						<div class="detail-icon"><i class="bi bi-clock"></i></div>
 						<div class="detail-content">
 							<div class="detail-label">Horario de Atención:</div>
 							<div class="detail-value">{info.horario}</div>

@@ -3,9 +3,9 @@
 	// import para el menu; menu();
 
 	import FileGallery from "../files/galleryIMG/GalleryIMG.svelte";
+	import AdminEtiquetas from "./etiquetas/Admin.svelte";
 
 	const PATH_IMG_NOVEDADES = "img/novedades";
-	const MAX_ETIQUETAS = 5;
 	
 	let contenedor, etiquetas_names = {}, etiquetas =[];
 
@@ -58,27 +58,29 @@
 		})
 	}
 
-	NOVEDADES_ETIQUETAS.read().then(v=>{
-		const nuevasEtiquetas = [];
-		if(v.length<MAX_ETIQUETAS){
-			for (let i = v.length; i < 5; i++) {
-				nuevasEtiquetas.push({ nombre: "" });
-			}
-			NOVEDADES_ETIQUETAS.custom(NOVEDADES_ETIQUETAS_CREATES,nuevasEtiquetas).then(v=>{
-				NOVEDADES_ETIQUETAS.read().then(v=>etiquetas=v);
-			})
-		}else{
-			etiquetas = NOVEDADES_ETIQUETAS.values;
-		}
-		actualizarEtiquetas()
-	});
+	// NOVEDADES_ETIQUETAS.read().then(v=>{
+	// 	const nuevasEtiquetas = [];
+	// 	if(v.length<MAX_ETIQUETAS){
+	// 		for (let i = v.length; i < 5; i++) {
+	// 			nuevasEtiquetas.push({ nombre: "" });
+	// 		}
+	// 		NOVEDADES_ETIQUETAS.custom(NOVEDADES_ETIQUETAS_CREATES,nuevasEtiquetas).then(v=>{
+	// 			NOVEDADES_ETIQUETAS.read().then(v=>etiquetas=v);
+	// 		})
+	// 	}else{
+	// 		etiquetas = NOVEDADES_ETIQUETAS.values;
+	// 	}
+	// 	actualizarEtiquetas()
+	// });
 
 	export function onmount() {
+		actualizarEtiquetas()
+
 		contenedor.append(
 			table(_NOVEDADES, {
 				buttons: [
 					{'-plus': addNovedad},
-					// {'-tags': tags},
+					{'-tags:Gestor de Etiquetas': v=>modal(AdminEtiquetas, {header:0, X:1, cancel:0, accept:"Salir", backdrop:false}).accept(actualizarEtiquetas).close(actualizarEtiquetas)},
 					VEN_BTN_DELETE
 				],
 				filter:true,
@@ -117,23 +119,26 @@
 										}
 									}), {
 										size:'xl',
-										header:false
+										cancel:false,
+										// header:false
 									});
 								}
 							},
-							{
-								'-youtube': novedad =>{
-									input("Copiar link de video de Youtube",novedad.video, {required:false}).accept(value=>{
-										value = value ? (/^\w+$/.test(value) ? value : (/=([^&]+)/.exec(value)?.[1]||'')) : '';
-										NOVEDADES.update(novedad,{video:value});
-									})
-								}
-							},
+							// {
+							// 	'-youtube': novedad =>{
+							// 		input("Copiar link de video de Youtube",novedad.video, {required:false}).accept(value=>{
+							// 			value = value ? (/^\w+$/.test(value) ? value : (/=([^&]+)/.exec(value)?.[1]||'')) : '';
+							// 			NOVEDADES.update(novedad,{video:value});
+							// 		})
+							// 	}
+							// },
 							{
 								'-tags': novedad =>{
-									select(etiquetas_names, novedad.etiquetas).accept(etiquetasSeleccionadas=>{
+									select("Selecciona hasta 5 etiquetas", etiquetas_names, novedad.etiquetas).accept(etiquetasSeleccionadas=>{
 										if(etiquetasSeleccionadas){
-											NOVEDADES.update(novedad.Y,{etiquetas: etiquetasSeleccionadas})
+											// NOVEDADES.update(novedad.Y,{etiquetas: etiquetasSeleccionadas});
+											const primeros5 = etiquetasSeleccionadas.slice(0, 5);
+											NOVEDADES.update(novedad.Y,{etiquetas: primeros5}).then(v=>info("Maximo 5 etiquetas"));
 										}
 									})
 								}
@@ -165,45 +170,16 @@
 			})
 		);
 	}
+
+
+	NOVEDADES_ETIQUETAS.read().then(actualizarEtiquetas);
+
+	NOVEDADES_ETIQUETAS.on(onupdate, actualizarEtiquetas);
+
 </script>
 
 <section class="xen-admin-novedades">
 	<!-- svelte-ignore missing-declaration -->
-	{#key etiquetas}
-		<div class="container">
-			<div class="header-section">
-				<div class="title-row">
-					<h3 class="section-title">🏷️ Gestión de Etiquetas</h3>
-					<span class="counter">{etiquetas.filter(tag => tag.nombre).length}/{MAX_ETIQUETAS}</span>
-				</div>
-				<p class="description">
-					Organiza tus novedades con etiquetas personalizadas. Haz clic en ➕ para crear nuevas etiquetas o ✏️ para editarlas.
-				</p>
-				<p class="description">
-					Si quedan vacias simplemente no se mostraran en la novedad.
-				</p>
-
-				<!-- <p>Máximo {MAX_ETIQUETAS} etiquetas</p> -->
-				<div class="grid">
-					{#each etiquetas as tag}
-						{#if tag.nombre}
-							<div class="chip etiqueta-{tag.Y}">
-								<span class="text"><i class="bi bi-tag"></i> {tag.nombre}</span>
-								<button class="edit-btn" on:click={() => editar(tag)}>✏️</button>
-							</div>
-						{:else}
-							<div class="chip etiqueta-0">
-								<span class="text">🏷️ Vacío</span>
-								<button class="edit-btn" on:click={() => editar(tag)}>➕</button>
-							</div>
-						{/if}
-					{/each}
-				</div>
-			</div>
-
-		</div>
-	{/key}
-
 	<h3 class="section-title"> Gestión de Novedades</h3>
 	<div bind:this={contenedor}></div>
 </section>
@@ -213,7 +189,7 @@
 
 
 	/* Estilos para el header */
-	.header-section {
+	/* .header-section {
 		margin-bottom: 20px;
 		padding: 16px;
 		background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
@@ -272,20 +248,9 @@
 		font-weight: 500;
 		border: 1px solid;
 		min-width: 100px;
-	}
-    /* .chip {
-        display: inline-flex;
-        align-items: center;
-        background: #f1f5f9;
-        border: 1px solid #e2e8f0;
-        border-radius: 20px;
-        padding: 6px 12px;
-        font-size: 14px;
-        min-width: 80px;
-        max-width: 250px;
-    } */
-
-    /* .text {
+	} 
+	
+	.text {
         color: #1e293b;
         font-weight: 500;
         margin-right: 6px;
@@ -293,7 +258,8 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         flex: 1; 
-    } */
+    } 
+		
 
     .edit-btn {
         background: transparent;
@@ -306,9 +272,9 @@
 
     .edit-btn:hover { opacity: 1; } 
 
-
+*/
 /* Estilos base */
-.etiqueta-gris, .etiqueta-0 { 
+/* .etiqueta-gris, .etiqueta-0 { 
     background: #f8fafc; 
     border-color: #cbd5e1; 
     color: #475569; 
@@ -342,10 +308,10 @@
     background: #eef2ff; 
     border-color: #c7d2fe; 
     color: #4338ca; 
-}
+} */
 
 /* Efectos hover */
-.etiqueta-gris:hover, .etiqueta-0:hover {
+/* .etiqueta-gris:hover, .etiqueta-0:hover {
     background: #e2e8f0;
     border-color: #94a3b8;
     color: #334155;
@@ -391,10 +357,10 @@
     color: #3730a3;
     box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
     transform: translateY(-1px);
-}
+} */
 
 /* Transición suave para todos */
-.etiqueta-gris, .etiqueta-0,
+/* .etiqueta-gris, .etiqueta-0,
 .etiqueta-azul, .etiqueta-1,
 .etiqueta-verde, .etiqueta-2,
 .etiqueta-rosa, .etiqueta-3,
@@ -402,6 +368,6 @@
 .etiqueta-indigo, .etiqueta-5 {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-}
+} */
     
 </style>

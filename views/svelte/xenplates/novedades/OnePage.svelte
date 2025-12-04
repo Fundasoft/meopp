@@ -3,15 +3,12 @@
     import NovedadCard from "./Card.svelte";
 	import FileNotFoundSvg from "../recursos/FileNotFoundSvg.svelte";
 
-
-    let novedades=[];
+    let novedades=[], contenedor;
 
     const featuredPost = {
         title: "Novedades",
         subtitle: "Descubre nuestra seccion de noticias"
     };
-
-    let contenedor;
 
     onMount(()=>{
         contenedor.append(grilla);
@@ -29,6 +26,7 @@
     });
 
     log.QUERY_tag(QUERY.tag);
+
     if(QUERY.tag){
         NOVEDADES.read([AND,[_etiquetas,INCLUDES,QUERY.tag],[_habilitada,IGUAL,1]]).then(_novedades=> {
             log._novedades(_novedades)
@@ -38,7 +36,7 @@
     }else{
         NOVEDADES.read(QUERY.novedad ? [AND,['Y',IGUAL,QUERY.novedad],[_habilitada,IGUAL,1]] : [_habilitada,IGUAL,1]).then(_novedades=> {
             grilla.value=_novedades.reverse();
-            novedades=_novedades
+            novedades=_novedades;
         });
     }
 

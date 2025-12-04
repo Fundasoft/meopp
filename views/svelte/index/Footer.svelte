@@ -32,21 +32,17 @@
 	
 	const enlaces = [
 		{ 
-			texto: 'Nosotros', 
-			url: '#' 
+			texto: 'Afiliaciones', 
+			url:"index.html?render=afiliaciones" 
 		},
 		{ 
-			texto: 'Servicios', 
-			url: '#servicios' 
-		},
+			texto: 'Autoridades', 
+			url: "index.html?render=autoridades"
+		}
 		// { 
 		// 	texto: 'Beneficios', 
 		// 	url: '/beneficios' 
-		// },
-		{ 
-			texto: 'Contacto', 
-			url: '#' 
-		}
+		// }
 	];
 	
 	const contactInfo = [

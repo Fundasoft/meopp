@@ -49,7 +49,7 @@
                             <GaleriaNews novedad={novedad} path={PATH_IMG_NOVEDADES}/>
                         {/if}
 
-                        {#if novedad.video}
+                        <!-- {#if novedad.video}
                             <div class="video-container">
                                 <iframe 
                                     src="https://www.youtube.com/embed/{novedad.video}" 
@@ -60,7 +60,7 @@
                                     >
                                 </iframe>
                             </div>
-                        {/if}
+                        {/if} -->
 
                         {#if novedad.etiquetas && novedad.etiquetas.length > 0 && ETIQUETAS_NAMES}
                             <div class="card-etiquetas">
