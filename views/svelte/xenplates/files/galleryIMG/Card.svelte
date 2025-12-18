@@ -3,13 +3,13 @@
 	export let value, GRID;
 	
 	function showImageFunction(){
-			modal(html(`<div class="w-100 text-center"><img src="${value.src}" style=" max-height: 70vh; height: auto; max-width: 100%; min-width:auto" class="img-show" alt="${value.name}"></div>`), {
-					// props:{img},
-					size:"xl",
-					center:true,
-					accept:false,
-					cancel:false
-			});
+		modal(html(`<div class="w-100 text-center"><img src="${value.src}" style=" max-height: 70vh; height: auto; max-width: 100%; min-width:auto" class="img-show" alt="${value.name}"></div>`), {
+				// props:{img},
+				size:"xl",
+				center:true,
+				accept:false,
+				cancel:false
+		});
 	}
 
 	function imgOnError(){

@@ -3,7 +3,6 @@ import Novedades from './xenplates/novedades/OnePage.svelte';
 import Novedad from './xenplates/novedades/Novedad.svelte';
 import Footer from './index/Footer.svelte';
 
-import "./index/style.css";
 import "./xenplates/novedades/style.css";
 
 setting({});

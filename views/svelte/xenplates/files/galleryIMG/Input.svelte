@@ -1,13 +1,37 @@
 <script>
-	export let accept = "image/*"; // valor por defecto: imágenes
+	export let accept = "image/*";
 	export let multiple = true;
+
+	const MAX_FILE_SIZE = 1 * 1024 * 1024;
 
 	export function GET() {
 		actualizarInputDesdeFiles();
 		return [...fileInput.files];
 	}
 
-	let files = [], isDragOver = false, fileInput;
+	let files = [];
+	let isDragOver = false;
+	let fileInput;
+
+	let mensajeError = "";
+	let mensajeVisible = false;   // controla fade-out
+	let timeoutError = null;
+
+	function mostrarError(msg) {
+		mensajeError = msg;
+		mensajeVisible = true;     // aparece con fade-in
+
+		if (timeoutError) clearTimeout(timeoutError);
+
+		timeoutError = setTimeout(() => {
+			mensajeVisible = false;   // comienza fade-out
+
+			// esperamos el tiempo de la animación antes de borrar el mensaje
+			setTimeout(() => {
+				mensajeError = "";
+			}, 300); // coincide con transition en CSS
+		}, 3000);
+	}
 
 	function handleDragOver(event) {
 		event.preventDefault();
@@ -29,34 +53,33 @@
 	function handleDrop(event) {
 		event.preventDefault();
 		isDragOver = false;
-		const droppedFiles = Array.from(event.dataTransfer.files);
-		addFiles(droppedFiles);
+		addFiles(Array.from(event.dataTransfer.files));
 	}
 
 	function handleFileSelect(event) {
-		const selectedFiles = Array.from(event.target.files);
-		addFiles(selectedFiles);
+		addFiles(Array.from(event.target.files));
 	}
 
 	async function addFiles(newFiles) {
-		const imageFiles = newFiles.filter(file => file.type.startsWith('image/'));
-
+		const validImages = newFiles.filter(file => file.type.startsWith("image/"));
 		const existingFileSignatures = new Set(files.map(f => `${f.name}-${f.size}`));
 
-		for (const file of imageFiles) {
-			const signature = `${file.name}-${file.size}`;
-			if (!existingFileSignatures.has(signature)) {
-				const preview = await getImageUrl(file);
-				files = [...files, { file, preview }];
+		for (const file of validImages) {
+			if (file.size > MAX_FILE_SIZE) {
+				mostrarError(`El archivo "${file.name}" supera el límite de 1 MB y no fue agregado.`);
+				continue;
 			}
+
+			const signature = `${file.name}-${file.size}`;
+			if (existingFileSignatures.has(signature)) continue;
+
+			const preview = await getImageUrl(file);
+			files = [...files, { file, preview }];
 		}
 	}
 
 	function removeFile(index) {
-		log.files_before(files)
 		files = files.filter((_, i) => i !== index);
-		log.files_after(files)
-		log.fileInput_files(fileInput.files)
 	}
 
 	function getImageUrl(file) {
@@ -64,15 +87,14 @@
 			const reader = new FileReader();
 			reader.onload = () => resolve(reader.result);
 			reader.onerror = reject;
-			reader.readAsDataURL(file); // genera una URL tipo base64
+			reader.readAsDataURL(file);
 		});
 	}
-
 </script>
+
 
 <div>
 
-	<!-- Zona de subida -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div 
 		class="upload-zone {isDragOver ? 'drag-over' : ''}"
@@ -139,6 +161,20 @@
 			</div>
 		</div>
 	{/if}
+
+	{#if mensajeError}
+		<div
+			class="mensaje-error"
+			style="
+				opacity: {mensajeVisible ? 1 : 0};
+				transform: translateY({mensajeVisible ? '0' : '5px'});
+				transition: opacity 0.4s ease, transform 0.4s ease;
+			"
+		>
+			{mensajeError}
+		</div>
+	{/if}
+
 
 </div>
 
@@ -249,4 +285,17 @@
 	.remove-btn:hover {
 		background: rgba(255, 0, 0, 1);
 	}
+
+	.mensaje-error {
+		margin-top: 1rem;
+		padding: .6rem 1rem;
+		border-radius: 8px;
+		background: #ffdddd;
+		color: #a33;
+		font-size: .9rem;
+		text-align: center;
+		border: 1px solid #e5b3b3;
+	}
+
+
 </style>

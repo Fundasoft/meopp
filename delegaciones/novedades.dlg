@@ -7,8 +7,8 @@
     "xenplate",
     "views/svelte/xenplates/novedades/*",
     "views/svelte/novedades.js",
-    "models/NOVEDADES.js",
-    "models/NOVEDADES_CONTENIDOS.js",
-    "models/NOVEDADES_ETIQUETAS.js"
+    "models/NOVEDADES.json",
+    "models/NOVEDADES_CONTENIDOS.json",
+    "models/NOVEDADES_ETIQUETAS.json"
   ]
 }
