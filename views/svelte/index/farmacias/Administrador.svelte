@@ -40,6 +40,7 @@
 En caso de menores de edad, la solicitud deberá ser realizada por sus representantes legales con acreditación de DNI y credencial del menor sin excepción.
 Contamos con doce farmacias propias donde los afiliados tienen la posibilidad de comprar medicamentos recetados con hasta el 100% de cobertura, según vademecum vigente al momento de la compra." />
 <section class="container">
+    <img src="./images/meopp/farmacias.webp" alt="farmacias" class="img-farmacias" >
     <div bind:this={contenedor}></div>
     <Beneficios />
 </section>
@@ -49,4 +50,13 @@ Contamos con doce farmacias propias donde los afiliados tienen la posibilidad de
         min-height: 80vh;
         padding-block: 2rem;
     }
+
+    .img-farmacias {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
 </style>
