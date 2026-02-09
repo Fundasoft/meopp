@@ -1,13 +1,14 @@
 <script>
     // Datos estáticos para las secciones
     const secciones = [
-        {
-            titulo: "Cómo Afiliarse",
-            descripcion: "Requisitos para el alta: El trabajador titular debe presentar su DNI, informar el nombre de la empresa empleadora y firmar la nota de afiliación correspondiente.",
-            botonTexto: "Enviar Documentación",
-            imagen: "../images/meopp/meopp.webp",
-            invertido: false
-        },
+        // A diferencia de la pagina viea, no lo van a usar
+        // {
+        //     titulo: "Cómo Afiliarse",
+        //     descripcion: "Requisitos para el alta: El trabajador titular debe presentar su DNI, informar el nombre de la empresa empleadora y firmar la nota de afiliación correspondiente.",
+        //     botonTexto: "Enviar Documentación",
+        //     imagen: "../images/meopp/meopp.webp",
+        //     invertido: false
+        // },
         {
             titulo: "Contactános",
             descripcion: "",

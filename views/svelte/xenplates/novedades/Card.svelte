@@ -1,7 +1,6 @@
 <script>
-    export let value, trash, render, edit;
-    [render,trash,edit];
-
+    export let value, GRID;
+    [GRID];
 
     log.VALUE(value);
 
@@ -17,6 +16,7 @@
 </script>
 
 <div class="card-novedad">
+    <a class="" href="novedades.html?render=novedad&y={value.Y}">
     <div class="card-img">
         {#if value.imagenes && value.imagenes.length > 0}
             <img 
@@ -37,6 +37,7 @@
     </div>
     
     <div class="card-body">
+        
         <!-- Etiquetas antes del título -->
         <!-- svelte-ignore missing-declaration -->
         {#if value.etiquetas && value.etiquetas.length > 0 && ETIQUETAS_NAMES}
@@ -67,15 +68,8 @@
             <p class="card-novedad-subtitulo">{value.subtitulo}</p>
         {/if}
         
-        <div class="card-footer">
-            <a class="card-novedad-btn-leer" href="novedades.html?render=novedad&y={value.Y}">
-                Leer más
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                </svg>
-            </a>
-        </div>
     </div>
+</a>
 </div>
 
 <style>
@@ -103,17 +97,6 @@
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         border-color: #d1d5db;
-    }
-
-    .card-img {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-        background: #f9fafb;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
     }
 
     .img-novedad {
@@ -182,41 +165,16 @@
         color: white;
     }
 
-    .card-body {
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        flex-grow: 1;
-    }
-
     .card-header-info {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
     }
 
-    .card-novedad-titulo {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: #111827;
-        margin: 0;
-        line-height: 1.4;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+    a{
+        text-decoration: none !important;
     }
 
-    .card-novedad-fecha {
-        font-size: 0.8rem;
-        color: #6b7280;
-        background: #f3f4f6;
-        padding: 4px 10px;
-        border-radius: 6px;
-        align-self: flex-start;
-        font-weight: 500;
-    }
 
     .card-novedad-subtitulo {
         font-size: 0.9rem;
@@ -236,38 +194,10 @@
         margin-top: auto;
     }
 
-    .card-novedad-btn-leer {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 10px 16px;
-        font-size: 0.875rem;
-        font-weight: 500;
-        border-radius: 8px;
-        color: #4f46e5;
-        text-decoration: none;
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        transition: all 0.2s ease;
-    }
-
-    .card-novedad-btn-leer:hover {
-        background: #4f46e5;
-        color: white;
-        transform: translateX(2px);
-    }
-
     .tag-button{
         text-decoration: none;
     }
 
-    .card-novedad-btn-leer svg {
-        transition: transform 0.2s ease;
-    }
-
-    .card-novedad-btn-leer:hover svg {
-        transform: translateX(2px);
-    }
 
     @media (max-width: 768px) {
         .card-img {

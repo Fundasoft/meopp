@@ -5,10 +5,10 @@
 
     let novedades=[], contenedor;
 
-    const featuredPost = {
-        title: "Novedades",
-        subtitle: "Descubre nuestra seccion de noticias"
-    };
+    // const featuredPost = {
+    //     title: "Novedades",
+    //     subtitle: "Descubre nuestra seccion de noticias"
+    // };
 
     onMount(()=>{
         contenedor.append(grilla);
@@ -34,6 +34,7 @@
             novedades=_novedades
         });
     }else{
+
         NOVEDADES.read(QUERY.novedad ? [AND,['Y',IGUAL,QUERY.novedad],[_habilitada,IGUAL,1]] : [_habilitada,IGUAL,1]).then(_novedades=> {
             grilla.value=_novedades.reverse();
             novedades=_novedades;
@@ -42,12 +43,12 @@
 
 </script>
 
-<section class="blog container-fluid p-2">
+<section class="blog container p-2">
     <!-- Hero -->
-    <div class="hero">
+    <!-- <div class="hero">
         <h1>{featuredPost.title}</h1>
         <p class="subtitle">{featuredPost.subtitle}</p>
-    </div>
+    </div> -->
 
     <!-- {#key novedades} -->
         {#if !novedades.length}
@@ -69,6 +70,7 @@
 <style>
     .cards-container{
         min-height: 50vh;
+        padding: 1rem;
     }
 
     /* SIN NOVEDADES */
@@ -118,7 +120,7 @@
         min-height: 50vh;
     }
 
-    .hero {
+    /* .hero {
         background: #f8f9fa;
         border: 1px solid #e9ecef;
         border-radius: 8px;
@@ -142,9 +144,9 @@
         margin: 0;
         line-height: 1.5;
         font-weight: 400;
-    }
+    } */
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         .hero {
             padding: 2rem 1.5rem;
         }
@@ -166,6 +168,6 @@
         .hero h1 {
             font-size: 1.75rem;
         }
-    }
+    } */
     
 </style>

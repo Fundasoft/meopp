@@ -1,10 +1,11 @@
 <script>
+	
 	// Administra el componente mediante el panel
 	// import para el menu; menu();
 
 	import FileGallery from "../files/galleryIMG/GalleryIMG.svelte";
 	import AdminEtiquetas from "./etiquetas/Admin.svelte";
-
+	import SingleIMG from "../files/singleIMG/SingleIMG.svelte";
 	const PATH_IMG_NOVEDADES = "img/novedades";
 	
 	let contenedor, etiquetas_names = {}, etiquetas =[];
@@ -101,8 +102,23 @@
 					{
 						...DATE,
 						key:"fecha", 
-						// value:v=>new Date*1,
 						readOnly
+					},
+					{
+						...TEXTAREA,
+						key:"parrafo1", 
+						title:"Parrafo 1", 
+						icon:"blockquote-left",
+						value:"", 
+						modal:{title:"Parrafo 1 (Opcional - antes de las imagenes) "}
+					},
+					{
+						...TEXTAREA,
+						key:"parrafo2", 
+						title:"Parrafo 2", 
+						icon:"blockquote-right",
+						value:"", 
+						modal:{title:"Parrafo 2 (Opcional - luego de las imagenes)"}
 					},
 					{
 						...BUTTONS,
@@ -116,11 +132,26 @@
 											model:NOVEDADES, 
 											key:'imagenes', 
 											Y:novedad.Y
-										}
+										},
 									}), {
 										size:'xl',
 										cancel:false,
 										// header:false
+									});
+								}
+							},
+							{
+								'-image': novedad => {
+									modal('Imagen de Portada', html(SingleIMG,{
+										path:PATH_IMG_NOVEDADES,
+										permit:PUBLIC,
+										sync:{
+											model:NOVEDADES, 
+											key:'image', 
+											Y:novedad.Y
+										}
+									}), {
+										cancel:false,
 									});
 								}
 							},
@@ -143,29 +174,9 @@
 									})
 								}
 							},
-							{
-								'-body-text': novedad =>{
-									NOVEDADES_CONTENIDOS.id(novedad.contenido).then(v=>{
-										if(v){
-											let contenido = v.contenido; 
-											log.v(v)
-											input("Contenido",{...TEXTAREA, value:contenido, length:1024}, {required:false}).accept(value=>{
-												NOVEDADES_CONTENIDOS.update(novedad.contenido,{contenido:value})
-											})
-										
-										}else{
-											input("Contenido",{...TEXTAREA, value:"", length:1024}, {required:false}).accept(value=>{
-												NOVEDADES_CONTENIDOS.create({contenido:value}).then(v=>{
-													log.contenido_nuevo(v);
-													NOVEDADES.update(novedad.Y,{contenido:v});
-												})
-											})
-										}
-									})
-								}
-							}
+							
 						]
-					},
+					}
 				],
 			})
 		);
@@ -175,6 +186,9 @@
 	NOVEDADES_ETIQUETAS.read().then(actualizarEtiquetas);
 
 	NOVEDADES_ETIQUETAS.on(onupdate, actualizarEtiquetas);
+
+	// f.on(onsubmit-before,(e,v)=>v.n++)
+
 
 </script>
 

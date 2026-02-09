@@ -21,7 +21,7 @@ img{
 
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgb(128, 128, 128,0.3); 
+    box-shadow: inset 0 0 5px rgba(77, 67, 67, 0.3); 
     border-radius: 10px;
 }
 
@@ -38,7 +38,7 @@ img{
 
 
     :root {
-        --blue: #007bff;
+        --blue: red;
         --blue-light: #e3f2fd;
         --green: #388e3c;
         --green-light: #e8f5e8;
@@ -57,8 +57,6 @@ img{
     .btn-hero { color: white; font-weight: 600; text-decoration: none; border-bottom: 2px solid rgba(255,255,255,0.3); }
     .btn-hero:hover { border-color: white; }
 
-    /* Cards */
-    /* .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; } */
     .card { display: grid; grid-template-columns: 1fr auto; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: 100%; }
     .card:hover { transform: translateY(-2px); }
     .card-body { padding: 1.5rem; }
@@ -72,8 +70,6 @@ img{
     .card a { color: var(--blue); text-decoration: none; font-weight: 500; }
 
     .img-novedad{max-width: 100%;max-height: 100%;}
-
-    /* Content */
     
     .content { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;padding: 30px; }
     .content-noticia{
@@ -98,7 +94,7 @@ img{
         NOVEDAD
     --------------------------------------
     */
-    .novedad-article-container { max-width: 1100px; margin: 0 auto; font-family: "Inter", sans-serif; line-height: 1.8;}
+    .novedad-article-container { font-family: "Inter", sans-serif; line-height: 1.8;}
     .novedad-title { color: #1d4ed8; font-size: 1.8rem; font-weight: 700; text-align: center; margin: 1rem 0 1.5rem 0;}
     .novedad-image-container { position: relative; overflow: hidden; width: 100% !important; height: auto; display: block;}
     .novedad-subtitle { background: #f3f4f6; font-size: 0.95rem; color: #374151; padding: 1rem; margin-bottom: 1rem; border-radius: 6px; text-align: center;}
@@ -113,7 +109,6 @@ img{
     .novedad-facebook { background: #1877f2; }
     .novedad-twitter { background: #1da1f2; }
     .novedad-linkedin { background: #0077b5; }
-
     .carousel-item { max-height: 600px; align-content: center; } 
 
     @media (max-width: 768px) 
@@ -144,34 +139,28 @@ img{
     } 
 
     .xen-modal-body { text-align: center; } 
-    .xen-grid-novedades .xen-grid-item { max-width: 350px !important;height:100%;} 
+    .xen-grid-novedades .xen-grid-item { max-width: 380px !important;height:100%;} 
 
     .carousel-item { align-content: center; } 
-    .card-novedad { display: flex; flex-direction: column; background: #fff; border-radius: 0.5rem; overflow: hidden;height: 100%; border: 1px solid #eee; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: transform 0.25s ease, box-shadow 0.25s ease; max-width: 400px; margin: auto; } 
+    .card-novedad { display: flex; flex-direction: column; background: #fff; border-radius: 0.5rem; overflow: hidden;height: 100%; border: 1px solid #eee; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.211); transition: transform 0.25s ease, box-shadow 0.25s ease; max-width: 400px; margin: auto; } 
     .card-novedad:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); } 
-    .card-img { width: 100%; height: 200px; overflow: hidden; background: #f9f9f9; display: flex; align-items: center; justify-content: center; } 
+    .card-img { width: 100%; height: 250px; overflow: hidden; background: #f9f9f9; display: flex; align-items: center; justify-content: center; } 
     .img-novedad { width: 100%; height: 100%; object-fit: cover; } 
     .img-placeholder { width: 100%; height: 100%; color: #aaa; display: flex; align-items: center; justify-content: center; } 
-    .card-body { padding: 1.3rem; display: flex; flex-direction: column; gap: 0.9rem; } 
-    .card-novedad-titulo { font-size: 1.3rem; font-weight: 600; color: #1a1a1a; margin: 0; position: relative; padding-bottom: 4px; } 
-    .card-novedad-titulo::after { content: ""; position: absolute; left: 0; bottom: 0; width: 40px; height: 2px; background: #6878e2; border-radius: 2px; transition: width 0.3s ease; } 
+    .card-body { padding: 2rem; display: flex; flex-direction: column; gap: 0.9rem; } 
+    .card-novedad-titulo { font-size: 1.5rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; padding-bottom: 6px;text-align: center; } 
     .card-novedad:hover .card-novedad-titulo::after { width: 100%; } 
-    .card-novedad-fecha { font-size: 0.8rem; color: #555; background: #f5f5f5; padding: 0.25rem 0.6rem; border-radius: 0.4rem; align-self: flex-start; } 
-    .card-novedad-subtitulo { font-size: 0.95rem; color: #444; line-height: 1.5; flex-grow: 1; } 
+    .card-novedad-fecha { font-size: 0.8rem; color: #979797; padding: 0.25rem 0.6rem; border-radius: 0.4rem; align-self: flex-end; font-weight: 600;} 
+    .card-novedad-subtitulo { font-size: 0.95rem; color: #444; line-height: 1.5; flex-grow: 1;text-align: center; } 
     .card-novedad-btn-leer { align-self: flex-end; padding: 0.45rem 1rem; font-size: 0.9rem; border-radius: 0.4rem; color: #6878e2; text-decoration: none; transition: all 0.25s ease; } 
     .card-novedad-btn-leer:hover { color: #475ff7; }
-    
 
-    /* ETIQUETAS */
-    
     .etiqueta-gris, .etiqueta-0 { background: #f8fafc; border-color: #cbd5e1; color: #475569; }
     .etiqueta-azul, .etiqueta-1 { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
     .etiqueta-verde, .etiqueta-2 { background: #f0fdf4; border-color: #bbf7d0; color: #166534; }
     .etiqueta-rosa, .etiqueta-3 { background: #fdf2f8; border-color: #fbcfe8; color: #be185d; }
     .etiqueta-naranja, .etiqueta-4 { background: #fff7ed; border-color: #fed7aa; color: #c2410c; }
     .etiqueta-indigo, .etiqueta-5 { background: #eef2ff; border-color: #c7d2fe; color: #4338ca; }
-    
-    
     
     .etiqueta-teal { background: #f0fdfa; border-color: #99f6e4; color: #0f766e; }
     .etiqueta-lime { background: #f7fee7; border-color: #bef264; color: #4d7c0f; }

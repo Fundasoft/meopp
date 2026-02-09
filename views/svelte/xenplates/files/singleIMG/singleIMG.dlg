@@ -1,0 +1,10 @@
+{
+  "name":"SingleIMG",
+  "description":"Gestión de imagen individual",
+  "author":"xen",
+  "type":"code",
+  "import":[
+    "xenplate",
+    "views/svelte/xenplates/files/singleIMG/*"
+  ]
+}

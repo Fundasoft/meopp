@@ -6,9 +6,10 @@
   "import":[
     "xenplate",
     "views/svelte/xenplates/novedades/*",
+    "!views/svelte/xenplates/novedades/style.css",
+    "!views/svelte/xenplates/novedades/Hero.svelte",
     "views/svelte/novedades.js",
     "models/NOVEDADES.json",
-    "models/NOVEDADES_CONTENIDOS.json",
     "models/NOVEDADES_ETIQUETAS.json"
   ]
 }

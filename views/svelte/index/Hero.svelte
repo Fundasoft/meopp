@@ -3,11 +3,11 @@
     import { onMount } from "svelte";
 
     onMount(()=>{
-    var myCarousel = document.querySelector('#carouselExampleAutoplaying');
-    var carousel = new bootstrap.Carousel(myCarousel,{
-        interval: 6000,
-    });
-    carousel.cycle();
+        var myCarousel = document.querySelector('#carouselExampleAutoplaying');
+        var carousel = new bootstrap.Carousel(myCarousel,{
+            interval: 6000,
+        });
+        carousel.cycle();
     })
 
     let path = "./images/meopp/"
@@ -15,9 +15,9 @@
     let heroContent =[
         {
             img: "meopp",
-            titulo: "En MEOPP cuidamos tu salud y la de tu familia.",
-            subtitulo: "Somos la obra social privada de los trabajadores del petróleo, con cobertura médica de calidad, prestadores en todo el país y beneficios exclusivos para el sector.",
-            resaltar:["obra social privada", "cobertura médica de calidad", "beneficios exclusivos"],
+            titulo: "En MEOPP MUTUAL cuidamos a la familia petrolera.",
+            subtitulo: "Somos la Mutual de empleados y obreros petroleros privados, brindamos beneficios a todos nuestros asociados en salud, recreación, subsidios, ópticas y farmacias.",
+            resaltar:["MEOPP MUTUAL", "Mutual de empleados", "beneficios"],
             texto:"Afiliate ahora",
             url:"./index.html"
         },

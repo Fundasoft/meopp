@@ -18,7 +18,7 @@
     {#if novedad.imagenes.length > 1}
         <button class="carousel-control-prev" type="button" data-bs-target="#{ID}" data-bs-slide="prev">
             <span class="carousel-control-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </span>
@@ -26,7 +26,7 @@
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#{ID}" data-bs-slide="next">
             <span class="carousel-control-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </span>
@@ -80,8 +80,6 @@
         margin: 1.5rem 0;
         border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 4px 20px rgba(0,0,0,.1);
-        background: #f8f9fa;
     }
 
     /* Altura fija del visor (sin saltos) */
@@ -89,7 +87,6 @@
         position: relative;
         width: 100%;
         height: 400px;  
-        background: #fff;
         border-radius: 12px;
         overflow: hidden;
     }
@@ -112,7 +109,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #fff;
     }
 
     /* Imagen: SIEMPRE completa, sin recortes ni deformación */
@@ -129,50 +125,36 @@
         */
     }
 
-    /* ================================
-        CONTROLES
-    ================================= */
     .carousel-control-prev,
     .carousel-control-next {
         position: absolute;
-        top: 0; bottom: 0;
-        width: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        padding: 0;
         background: none;
         border: none;
         color: #fff;
-        opacity: 0;
-        transition: all .3s ease;
+        opacity: 1; /* siempre visibles */
         z-index: 5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
-    .carousel:hover .carousel-control-prev,
-    .carousel:hover .carousel-control-next { opacity: 1; }
-    .carousel-control-prev {
-        left: 0;
-        background: linear-gradient(to right, rgba(0,0,0,.1), rgba(0,0,0,0));
-    }
-    .carousel-control-next {
-        right: 0;
-        background: linear-gradient(to left, rgba(0,0,0,.1), rgba(0,0,0,0));
-    }
-    .carousel-control-prev:hover,
-    .carousel-control-next:hover {
-        background: rgba(0,0,0,.1);
-        opacity: 1;
-    }
+
+    .carousel-control-prev { left: 12px; }
+    .carousel-control-next { right: 12px; }
+
     .carousel-control-icon {
-        width: 24px; height: 24px;
+        width: 52px;
+        height: 52px;
         display: flex; align-items: center; justify-content: center;
-        background: rgba(255,255,255,.2);
+        background: rgb(255, 255, 255);
+        color: #3f3f40;
         border-radius: 50%;
         backdrop-filter: blur(4px);
         transition: all .3s ease;
     }
     .carousel-control-prev:hover .carousel-control-icon,
     .carousel-control-next:hover .carousel-control-icon {
-        background: rgba(255,255,255,.2);
+        background: rgba(230, 230, 230, 0.949);
         transform: scale(1.1);
     }
 
@@ -182,8 +164,6 @@
     .thumbnail-slider-container {
         display: flex; align-items: center; justify-content: center;
         padding: 1rem 0;
-        background: #f8f9fa;
-        border-top: 1px solid #e9ecef;
     }
     .carousel__indicators__container {
         margin: 0; width: 100%;
