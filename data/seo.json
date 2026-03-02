@@ -1,1 +1,41 @@
-{"keywords":[],"description":"","category":"","country":"","city":"","address":"","zipcode":"","telephone":"","openingHours":[],"socialMedia":[]}
+{
+    "keywords": [
+        "Farmacias",
+        "farmacias Neuquén",
+        "farmacias Río Negro",
+        "farmacias La Pampa",
+        "mutual Neuquén",
+        "mutual petrolera",
+        "mutual empleados petroleros",
+        "mutual obreros petroleros privados",
+        "beneficios mutuales",
+        "prestaciones económicas",
+        "subsidios",
+        "subsidios mutual",
+        "ópticas",
+        "ópticas mutual",
+        "cobertura de salud mutual",
+        "servicios para afiliados petroleros",
+        "mutual en Neuquén capital",
+        "obra social petroleros privados",
+        "asociados mutual petrolera",
+        "beneficios para empleados petroleros"
+    ],
+    "description": "Somos la Mutual de empleados y obreros petroleros privados, brindamos beneficios a todos nuestros asociados en salud, recreación, subsidios, ópticas y farmacias.",
+    "category": "Mutual",
+    "country": "Argentina",
+    "city": "Neuquén",
+    "address": "Santa Cruz 255",
+    "zipcode": "8300",
+    "telephone": [
+        "(299) 4439842",
+        "(299) 4424505"
+    ],
+    "openingHours": [
+        "Lunes a Viernes de 8:30hs a 16:30hs"
+    ],
+    "socialMedia": [
+        "https://www.instagram.com/meopp.mutual",
+        "https://www.facebook.com/meopp.mutual"
+    ]
+}
