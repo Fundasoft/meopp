@@ -9,7 +9,8 @@
     import Afiliaciones from './index/Afiliaciones.svelte';
     import Jubilados from './index/Jubilados.svelte';
     import Autoridades from './index/Autoridades.svelte';
-    import Informacion from './index/Informacion.svelte';
+    import Info from './index/Info.svelte';
+    // import Informacion from './index/Informacion.svelte';
     import Footer from './index/Footer.svelte';
     // import Whatsapp from './xenplate/Whatsapp.svelte';
 
@@ -46,7 +47,8 @@ switch (RENDER) {
     case 'index':    
         section(Hero);
         section(Servicios);
-        section(Informacion);
+        section(Info);
+        // section(Informacion);
         break;
     case 'farmacias':
         section(AdminFarmacias);
