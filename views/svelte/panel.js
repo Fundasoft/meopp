@@ -25,12 +25,12 @@ menu('Novedades', view(Novedades),{shortcut, icon:"newspaper"});
 menu('Opticas', view(AdminOpticas), {icon:"eyeglasses", shortcut});
 menu('Sitio', {icon:"globe"});
 menu('Sitio/Cuota inicial Jubilados', e=>{
-	variable(VAR_PUBLIC_JUBILADOS_CUOTA_INICIAL)
+	variable(VAR_JUBILADOS_CUOTA_INICIAL)
     .then(p=>input("Editar cuota inicial, hasta el 15 de cada mes (número con punto decimal)",p)
-        .accept(p=>variable(VAR_PUBLIC_JUBILADOS_CUOTA_INICIAL,p)))
+        .accept(p=>variable(VAR_JUBILADOS_CUOTA_INICIAL,p)))
 }, {icon:"globe"});
 menu('Sitio/Cuota tardia Jubilados', e=>{
-	variable(VAR_PUBLIC_JUBILADOS_CUOTA_TARDIA)
+	variable(VAR_JUBILADOS_CUOTA_TARDIA)
     .then(p=>input("Editar cuota tardia a pagos a partir del 15 de cada mes (número con punto decimal)",p)
-        .accept(p=>variable(VAR_PUBLIC_JUBILADOS_CUOTA_TARDIA,p)))
+        .accept(p=>variable(VAR_JUBILADOS_CUOTA_TARDIA,p)))
 }, {icon:"globe"});

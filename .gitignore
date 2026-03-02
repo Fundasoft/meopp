@@ -13,6 +13,10 @@ repositorio/
 sen
 package.json
 
+# xen con keys
+gemeni.xen
+chatgpt.xen
+
 # extensiones
 .~lock*
 *.lic
@@ -36,6 +40,7 @@ package.json
 *.pyc
 *.env
 *.sen
+*.dat
 *.pem
 *.key
 *.crt

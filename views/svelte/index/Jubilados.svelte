@@ -20,8 +20,8 @@
 	};
 
 	async function actualizarCuota(){
-		info.cuotas.inicial.valor = await variable(VAR_PUBLIC_JUBILADOS_CUOTA_INICIAL);
-		info.cuotas.tardia.valor = await variable(VAR_PUBLIC_JUBILADOS_CUOTA_TARDIA);
+		info.cuotas.inicial.valor = await variable(VAR_JUBILADOS_CUOTA_INICIAL);
+		info.cuotas.tardia.valor = await variable(VAR_JUBILADOS_CUOTA_TARDIA);
 	};
 
 	actualizarCuota();
