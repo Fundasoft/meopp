@@ -4,11 +4,11 @@
 	let info = {
 		cuotas: {
 			inicial:{
-				valor:0,
+				valor:45076.35,
 				periodo: 'del 1 al 15 de cada mes'
 			},
 			tardia: {
-				valor:0,
+				valor:47330.00,
 				periodo: 'del 15 al 28 de cada mes'
 			}
 		},
@@ -19,12 +19,13 @@
 		direccion: 'Calle Santa Cruz 356, Neuquén'
 	};
 
-	async function actualizarCuota(){
-		info.cuotas.inicial.valor = await variable(VAR_JUBILADOS_CUOTA_INICIAL);
-		info.cuotas.tardia.valor = await variable(VAR_JUBILADOS_CUOTA_TARDIA);
-	};
+	// async function actualizarCuota(){
+	// 	info.cuotas.inicial.valor = await variable(VAR_JUBILADOS_CUOTA_INICIAL);
+	// 	info.cuotas.tardia.valor = await variable(VAR_JUBILADOS_CUOTA_TARDIA);
+	// };
 
-	actualizarCuota();
+	// actualizarCuota();
+
 </script>
 
 <SectionsHero 

@@ -5,7 +5,7 @@
             subtitle:"Requisitos",
             icon: "./images/icons/wedding.svg",
             alt: "Icono de casamiento",
-            monto: "$420.000",
+            monto: "$500.000",
             requisitos: [
                 "Acta de matrimonio",
                 "Copia DNI asociado titular",
@@ -22,7 +22,7 @@
             subtitle:"Requisitos",
             icon: "./images/icons/baby.svg",
             alt: "Icono de nacimiento",
-            monto: "$330.000",
+            monto: "$400.000",
             requisitos: [
                 "Acta de nacimiento",
                 "Copia del DNI del menor",
@@ -40,7 +40,7 @@
             subtitle:"Ver opciones disponibles",
             icon: "./images/icons/memorial.svg",
             alt: "Icono de defuncion",
-            monto: "$363.000",
+            monto: "$440.000",
             requisitos: [
                 "Subsidio por defunción de titular",
                 "Subsidio por defunción de esposo/a o conviviente",
