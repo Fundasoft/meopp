@@ -1,5 +1,6 @@
 [
     {
+        "Y":1,
         "nombre": "Chos Malal",
         "direccion": "25 de Mayo esquina Brown",
         "horarios": "Lun a Vie de 8:30 a 12:30 y 16:00 a 20:00 - Sab 9:00 a 13:00",
@@ -11,6 +12,7 @@
         "habilitado": 1        
     },
     {
+        "Y":2,
         "nombre": "Neuquén Capital",
         "direccion": "Santa Cruz 275",
         "horarios": "Lun a Vie de 8 a 20 - Sab 9 a 13",
@@ -22,6 +24,7 @@
         "habilitado": 1        
     },
     {
+        "Y":3,
         "nombre": "Neuquén Capital - Oeste",
         "direccion": "Godoy 85",
         "horarios": "Lun a Vie de 8 a 20 - Sab 9 a 13",
@@ -33,6 +36,7 @@
         "habilitado": 1        
     },
     {
+        "Y":4,
         "nombre": "Añelo",
         "direccion": "Calle N° 15 y Calle N° 2",
         "horarios": "Lun a Vie de 9 a 13 y 14 a 19 - Sab 9 a 13",
@@ -44,6 +48,7 @@
         "habilitado": 1        
     },
     {
+        "Y":5,
         "nombre": "Buta Ranquil",
         "direccion": "Pehuenches e Islas Malvinas",
         "horarios": "Lun a Vie de 8:30 a 12:30 y 16 a 20 - Sab 9 a 13",
@@ -55,6 +60,7 @@
         "habilitado": 1        
     },
     {
+        "Y":6,
         "nombre": "Cutral Co",
         "direccion": "Santa Cruz e Yrigoyen ",
         "horarios": "Lun a Vie de 8:30 a 12:30 y 16 a 20 - Sab 9 a 13 ",
@@ -66,6 +72,7 @@
         "habilitado": 1        
     },
     {
+        "Y":7,
         "nombre": "Centenario",
         "direccion": "Irigoyen 75",
         "horarios": "Lun a Vie de 8:30 a 12:30 y 16 a 20 - Sab 9 a 13",
@@ -77,6 +84,7 @@
         "habilitado": 1        
     },
     {
+        "Y":8,
         "nombre": "25 de mayo",
         "direccion": "Don Bosco 66",
         "horarios": "Lun a Vie d 8:30 a 12:30 y 16:30 a 20:30 - Sab 9 a 13",
@@ -88,6 +96,7 @@
         "habilitado": 1        
     },
     {
+        "Y":9,
         "nombre": "Rincón de los Sauces",
         "direccion": "Salta 145",
         "horarios": "Lun a Vie de 8:30 a 13 y 16:30 a 20:30 - Sab 9 a 13",
@@ -99,6 +108,7 @@
         "habilitado": 1        
     },
     {
+        "Y":10,
         "nombre": "Plottier",
         "direccion": "Planicie Banderita esquina Rio Bermejo",
         "horarios": "Lun a Vie de 8:30 a 12:30 y 16 a 20 - Sab 9 a 13",
@@ -110,6 +120,7 @@
         "habilitado": 1        
     },
     {
+        "Y":11,
         "nombre": "Catriel",
         "direccion": "Rene favaloro 446",
         "horarios": "Lun a Vie de 8:30 a 12:30 y 16:30 a 20:30 - Sab 9 a 13",
@@ -121,6 +132,7 @@
         "habilitado": 1        
     },
     {
+        "Y":12,
         "nombre": "Plaza Huincul",
         "direccion": "Carmen Funes 1000",
         "horarios": "Lun a Vie de 8:30 a 12:30 y 16:30 a 20:30 - Sab 9 a 13",
@@ -132,6 +144,7 @@
         "habilitado": 1        
     },
     {
+        "Y":13,
         "nombre": "Prueba",
         "direccion": "Prueba habilitado",
         "horarios": "Prueba habilitado",
@@ -140,6 +153,6 @@
             -68.0891166
         ],
         "telefono": "299-5320071",
-        "habilitado": 1        
+        "habilitado": 0        
     }
 ]

@@ -1,38 +1,51 @@
 [
     {
+        "Y":1,
         "codigo":"A",
         "articulo":"CRISTAL BLANCO - Baja graduación (el par)",
         "precio": 60033.47,
         "habilitado": 1
     },
     {
+        "Y":2,
         "codigo":"A",
         "articulo":"CRISTAL BLANCO - Graduación intermedia (el par)",
         "precio": 99340.77,
         "habilitado": 1
     },
     {
+        "Y":3,
         "codigo":"A",
         "articulo":"CRISTAL BLANCO - Graduación alta (el par)",
         "precio": 185649.63,
         "habilitado": 1
     },
     {
+        "Y":4,
         "codigo":"B",
         "articulo":"ARMAZON",
         "precio": 79009.09,
         "habilitado": 1
     },
     {
+        "Y":5,
         "codigo":"A",
         "articulo":"MULTIFOCAL/ BIFOCALES (el par)",
         "precio": 213102.63,
         "habilitado": 1
     },
     {
+        "Y":6,
         "codigo":"E",
         "articulo":"LENTES DE CONTACTO",
         "precio": 354755.22,
         "habilitado": 1
+    },
+    {
+        "Y":7,
+        "codigo":"E",
+        "articulo":"LENTES DE CONTACTO PRUEBA",
+        "precio": 354755.22,
+        "habilitado": 0
     }
 ]
