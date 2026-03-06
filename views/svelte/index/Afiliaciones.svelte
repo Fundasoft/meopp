@@ -1,12 +1,3 @@
-<script>
-	async function actualizarCuota(){
-		info.cuotas.inicial.valor = await variable(VAR_JUBILADOS_CUOTA_INICIAL);
-		info.cuotas.tardia.valor = await variable(VAR_JUBILADOS_CUOTA_TARDIA);
-	};
-
-	actualizarCuota();
-</script>
-
 <section class="container">
     
 	<div class="compact-container">
