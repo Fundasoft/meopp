@@ -14,7 +14,7 @@ import Novedades from './xenplates/novedades/Admin.svelte';
 // configuracion
 // --------------------------------------------------------------
 
-setting({[SETTING_TITLE]:"meopp"});
+setting({[SETTING_PANEL_TITLE]:"meopp"});
 
 // --------------------------------------------------------------
 // menu + vistas
