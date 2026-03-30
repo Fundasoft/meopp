@@ -1,1 +1,0 @@
-{"name":"meopp","cuit":"0","phone":"","domain":"meopp.mutual.ar","type":"org"}

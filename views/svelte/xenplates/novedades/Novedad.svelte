@@ -7,16 +7,18 @@
 
     let novedad, recientes;
 
-    let promesa = NOVEDADES.id(QUERY.y).then(v=> {
-        novedad = v;
-    });
-
-    let promesaAside = NOVEDADES.read([AND,[_Y,DISTINTO, QUERY.y],[_habilitada,IGUAL,1]]).then(v=> {
-        recientes=v;
+    let promesa = NOVEDADES.read([AND,[_Y,MAYOR_IGUAL, QUERY.y],[_habilitada,IGUAL,1]]).then(v=> {
+        novedad = v.find(v=>v.Y == QUERY.y) || {};
+        recientes = v
+            .filter(v => v.Y != QUERY.y)
+            .sort((a, b) => b.Y - a.Y)
+            .slice(0, 4) ||[];
+        
+        log.v(v);
+        log.novedad(novedad);
     });
 
     async function copyToClipboard() {
-
         const shareData = {
             title: novedad.titulo,
             text: novedad.parrafo1?.slice(0, 120) || "Mirá esta novedad",
@@ -57,9 +59,7 @@
     {#await promesa}
         <Spinner/>
     {:then}
-
         {#if novedad}
-
             <!-- HERO FULLSCREEN -->
             <div class="hero-header { !novedad?.image ? 'hero-header--noimage' : '' }">
                 {#if novedad?.image}
@@ -97,11 +97,8 @@
                 </div>
             
             </div>
-            
-
             <!-- CONTENIDO CENTRADO -->
             <div class="article-container container">
-
                 <!-- ETIQUETAS -->
                 {#if novedad.etiquetas && novedad.etiquetas.length > 0 && ETIQUETAS_NAMES}
                     <div class="card-etiquetas">
@@ -137,49 +134,43 @@
                 {/if}
 
                 <!-- POSTS SIMILARES -->
-                {#await promesaAside}
-                    <Spinner/>
-                {:then}
-                    {#if recientes?.length}
-                        <!-- <Similares {recientes} /> -->
-                        <section class="related-posts">
-                            <h4>Posts similares</h4>
+                {#if recientes?.length}
+                    <!-- <Similares {recientes} /> -->
+                    <section class="related-posts">
+                        <h4>Posts similares</h4>
 
-                            <div class="related-grid">
-                                {#each recientes as post}
-                                <a
-                                    href="novedades.html?render=novedad&y={post.Y}"
-                                    class="related-card"
-                                >
-                                    <div class="card-image">
-                                    {#if post.imagenes?.length}
-                                        <img
-                                            src="{PATH_IMG_NOVEDADES}/{post.Y}/{post.imagenes[0]}.webp"
-                                            alt={post.titulo}
-                                            loading="lazy"
-                                            />
-                                    {:else}
-                                        <div class="card-placeholder">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                                <circle cx="8.5" cy="8.5" r="1.5"/>
-                                                <polyline points="21 15 16 10 5 21"/>
-                                            </svg>
-                                        </div>
-                                    {/if}
+                        <div class="related-grid">
+                            {#each recientes as post}
+                            <a
+                                href="novedades.html?render=novedad&y={post.Y}"
+                                class="related-card"
+                            >
+                                <div class="card-image">
+                                {#if post.imagenes?.length}
+                                    <img
+                                        src="{PATH_IMG_NOVEDADES}/{post.Y}/{post.imagenes[0]}.webp"
+                                        alt={post.titulo}
+                                        loading="lazy"
+                                        />
+                                {:else}
+                                    <div class="card-placeholder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                                            <polyline points="21 15 16 10 5 21"/>
+                                        </svg>
                                     </div>
-                                    <div class="card-content">
-                                    <h5 class="card-title">{post.titulo}</h5>
-                                    </div>
-                                </a>
-                                {/each}
-                            </div>
-                        </section>
-                    {/if}
-                {/await}
-
+                                {/if}
+                                </div>
+                                <div class="card-content">
+                                <h5 class="card-title">{post.titulo}</h5>
+                                </div>
+                            </a>
+                            {/each}
+                        </div>
+                    </section>
+                {/if}
             </div>
-
         {:else}
 
             <div class="no-novedades">
@@ -193,5 +184,3 @@
     {/await}
 
 </section>
-
-

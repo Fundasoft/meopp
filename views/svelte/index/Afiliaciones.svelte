@@ -9,7 +9,8 @@
 					<div class="contact-item">
 						<div class="contact-label">Mutual Meopp</div>
 						<div class="contact-label">Requisitos para el alta</div>
-						<div class="contact-value">El trabajador titular presenta su DNI e informa el nombre de la empresa empleadora, además firma la nota de afiliación correspondiente.</div>
+						<div class="contact-value">El trabajador afiliado al sindicato deberá presentarse con su DNI y constancia de ALTA emitida por ARCA. Además, deberá firmar la respectiva ficha de afiliación y autorización de descuento.</div>
+						<!-- <div class="contact-value">El trabajador titular presenta su DNI e informa el nombre de la empresa empleadora, además firma la nota de afiliación correspondiente.</div> -->
 					</div>
 				</div>
 			</div>
@@ -18,9 +19,6 @@
 		</div>
 	</div>
 </section>
-
-
-
 
 <style>
     section {

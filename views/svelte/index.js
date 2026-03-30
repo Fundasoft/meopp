@@ -16,10 +16,8 @@
 
     import "./index/style.css";
 
-    cdns(
-        'https://unpkg.com/aos@2.3.1/dist/aos.css', 
-        'https://unpkg.com/aos@2.3.1/dist/aos.js'
-    ).then(e => AOS.init());
+    cdns("https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.2/aos.min.css", "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.2/aos.min.js");
+
 
     // --------------------------------------------------------------
     // configuracion
@@ -82,3 +80,10 @@ switch (RENDER) {
     // --------------------------------------------------------------
 
     section(Footer);
+
+    
+on(
+    onload,e=>{
+        AOS.init()
+    }
+);

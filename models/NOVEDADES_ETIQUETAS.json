@@ -1,1 +1,27 @@
-{"bd":"json","key":"f65209ae962ed017d869311d7320df2e885e523156195698a6913f5abd5961b6","permiso":"public","columnas":{"nombre":{"STRING":"","len":25}},"custom":{"creates":{"crud":"creates","permiso":["ADMINISTRADOR"]},"updates":{"crud":"updates","permiso":["ADMINISTRADOR"]}},"nombre":"NOVEDADES_ETIQUETAS","Y":39,"UUID":"ccb39695d799675a57e7a1fe67408cfecad0cdc644670a97c9870ef0caff9437"}
+{
+  "bd": "json",
+  "key": "f65209ae962ed017d869311d7320df2e885e523156195698a6913f5abd5961b6",
+  "permiso": "public",
+  "columnas": {
+    "nombre": {
+      "STRING": "",
+      "len": 25
+    }
+  },
+  "custom": {
+    "creates": {
+      "crud": "creates",
+      "permiso": [
+        "ADMINISTRADOR"
+      ]
+    },
+    "updates": {
+      "crud": "updates",
+      "permiso": [
+        "ADMINISTRADOR"
+      ]
+    }
+  },
+  "Y": 39,
+  "UUID": "ccb39695d799675a57e7a1fe67408cfecad0cdc644670a97c9870ef0caff9437"
+}
