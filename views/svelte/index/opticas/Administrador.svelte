@@ -9,6 +9,7 @@
         sync: {
             read:false
         },
+        class:"opticas",
         filter: true,
         item: Card,
         columns: [
@@ -23,6 +24,9 @@
     
     onMount(()=>{
         contenedor.append(grilla);
+
+        document.querySelector('.xen-grid-opticas .xen-grid-header input[type="search"]')
+            ?.setAttribute('placeholder', 'Buscar...');
     })
 
     function enviarMail() {

@@ -222,9 +222,7 @@
 		margin-top: 2rem;
 	}
 
-	p{
-		margin: 0;;
-	}
+	p{margin: 0;}
 
 	.thumbnails p {
 		margin-bottom: 0.8rem;

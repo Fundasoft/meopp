@@ -69,16 +69,16 @@
         
         <div class="external-buttons">
             
-        <!-- <a class="external-button" href="./documents/pdf/camara-neuquina-de-farmacias.pdf" target="_blank" rel="noopener noreferrer">
-            <span>Cámara Neuquina de Farmacias</span>
-            <i class="bi bi-clipboard2-plus icon-external"></i>
-        </a> -->
+            <!-- <a class="external-button" href="./documents/pdf/camara-neuquina-de-farmacias.pdf" target="_blank" rel="noopener noreferrer">
+                <span>Cámara Neuquina de Farmacias</span>
+                <i class="bi bi-clipboard2-plus icon-external"></i>
+            </a> -->
 
-        <a class="external-button" href="./documents/pdf/listado-farmacias.pdf" target="_blank" rel="noopener noreferrer">
-            <span>Listado de Farmacias</span>
-            <i class="bi bi-clipboard2-plus icon-external"></i>
-        </a>
-        
+            <a class="external-button" href="./documents/pdf/listado-farmacias.pdf" target="_blank" rel="noopener noreferrer">
+                <span>Listado de Farmacias</span>
+                <i class="bi bi-clipboard2-plus icon-external"></i>
+            </a>
+            
         </div>
     </div>
 </div>
@@ -236,17 +236,11 @@
 }
 
 .external-buttons {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     gap: 16px;
     max-width: 512px;
     margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-    .external-buttons {
-    grid-template-columns: repeat(2, 1fr);
-    }
+    justify-content: center;
 }
 
 .external-button {
@@ -260,6 +254,7 @@
     color: var(--green-darker);
     background-color: var(--green-light-50);
     font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.2s ease;
 }

@@ -4,6 +4,9 @@ import { onMount } from 'svelte';
 let isNavbarOpen = false;
 let y=0 ,navHeight;
 
+const INDEX = RENDER == 'index';
+
+
 setTimeout(e=>{
     if (window.location.hash) {
         document.querySelector(window.location.hash).scrollIntoView({behavior: 'smooth'});
@@ -60,6 +63,11 @@ function handleDocumentClick(event) {
                     <li class="nav-item">
                         <a class="nav-link fixed" href="index.html?render=autoridades" role="button">
                             Autoridades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fixed" href="{INDEX?'':'index.html'}#servicios" role="button">
+                            Servicios
                         </a>
                     </li>
                     <li class="nav-item">

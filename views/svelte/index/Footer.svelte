@@ -75,9 +75,6 @@
 					<div class="logo-container">
 						<img src="./images/logo/light.png" alt="MEoPP logo" class="footer-logo">
 					</div>
-					<p class="logo-description">
-						Mutual de Empleados y Obreros de la Provincia del Neuquén
-					</p>
 				</div>
 
 				<!-- Columna de enlaces -->
@@ -139,7 +136,7 @@
 						>
 							<!-- <social.icon class="social-icon" size={20} /> -->
 							<i class="bi bi-{social.icon}"></i>
-							<span class="social-name">{social.name}</span>
+							<!-- <span class="social-name">{social.name}</span> -->
 						</a>
 					{/each}
 				</div>
@@ -377,13 +374,13 @@
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
-		padding: 0.8rem 1.2rem;
+		padding: 0.4rem 0.8rem;
 		background: var(--white);
 		color: var(--dark);
 		text-decoration: none;
 		border-radius: 25px;
 		font-weight: 500;
-		font-size: 0.9rem;
+		font-size: 1.2rem;
 		transition: var(--transition);
 		border: 2px solid transparent;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -396,6 +393,8 @@
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 		border-color: var(--social-color);
 	}
+
+
 
 	.social-name {
 		font-weight: 600;

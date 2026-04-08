@@ -114,7 +114,6 @@
                         </div>
                     </div>
                 </div>
-              
                 <div class="action-section">
                     <a class="action-button" href={item.botonUrl}>
                         {item.botonTexto}
@@ -126,11 +125,6 @@
 {/each}
 
 <style>
-    :root {
-        --green-04: #8bc34a;
-        --green-03: #7cb342;
-    }
-
     .icon{
         width: 150px;
     }
@@ -287,10 +281,10 @@
         color: #374151;
     }
 
-    .defuncion-option {
+    /* .defuncion-option {
         font-weight: 500;
         color: var(--green-04);
-    }
+    } */
 
     .bullet {
         width: 6px;

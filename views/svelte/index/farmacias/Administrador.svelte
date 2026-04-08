@@ -7,11 +7,11 @@
     
     let contenedor;
     let grilla = grid([],{
-        // buttons: ['++'],
         sync: {
             read:false
         },
         filter: true,
+        class: "farmacias",
         item: Card,
         columns: [
             { key: "nombre", value: ""},
@@ -28,6 +28,9 @@
     
     onMount(()=>{
         contenedor.append(grilla);
+
+        document.querySelector('.xen-grid-farmacias .xen-grid-header input[type="search"]')
+            ?.setAttribute('placeholder', 'Buscar sucursal o farmacia...');
     })
     
     modal("",html(MensajeInicio),{footer:false})
@@ -41,7 +44,7 @@ En caso de menores de edad, la solicitud deberá ser realizada por sus represent
 Contamos con doce farmacias propias donde los afiliados tienen la posibilidad de comprar medicamentos recetados con hasta el 100% de cobertura, según vademecum vigente al momento de la compra." />
 <section class="container">
     <img src="./images/meopp/farmacias.webp" alt="farmacias" class="img-farmacias" >
-    <div bind:this={contenedor}></div>
+    <div class="py-2" bind:this={contenedor}></div>
     <Beneficios />
 </section>
 

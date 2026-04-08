@@ -33,7 +33,7 @@
 			.map(n => ({
 				Y:n.Y,
 				etiquetas: n.etiquetas.filter(e => e !== etiqueta.Y)
-			}));;
+			}));
         if(novedadesLimpias.length){
             NOVEDADES.custom(NOVEDADES_UPDATES,novedadesLimpias).then(v=>{
                 NOVEDADES.read();

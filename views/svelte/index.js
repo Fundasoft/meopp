@@ -16,7 +16,7 @@
 
     import "./index/style.css";
 
-    cdns("https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.2/aos.min.css", "https://cdn.jsdelivr.net/gh/Fundasoft/cdns@1.0.2/aos.min.js");
+    cdns(CDN_AOS);
 
 
     // --------------------------------------------------------------
