@@ -1,6 +1,6 @@
 <script>
-    export let value, trash, render, edit;
-    [render,trash,edit];
+    export let value, GRID;
+    [GRID];
 </script>
 
 <div class="optica-card">

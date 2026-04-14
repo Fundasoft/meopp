@@ -1,7 +1,7 @@
 <script>
     import Map from "./Map.svelte";
-    export let value, trash, render, edit;
-    [render,trash,edit];
+    export let value, GRID;
+    [GRID];
 
     // export let { nombre, direccion, horarios, telefono } = farmacia;
     // {

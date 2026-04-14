@@ -29,14 +29,14 @@
                 time: 300,
                 icon: "subsidy",
                 title: "Subsidios",
-                description: "Acompañamos los momentos más importantes de tu vida. Brindamos apoyo económico en situaciones especiales como nacimientos, matrimonios, y otros eventos significativos, para que sientas el respaldo de Meopp Mutual cuando más lo necesitás.",
+                description: "Acompañamos los momentos más importantes de tu vida. Brindamos apoyo económico en situaciones especiales como nacimientos, matrimonios, y otros eventos significativos, para que sientas el respaldo de MEOPP cuando más lo necesitás.",
                 src:"subsidios"
             },
             {
                 time: 400,
                 icon: "retirement",
                 title: "Jubilados",
-                description: "Beneficios exclusivos y atención personalizada para nuestros afiliados jubilados y pensionados.",
+                description: "Beneficios exclusivos y atención personalizada para nuestros afiliados jubilados.",
                 src:"jubilados"
             }
         ]

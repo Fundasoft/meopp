@@ -158,12 +158,7 @@
 								{/each}
 							</div>
 						</div>
-					</div>
-				</div>
-				<!-- Columna de Ubicacion -->
-				<div class="column contact-column">
-					<h4 class="column-title">Ubicación</h4>
-					<div class="contact-sections">
+
 						<!-- Direcciones -->
 						<div class="contact-section">
 							<i class="bi bi-geo-alt-fill contact-icon"></i>
@@ -267,7 +262,7 @@
 	}
 
 	.footer-container {
-		max-width: 1500px;
+		max-width: 1200px;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;

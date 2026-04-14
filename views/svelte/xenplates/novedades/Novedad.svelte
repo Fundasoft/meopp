@@ -121,7 +121,7 @@
                     </p>
                 {/if}
 
-                {#if novedad.imagenes && novedad.imagenes.length > 1}
+                {#if novedad.imagenes && novedad.imagenes.length > 0}
                     <section class="gallery-wrapper">
                         <GaleriaNews novedad={novedad} path={PATH_IMG_NOVEDADES}/>
                     </section>
