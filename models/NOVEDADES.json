@@ -1,7 +1,13 @@
 {
   "bd": "json",
   "key": "2f46119f2bdbee43142d07d3791779b5e765573e85cd0844aac6c0bec6cc9e0c",
-  "permiso": "public",
+  "permiso": {
+    "value": [
+      "ADMINISTRADOR",
+      "PRENSA"
+    ],
+    "custom": "public"
+  },
   "columnas": {
     "titulo": {
       "STRING": "",
@@ -12,7 +18,19 @@
       "len": 200
     },
     "imagenes": [],
+    "video_youtube": {
+      "STRING": "",
+      "len": 1024
+    },
     "image": 0,
+    "introduccionLink": {
+      "STRING": "",
+      "len": 1024
+    },
+    "link": {
+      "STRING": "",
+      "len": 300
+    },
     "video": {
       "STRING": "",
       "len": 100
@@ -44,6 +62,6 @@
       ]
     }
   },
-  "Y": 38,
-  "UUID": "a7df155f37c0ebc8a42f368ee6eb2d1643f1d47f3376af3be63944042a0b9de0"
+  "Y": 53,
+  "UUID": "fca03d7f01b1f8120f1863c3ddc728c819931e3d97ee9a5b3de2b42053c83c96"
 }

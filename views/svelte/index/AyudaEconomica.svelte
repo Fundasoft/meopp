@@ -182,7 +182,7 @@
         outline-offset: 3px;
     }
 
-    .button-icon {
+    /* .button-icon {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -214,7 +214,7 @@
         font-size: 0.8rem;
         font-weight: 800;
         letter-spacing: 0.04em;
-    }
+    } */
 
     @media (max-width: 768px) {
         .ayuda-economica-section {
@@ -258,8 +258,10 @@
             font-size: 0.95rem;
         }
 
+        /* 
         .pdf-badge {
             font-size: 0.75rem;
-        }
+        } 
+        */
     }
 </style>

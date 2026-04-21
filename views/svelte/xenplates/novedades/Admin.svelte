@@ -106,6 +106,29 @@
 					},
 					{
 						...TEXTAREA,
+						key:"introduccionLink", 
+						title:"Introducción a link", 
+						icon:"blockquote-left",
+						value:"", 
+						modal:{title:"Parrafo introductor al link Externo"}
+					},
+					{
+						...TEXTAREA,
+						key:"link",
+						icon:"link",
+						value:"", 
+						modal:{title:"Link externo"}
+					},
+					{
+						...TEXTAREA,
+						key:"video_youtube",
+						title:"Video de Youtube",
+						icon:"youtube",
+						value:"", 
+						modal:{title:"Link video"}
+					},
+					{
+						...TEXTAREA,
 						key:"parrafo1", 
 						title:"Parrafo 1", 
 						icon:"blockquote-left",

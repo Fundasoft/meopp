@@ -1,6 +1,6 @@
 {
   "bd": "json",
-  "key": "f65209ae962ed017d869311d7320df2e885e523156195698a6913f5abd5961b6",
+  "key": "2f46119f2bdbee43142d07d3791779b5e765573e85cd0844aac6c0bec6cc9e0c",
   "permiso": {
     "value": [
       "ADMINISTRADOR",
@@ -8,26 +8,23 @@
     ],
     "custom": "public"
   },
-  "columnas": {
-    "nombre": {
-      "STRING": "",
-      "len": 25
-    }
-  },
+  "extension": "NOVEDADES",
   "custom": {
     "creates": {
       "crud": "creates",
       "permiso": [
-        "ADMINISTRADOR"
+        "ADMINISTRADOR",
+        "PRENSA"
       ]
     },
     "updates": {
       "crud": "updates",
       "permiso": [
-        "ADMINISTRADOR"
+        "ADMINISTRADOR",
+        "PRENSA"
       ]
     }
   },
-  "Y": 55,
-  "UUID": "0ec447ebb509d8d5ae0622c683e65f95dd27efeb849f86d4b89f821dca66207a"
+  "Y": 54,
+  "UUID": "c06413f6102c71ec09136513940c2d141375c2fad5987d89ee1c4058983e9f14"
 }

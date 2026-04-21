@@ -18,6 +18,23 @@
         log.novedad(novedad);
     });
 
+    function getYoutubeEmbed(url) {
+        if (!url) return "";
+
+        let videoId = "";
+
+        if (url.includes("youtube.com")) {
+            videoId = url.split("v=")[1]?.split("&")[0];
+        } else if (url.includes("youtu.be")) {
+            videoId = url.split("/").pop();
+        }
+
+        return videoId
+            ? `https://www.youtube.com/embed/${videoId}`
+            : "";
+    }
+
+
     async function copyToClipboard() {
         const shareData = {
             title: novedad.titulo,
@@ -29,7 +46,6 @@
 
             if (navigator.share) {
                 await navigator.share(shareData);
-                success("Compartido correctamente", 3);
                 return;
             }
 
@@ -114,11 +130,42 @@
                     </div>
                 {/if}
 
+                <!-- Link externo -->
+
+                {#if novedad.introduccionLink && novedad.link}
+                    <div class="novedad-link-box">
+                        <p class="novedad-introduccion-link">
+                            {novedad.introduccionLink}
+                        </p>
+
+                        <a
+                            href={novedad.link}
+                            class="novedad-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ver más
+                        </a>
+                    </div>
+                {/if}
+                
                 <!-- Parrafos -->
                 {#if novedad.parrafo1}
                     <p class="novedad-div-content">
                         {novedad.parrafo1}
                     </p>
+                {/if}
+
+                {#if novedad?.video_youtube}
+                    <div class="video-wrap">
+                        <div class="video-responsive">
+                            <iframe
+                                src={getYoutubeEmbed(novedad.video_youtube)}
+                                title={novedad.titulo}
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
                 {/if}
 
                 {#if novedad.imagenes && novedad.imagenes.length > 0}
@@ -184,3 +231,60 @@
     {/await}
 
 </section>
+
+<style>
+    .novedad-link-box{
+        margin: 1.5rem 0;
+        padding: 1rem 1.25rem;
+        border-radius: 12px;
+        background: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    .novedad-introduccion-link{
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .novedad-link{
+        align-self: flex-start;
+        text-decoration: none;
+        font-weight: 600;
+        color: #0d6efd;
+    }
+
+    .novedad-link:hover{
+        text-decoration: underline;
+    }
+
+
+    .video-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1.5rem 0 2rem 0;
+    }
+
+    .video-responsive {
+        position: relative;
+        width: 100%;
+        max-width: 820px;
+        aspect-ratio: 16 / 9;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+        background: #000;
+    }
+
+    .video-responsive iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+
+</style>

@@ -8,26 +8,23 @@
     ],
     "custom": "public"
   },
-  "columnas": {
-    "nombre": {
-      "STRING": "",
-      "len": 25
-    }
-  },
+  "extension": "NOVEDADES_ETIQUETAS",
   "custom": {
     "creates": {
       "crud": "creates",
       "permiso": [
-        "ADMINISTRADOR"
+        "ADMINISTRADOR",
+        "PRENSA"
       ]
     },
     "updates": {
       "crud": "updates",
       "permiso": [
-        "ADMINISTRADOR"
+        "ADMINISTRADOR",
+        "PRENSA"
       ]
     }
   },
-  "Y": 55,
-  "UUID": "0ec447ebb509d8d5ae0622c683e65f95dd27efeb849f86d4b89f821dca66207a"
+  "Y": 56,
+  "UUID": "13b40eff2edca37ce75bd5f1c2ace52351a4e402cb41ac4075cb937fd566a7b6"
 }
